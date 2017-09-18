@@ -164,7 +164,7 @@ ul.navList, ul.subNavList {
     margin:0 25px 0 0;
     padding:0;
 }
-ul.navList {display: none;} ul.navlist li{
+ul.navList li{
     list-style:none;
     float:left;
     padding: 5px 6px;
