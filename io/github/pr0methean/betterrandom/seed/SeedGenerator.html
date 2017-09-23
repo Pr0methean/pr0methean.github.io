@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":18};
+var methods = {"i0":6,"i1":18,"i2":18};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],16:["t5","Default Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -147,6 +147,10 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.h
 <div class="block">Generate a seed value for a random number generator.</div>
 </td>
 </tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>default boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#isWorthTrying--">isWorthTrying</a></span>()</code>&nbsp;</td>
+</tr>
 </table>
 </li>
 </ul>
@@ -182,7 +186,7 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.h
 <a name="generateSeed-int-">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>generateSeed</h4>
 <pre>default&nbsp;byte[]&nbsp;generateSeed(int&nbsp;length)
@@ -195,6 +199,21 @@ extends <a href="http://docs.oracle.com/javase/7/docs/api/java/io/Serializable.h
 <dd>A byte array containing the seed data.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - If a seed cannot be generated for any reason.</dd>
+</dl>
+</li>
+</ul>
+<a name="isWorthTrying--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>isWorthTrying</h4>
+<pre>default&nbsp;boolean&nbsp;isWorthTrying()</pre>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if we cannot determine without I/O calls that this SeedGenerator would throw a
+     <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed"><code>SeedException</code></a> if <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-int-"><code>generateSeed(int)</code></a> or <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-byte:A-"><code>generateSeed(byte[])</code></a> were
+     being called right now.</dd>
 </dl>
 </li>
 </ul>
