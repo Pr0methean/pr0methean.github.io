@@ -1,259 +1,574 @@
-n&quot;, BinaryUtils.convertBytesToHexString(randomBytes));
-    }
-  }
+/* Javadoc style sheet */
+/*
+Overall document style
+*/
+
+@import url('resources/fonts/dejavu.css');
+
+body {
+    background-color:#ffffff;
+    color:#353833;
+    font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;
+    font-size:14px;
+    margin:0;
 }
-</code></pre>
-<h2>ReseedingSplittableRandomAdapter for fast, high-quality parallel bridge dealing</h2>
-<pre><code>import static io.github.pr0methean.betterrandom.seed.DefaultSeedGenerator.DEFAULT_SEED_GENERATOR;
+a:link, a:visited {
+    text-decoration:none;
+    color:#4A6782;
+}
+a:hover, a:focus {
+    text-decoration:none;
+    color:#bb7a2a;
+}
+a:active {
+    text-decoration:none;
+    color:#4A6782;
+}
+a[name] {
+    color:#353833;
+}
+a[name]:hover {
+    text-decoration:none;
+    color:#353833;
+}
+pre {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+}
+h1 {
+    font-size:20px;
+}
+h2 {
+    font-size:18px;
+}
+h3 {
+    font-size:16px;
+    font-style:italic;
+}
+h4 {
+    font-size:13px;
+}
+h5 {
+    font-size:12px;
+}
+h6 {
+    font-size:11px;
+}
+ul {
+    list-style-type:disc;
+}
+code, tt {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+    padding-top:4px;
+    margin-top:8px;
+    line-height:1.4em;
+}
+dt code {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+    padding-top:4px;
+}
+table tr td dt code {
+    font-family:'DejaVu Sans Mono', monospace;
+    font-size:14px;
+    vertical-align:top;
+    padding-top:4px;
+}
+sup {
+    font-size:8px;
+}
+/*
+Document title and Copyright styles
+*/
+.clear {
+    clear:both;
+    height:0px;
+    overflow:hidden;
+}
+.aboutLanguage {
+    float:right;
+    padding:0px 21px;
+    font-size:11px;
+    z-index:200;
+    margin-top:-9px;
+}
+.legalCopy {
+    margin-left:.5em;
+}
+.bar a, .bar a:link, .bar a:visited, .bar a:active {
+    color:#FFFFFF;
+    text-decoration:none;
+}
+.bar a:hover, .bar a:focus {
+    color:#bb7a2a;
+}
+.tab {
+    background-color:#0066FF;
+    color:#ffffff;
+    padding:8px;
+    width:5em;
+    font-weight:bold;
+}
+/*
+Navigation bar styles
+*/
+.bar {
+    background-color:#4D7A97;
+    color:#FFFFFF;
+    padding:.8em .5em .4em .8em;
+    height:auto;/*height:1.8em;*/
+    font-size:11px;
+    margin:0;
+}
+.topNav {
+    background-color:#4D7A97;
+    color:#FFFFFF;
+    float:left;
+    padding:0;
+    width:100%;
+    clear:right;
+    height:2.8em;
+    padding-top:10px;
+    overflow:hidden;
+    font-size:12px; 
+}
+.bottomNav {
+    margin-top:10px;
+    background-color:#4D7A97;
+    color:#FFFFFF;
+    float:left;
+    padding:0;
+    width:100%;
+    clear:right;
+    height:2.8em;
+    padding-top:10px;
+    overflow:hidden;
+    font-size:12px;
+}
+.subNav {
+    background-color:#dee3e9;
+    float:left;
+    width:100%;
+    overflow:hidden;
+    font-size:12px;
+}
+.subNav div {
+    clear:left;
+    float:left;
+    padding:0 0 5px 6px;
+    text-transform:uppercase;
+}
+ul.navList, ul.subNavList {
+    float:left;
+    margin:0 25px 0 0;
+    padding:0;
+}
+ul.navList li{
+    list-style:none;
+    float:left;
+    padding: 5px 6px;
+    text-transform:uppercase;
+}
+ul.subNavList li{
+    list-style:none;
+    float:left;
+}
+.topNav a:link, .topNav a:active, .topNav a:visited, .bottomNav a:link, .bottomNav a:active, .bottomNav a:visited {
+    color:#FFFFFF;
+    text-decoration:none;
+    text-transform:uppercase;
+}
+.topNav a:hover, .bottomNav a:hover {
+    text-decoration:none;
+    color:#bb7a2a;
+    text-transform:uppercase;
+}
+.navBarCell1Rev {
+    background-color:#F8981D;
+    color:#253441;
+    margin: auto 5px;
+}
+.skipNav {
+    position:absolute;
+    top:auto;
+    left:-9999px;
+    overflow:hidden;
+}
+/*
+Page header and footer styles
+*/
+.header, .footer {
+    clear:both;
+    margin:0 20px;
+    padding:5px 0 0 0;
+}
+.indexHeader {
+    margin:10px;
+    position:relative;
+}
+.indexHeader span{
+    margin-right:15px;
+}
+.indexHeader h1 {
+    font-size:13px;
+}
+.title {
+    color:#2c4557;
+    margin:10px 0;
+}
+.subTitle {
+    margin:5px 0 0 0;
+}
+.header ul {
+    margin:0 0 15px 0;
+    padding:0;
+}
+.footer ul {
+    margin:20px 0 5px 0;
+}
+.header ul li, .footer ul li {
+    list-style:none;
+    font-size:13px;
+}
+/*
+Heading styles
+*/
+div.details ul.blockList ul.blockList ul.blockList li.blockList h4, div.details ul.blockList ul.blockList ul.blockListLast li.blockList h4 {
+    background-color:#dee3e9;
+    border:1px solid #d0d9e0;
+    margin:0 0 6px -8px;
+    padding:7px 5px;
+}
+ul.blockList ul.blockList ul.blockList li.blockList h3 {
+    background-color:#dee3e9;
+    border:1px solid #d0d9e0;
+    margin:0 0 6px -8px;
+    padding:7px 5px;
+}
+ul.blockList ul.blockList li.blockList h3 {
+    padding:0;
+    margin:15px 0;
+}
+ul.blockList li.blockList h2 {
+    padding:0px 0 20px 0;
+}
+/*
+Page layout container styles
+*/
+.contentContainer, .sourceContainer, .classUseContainer, .serializedFormContainer, .constantValuesContainer {
+    clear:both;
+    padding:10px 20px;
+    position:relative;
+}
+.indexContainer {
+    margin:10px;
+    position:relative;
+    font-size:12px;
+}
+.indexContainer h2 {
+    font-size:13px;
+    padding:0 0 3px 0;
+}
+.indexContainer ul {
+    margin:0;
+    padding:0;
+}
+.indexContainer ul li {
+    list-style:none;
+    padding-top:2px;
+}
+.contentContainer .description dl dt, .contentContainer .details dl dt, .serializedFormContainer dl dt {
+    font-size:12px;
+    font-weight:bold;
+    margin:10px 0 0 0;
+    color:#4E4E4E;
+}
+.contentContainer .description dl dd, .contentContainer .details dl dd, .serializedFormContainer dl dd {
+    margin:5px 0 10px 0px;
+    font-size:14px;
+    font-family:'DejaVu Sans Mono',monospace;
+}
+.serializedFormContainer dl.nameValue dt {
+    margin-left:1px;
+    font-size:1.1em;
+    display:inline;
+    font-weight:bold;
+}
+.serializedFormContainer dl.nameValue dd {
+    margin:0 0 0 1px;
+    font-size:1.1em;
+    display:inline;
+}
+/*
+List styles
+*/
+ul.horizontal li {
+    display:inline;
+    font-size:0.9em;
+}
+ul.inheritance {
+    margin:0;
+    padding:0;
+}
+ul.inheritance li {
+    display:inline;
+    list-style:none;
+}
+ul.inheritance li ul.inheritance {
+    margin-left:15px;
+    padding-left:15px;
+    padding-top:1px;
+}
+ul.blockList, ul.blockListLast {
+    margin:10px 0 10px 0;
+    padding:0;
+}
+ul.blockList li.blockList, ul.blockListLast li.blockList {
+    list-style:none;
+    margin-bottom:15px;
+    line-height:1.4;
+}
+ul.blockList ul.blockList li.blockList, ul.blockList ul.blockListLast li.blockList {
+    padding:0px 20px 5px 10px;
+    border:1px solid #ededed; 
+    background-color:#f8f8f8;
+}
+ul.blockList ul.blockList ul.blockList li.blockList, ul.blockList ul.blockList ul.blockListLast li.blockList {
+    padding:0 0 5px 8px;
+    background-color:#ffffff;
+    border:none;
+}
+ul.blockList ul.blockList ul.blockList ul.blockList li.blockList {
+    margin-left:0;
+    padding-left:0;
+    padding-bottom:15px;
+    border:none;
+}
+ul.blockList ul.blockList ul.blockList ul.blockList li.blockListLast {
+    list-style:none;
+    border-bottom:none;
+    padding-bottom:0;
+}
+table tr td dl, table tr td dl dt, table tr td dl dd {
+    margin-top:0;
+    margin-bottom:1px;
+}
+/*
+Table styles
+*/
+.overviewSummary, .memberSummary, .typeSummary, .useSummary, .constantsSummary, .deprecatedSummary {
+    width:100%;
+    border-left:1px solid #EEE; 
+    border-right:1px solid #EEE; 
+    border-bottom:1px solid #EEE; 
+}
+.overviewSummary, .memberSummary  {
+    padding:0px;
+}
+.overviewSummary caption, .memberSummary caption, .typeSummary caption,
+.useSummary caption, .constantsSummary caption, .deprecatedSummary caption {
+    position:relative;
+    text-align:left;
+    background-repeat:no-repeat;
+    color:#253441;
+    font-weight:bold;
+    clear:none;
+    overflow:hidden;
+    padding:0px;
+    padding-top:10px;
+    padding-left:1px;
+    margin:0px;
+    white-space:pre;
+}
+.overviewSummary caption a:link, .memberSummary caption a:link, .typeSummary caption a:link,
+.useSummary caption a:link, .constantsSummary caption a:link, .deprecatedSummary caption a:link,
+.overviewSummary caption a:hover, .memberSummary caption a:hover, .typeSummary caption a:hover,
+.useSummary caption a:hover, .constantsSummary caption a:hover, .deprecatedSummary caption a:hover,
+.overviewSummary caption a:active, .memberSummary caption a:active, .typeSummary caption a:active,
+.useSummary caption a:active, .constantsSummary caption a:active, .deprecatedSummary caption a:active,
+.overviewSummary caption a:visited, .memberSummary caption a:visited, .typeSummary caption a:visited,
+.useSummary caption a:visited, .constantsSummary caption a:visited, .deprecatedSummary caption a:visited {
+    color:#FFFFFF;
+}
+.overviewSummary caption span, .memberSummary caption span, .typeSummary caption span,
+.useSummary caption span, .constantsSummary caption span, .deprecatedSummary caption span {
+    white-space:nowrap;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:12px;
+    padding-bottom:7px;
+    display:inline-block;
+    float:left;
+    background-color:#F8981D;
+    border: none;
+    height:16px;
+}
+.memberSummary caption span.activeTableTab span {
+    white-space:nowrap;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:12px;
+    margin-right:3px;
+    display:inline-block;
+    float:left;
+    background-color:#F8981D;
+    height:16px;
+}
+.memberSummary caption span.tableTab span {
+    white-space:nowrap;
+    padding-top:5px;
+    padding-left:12px;
+    padding-right:12px;
+    margin-right:3px;
+    display:inline-block;
+    float:left;
+    background-color:#4D7A97;
+    height:16px;
+}
+.memberSummary caption span.tableTab, .memberSummary caption span.activeTableTab {
+    padding-top:0px;
+    padding-left:0px;
+    padding-right:0px;
+    background-image:none;
+    float:none;
+    display:inline;
+}
+.overviewSummary .tabEnd, .memberSummary .tabEnd, .typeSummary .tabEnd,
+.useSummary .tabEnd, .constantsSummary .tabEnd, .deprecatedSummary .tabEnd {
+    display:none;
+    width:5px;
+    position:relative;
+    float:left;
+    background-color:#F8981D;
+}
+.memberSummary .activeTableTab .tabEnd {
+    display:none;
+    width:5px;
+    margin-right:3px;
+    position:relative; 
+    float:left;
+    background-color:#F8981D;
+}
+.memberSummary .tableTab .tabEnd {
+    display:none;
+    width:5px;
+    margin-right:3px;
+    position:relative;
+    background-color:#4D7A97;
+    float:left;
 
-import edu.emory.mathcs.backport.java.util.Collections;
-import io.github.pr0methean.betterrandom.seed.SeedException;
-import java.util.Arrays;
-import java.util.List;
-import java.util.concurrent.ScheduledThreadPoolExecutor;
-import java.util.concurrent.TimeUnit;
-
-public class SplittableRandomAdapterDemo {
-  private static final String[] VALUE_LABELS = {&quot;A&quot;,&quot;K&quot;,&quot;Q&quot;,&quot;J&quot;,&quot;10&quot;,&quot;9&quot;,&quot;8&quot;,&quot;7&quot;,&quot;6&quot;,&quot;5&quot;,&quot;4&quot;,&quot;3&quot;,&quot;2&quot;};
-  private static final String[] SUIT_LABELS = {&quot;♥️&quot;,&quot;♣️&quot;,&quot;♦️&quot;,&quot;♠️&quot;};
-  public static void main(String[] args) throws SeedException, InterruptedException {
-    String[] cards = new String[52];
-    int i=0;
-    for (String suit : SUIT_LABELS) {
-      for (String value : VALUE_LABELS) {
-        cards[i] = value + suit;
-        i++;
-      }
-    }
-    ThreadLocal&lt;List&lt;String&gt;&gt; deckCopies = ThreadLocal.withInitial(() -&gt; Arrays.asList(cards.clone()));
-    ScheduledThreadPoolExecutor executor = new ScheduledThreadPoolExecutor(4);
-    ReseedingSplittableRandomAdapter random = ReseedingSplittableRandomAdapter.getInstance(
-        DEFAULT_SEED_GENERATOR);
-    for (i=0; i&lt;1000; i++) {
-      executor.submit(() -&gt; {
-        List&lt;String&gt; deck = deckCopies.get();
-        Collections.shuffle(deck, random);
-        System.out.format(&quot;North: %s%nEast: %s%nSouth: %s%nWest: %s%n%n&quot;,
-            String.join(&quot;,&quot;, deck.subList(0, 13)),
-            String.join(&quot;,&quot;, deck.subList(13, 26)),
-            String.join(&quot;,&quot;, deck.subList(26, 39)),
-            String.join(&quot;,&quot;, deck.subList(39, 52)));
-      });
-    }
-    executor.shutdown();
-    executor.awaitTermination(1, TimeUnit.MINUTES);
-  }
+}
+.overviewSummary td, .memberSummary td, .typeSummary td,
+.useSummary td, .constantsSummary td, .deprecatedSummary td {
+    text-align:left;
+    padding:0px 0px 12px 10px;
+}
+th.colOne, th.colFirst, th.colLast, .useSummary th, .constantsSummary th,
+td.colOne, td.colFirst, td.colLast, .useSummary td, .constantsSummary td{
+    vertical-align:top;
+    padding-right:0px;
+    padding-top:8px;
+    padding-bottom:3px;
+}
+th.colFirst, th.colLast, th.colOne, .constantsSummary th {
+    background:#dee3e9;
+    text-align:left;
+    padding:8px 3px 3px 7px;
+}
+td.colFirst, th.colFirst {
+    white-space:nowrap;
+    font-size:13px;
+}
+td.colLast, th.colLast {
+    font-size:13px;
+}
+td.colOne, th.colOne {
+    font-size:13px;
+}
+.overviewSummary td.colFirst, .overviewSummary th.colFirst,
+.useSummary td.colFirst, .useSummary th.colFirst,
+.overviewSummary td.colOne, .overviewSummary th.colOne,
+.memberSummary td.colFirst, .memberSummary th.colFirst,
+.memberSummary td.colOne, .memberSummary th.colOne,
+.typeSummary td.colFirst{
+    width:25%;
+    vertical-align:top;
+}
+td.colOne a:link, td.colOne a:active, td.colOne a:visited, td.colOne a:hover, td.colFirst a:link, td.colFirst a:active, td.colFirst a:visited, td.colFirst a:hover, td.colLast a:link, td.colLast a:active, td.colLast a:visited, td.colLast a:hover, .constantValuesContainer td a:link, .constantValuesContainer td a:active, .constantValuesContainer td a:visited, .constantValuesContainer td a:hover {
+    font-weight:bold;
+}
+.tableSubHeadingColor {
+    background-color:#EEEEFF;
+}
+.altColor {
+    background-color:#FFFFFF;
+}
+.rowColor {
+    background-color:#EEEEEF;
+}
+/*
+Content styles
+*/
+.description pre {
+    margin-top:0;
+}
+.deprecatedContent {
+    margin:0;
+    padding:10px 0;
+}
+.docSummary {
+    padding:0;
 }
 
-</code></pre>
-<h1>Supported environments</h1>
-<p>BetterRandom requires many Java 8 features, but should work on any JVM that has them. Continuous
-integration takes place in the following environments:</p>
-<ul>
-<li>Linux (on Travis): OpenJDK 8, Oracle JDK 8</li>
-<li>OS X (on Travis): JDK 8 (unclear whether Oracle or OpenJDK)</li>
-<li>Cygwin (on Appveyor): JDK 8 (unclear whether Oracle or OpenJDK)</li>
-<li>MinGW (on Appveyor): JDK 8 (unclear whether Oracle or OpenJDK)</li>
-</ul>
-<p>Continuous integration for Oracle JDK 9 is set up on Travis, but will be ignored until Travis knows
-how to properly set <code>$JAVA_HOME</code> for JDK 9. CI on BSD or Android isn't likely any time soon, since
-no free providers of BSD CI seem to be integrated with GitHub, and there seems to be no
-actively-maintained Android-app wrapper for TestNG suites.</p>
-<h1>Alternative random number generators</h1>
-<p>BetterRandom provides several pseudorandom number generators that are intended as drop-in
-replacements for <code>java.util.Random</code>.</p>
-<h2>Features common to all PRNGs in <code>betterrandom.prng</code></h2>
-<ul>
-<li>
-<p>Reproducible: The <code>getSeed()</code> function retrieves a seed that can be passed into the constructor to
-create another PRNG giving the same output. If any random numbers have been generated since
-construction or a call to <code>setSeed(byte[])</code>, this may rewind the state to before that happened.</p>
-</li>
-<li>
-<p>Serializable: All these PRNGs can be serialized and deserialized, copying their full internal
-state.</p>
-</li>
-<li>
-<p><code>setSeed(byte[])</code>: Reseed even if more than a <code>long</code> is needed to do so.
-** Use <code>getNewSeedLength()</code> to get the recommended seed size.</p>
-</li>
-<li>
-<p><code>entropyBits()</code>: Find out when the PRNG has output more random data than it has been seeded with,
-and thus could benefit from being reseeded. Even when the PRNG is reseeded repeatedly without
-being used, the entropy count won't ever go above the size of the PRNG's internal state.
-** CAUTION: This feature is in alpha. Many inherited methods from <code>java.util.Random</code> obtain more
-bits than they actually use, and will need to be overwritten to either eliminate the waste or
-exclude it from the entropy debit.</p>
-</li>
-<li>
-<p><code>setSeederThread(RandomSeederThread)</code>: Reseeds the PRNG whenever its entropy is spent, but only
-as long as a seed generator can keep up. See below.</p>
-</li>
-</ul>
-<h2>Summary</h2>
-<table>
-<thead>
-<tr>
-<th>Class</th>
-<th>Seed size (bytes)</th>
-<th>Period (bits)</th>
-<th>Speed</th>
-<th>Speed with RandomSeederThread</th>
-<th>Effect of <code>setSeed(long)</code></th>
-<th><code>getSeed()</code> rewinds?</th>
-<th>Algorithm author</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>AesCounterRandom</td>
-<td>16-48<sup>*</sup></td>
-<td>2<sup>135</sup></td>
-<td>Slow</td>
-<td>Slow</td>
-<td>Combines with existing seed</td>
-<td>No</td>
-<td><a href="http://csrc.nist.gov/groups/ST/toolkit/documents/rng/BlockCipherDRBGs.pdf">NIST</a></td>
-</tr>
-<tr>
-<td>CellularAutomatonRandom</td>
-<td>4</td>
-<td>?</td>
-<td>Medium</td>
-<td>Very slow</td>
-<td>Replaces existing seed</td>
-<td>Yes</td>
-<td><a href="http://web.archive.org/web/20160413212616/http://home.southernct.edu/%7Epasqualonia1/ca/report.html">Anthony Pasqualoni</a></td>
-</tr>
-<tr>
-<td>Cmwc4096Random</td>
-<td>16384</td>
-<td>2<sup>131104</sup></td>
-<td>Medium</td>
-<td>Very slow</td>
-<td>Not supported</td>
-<td>Yes</td>
-<td><a href="http://school.anhb.uwa.edu.au/personalpages/kwessen/shared/Marsaglia03.html">George Marsaglia</a></td>
-</tr>
-<tr>
-<td>MersenneTwisterRandom</td>
-<td>16</td>
-<td>2<sup>19937</sup></td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Not supported</td>
-<td>Yes</td>
-<td><a href="http://www.math.sci.hiroshima-u.ac.jp/%7Em-mat/MT/emt.html">Makoto Matsumoto</a></td>
-</tr>
-<tr>
-<td>XorShiftRandom</td>
-<td>20</td>
-<td>~2<sup>160</sup></td>
-<td>Medium</td>
-<td>Medium</td>
-<td>Not supported</td>
-<td>Yes</td>
-<td><a href="http://www.jstatsoft.org/v08/i14/paper">George Marsaglia</a></td>
-</tr>
-<tr>
-<td>SplittableRandomAdapter</td>
-<td>8<sup>**</sup></td>
-<td>2<sup>64</sup></td>
-<td>Fast</td>
-<td>Fast<sup>†</sup></td>
-<td>Replaces existing seed (calling thread only)</td>
-<td>Yes</td>
-<td><a href="http://hg.openjdk.java.net/jdk8/jdk8/jdk/file/687fd7c7986d/src/share/classes/java/util/SplittableRandom.java">Guy Steele and Doug Lea</a></td>
-</tr></tbody></table>
-<p><sup>*</sup>Seed sizes above 32 for AesCounterRandom require jurisdiction policy files that allow
-192- and 256-bit AES seeds.</p>
-<p><sup>**</sup>Can be reseeded independently on each thread, affecting only that thread.</p>
-<p><sup>†</sup>Use specialized subclass ReseedingSplittableRandomAdapter.</p>
-<h2>AesCounterRandom</h2>
-<p>Retrieving the internal state of an <code>AesCounterRandom</code> instance from its output is considered
-equivalent to breaking the AES cipher.</p>
-<p>AesCounterRandom only generates a <em>permutation</em> of the space of 128-bit integers, so if it is used
-to generate about 2<sup>64</sup> 128-bit strings without reseeding, its statistical properties will
-begin to differ from those of <code>/dev/random</code> in that it won't have
-<a href="https://en.wikipedia.org/wiki/Birthday_problem">generated the same string twice</a>. This could be
-prevented by using a hash function rather than a reversible cipher, but the hash functions in
-standard JVMs are less cryptographically secure than AES and won't run as fast on hardware featuring
-AES-NI.</p>
-<h2>SplittableRandom adapters</h2>
-<p>These classes use <code>java.util.SplittableRandom</code> instances to implement the methods of <code>Random</code>,
-despite that the two classes are unrelated and have slightly different method signatures. Several
-adapters are available:</p>
-<ul>
-<li><code>SingleThreadSplittableRandomAdapter</code>: Simple and fast, but not thread-safe.</li>
-<li><code>SplittableRandomAdapter</code>: Backed by a <code>ThreadLocal&lt;SplittableRandom&gt;</code>, whose instances of
-<code>SplittableRandom</code> are all split from a single master.</li>
-<li><code>ReseedingSplittableRandomAdapter</code>: Also backed by a <code>ThreadLocal&lt;SplittableRandom&gt;</code>, this
-registers each thread's <code>SplittableRandom</code> instance with a <code>RandomSeederThread</code> (see below). This
-is probably the best PRNG implementation that allows concurrent access from multiple threads.</li>
-</ul>
-<h1>Reseeding</h1>
-<h2><code>SeedGenerator</code></h2>
-<p>A <code>SeedGenerator</code> produces seeds for PRNGs. All the provided implementations are singletons, because
-the seed sources cannot be parallelized. They include:</p>
-<ul>
-<li><code>DevRandomSeedGenerator.DEV_RANDOM_SEED_GENERATOR</code>: Works only on Unix-like systems; reads seeds
-from <code>/dev/random</code>.</li>
-<li><code>RandomDotOrgSeedGenerator.RANDOM_DOT_ORG_SEED_GENERATOR</code>: Uses the
-<a href="https://www.random.org/clients/http/">random.org old API</a> to retrieve random numbers over HTTPS.
-Random.org collects randomness from atmospheric noise using 9 radios, located at undisclosed
-addresses in Dublin and Copenhagen and tuned to undisclosed AM/FM frequencies. (The secrecy is
-intended to help prevent tampering with the output using a well-placed radio transmitter, and the
-use of AM/FM helps ensure that any such tampering would cause illegal interference with broadcasts
-and quickly attract regulatory attention.) Note that random.org limits the supply of free random
-numbers to any one IP address; if you operate from a fixed address (at least if you use IPv4), you
-can <a href="https://www.random.org/quota/">check your quota and buy more</a>.</li>
-<li><code>SecureRandomSeedGenerator.SECURE_RANDOM_SEED_GENERATOR</code>: Uses
-<code>java.security.SecureRandom.generateSeed</code>. On Oracle and OpenJDK, this in turn uses
-<code>sun.security.provider.SeedGenerator</code>; when <code>/dev/random</code> isn't available, that in turn uses the
-timing of newly-launched threads as a source of randomness, relying on the unpredictable
-interactions between different configurations of hardware and software and their workloads.</li>
-<li><code>DefaultSeedGenerator.DEFAULT_SEED_GENERATOR</code>: Uses the best of the above three that is currently
-available.</li>
-</ul>
-<h2>RandomSeederThread</h2>
-<p>This is a daemon thread that loops over all the <code>Random</code> instances registered with it and reseeds
-them. Those that implement <code>EntropyCountingRandom</code> are skipped when they still have entropy left
-from a previous seeding. Example usage:</p>
-<pre><code>// Obtain the seeder thread for this seed generator; launch it if it's not already running.
-RandomSeederThread seederThread = RandomSeederThread.getInstance(DEFAULT_SEED_GENERATOR);
-
-// Thread is now running, but is asleep if no PRNGs have already been added to it.
-
-// Begin including myRandom in the loop, and wake up the thread.
-seederThread.add(myRandom);
-
-// Manually trigger reseeding ASAP (myRandom must be added first)
-if (myRandom instanceof EntropyCountingRandom) {
-  seederThread.asyncReseed(myRandom);
+ul.blockList ul.blockList ul.blockList li.blockList h3 {
+    font-style:normal;
 }
 
-// Adding the same PRNG a second time has no effect
-seederThread.add(myRandom);
-</code></pre>
-<h1>Build scripts</h1>
-<ul>
-<li><code>benchmark.sh</code>: Compile and run benchmarks. Output will be in <code>benchmark/target</code>.</li>
-<li><code>coverage.sh</code>: Compile and run unit tests and generate coverage reports. Upload them to Coveralls
-if running in Travis-CI.</li>
-<li><code>test-proguard.sh</code>: Compile and run unit tests against Proguarded jar.</li>
-<li><code>unit-tests.sh</code>: Combined functions of <code>coverage.sh</code> and <code>test-proguard.sh</code>.</li>
-<li><code>release.sh</code>: Used to perform new releases.</li>
-<li><code>publish-javadoc.sh</code>: Used to release updated Javadocs to github.io.</li>
-<li><code>prepare-workspace.sh</code>: Install necessary packages on a fresh Ubuntu Trusty Tahr workspace, such
-as what c9.io provides.</li>
-</ul>
-<h1>Credits</h1>
-<p>The following classes are forked from <a href="https://github.com/dwdyer/uncommons-maths/">Uncommons Maths</a>:</p>
-<ul>
-<li>All of <code>betterrandom.prng</code> except <code>BaseRandom</code> and <code>betterrandom.prng.adapter</code></li>
-<li>All of <code>betterrandom.seed</code> except <code>RandomSeederThread</code></li>
-<li><code>BinaryUtils</code></li>
-<li>Test classes corresponding to the above.</li>
-</ul>
-</body></html>
-                                                                                                                                                                                                                                                          
+div.block {
+    font-size:14px;
+    font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;
+}
+
+td.colLast div {
+    padding-top:0px;
+}
+
+
+td.colLast a {
+    padding-bottom:3px;
+}
+/*
+Formatting effect styles
+*/
+.sourceLineNo {
+    color:green;
+    padding:0 30px 0 0;
+}
+h1.hidden {
+    visibility:hidden;
+    overflow:hidden;
+    font-size:10px;
+}
+.block {
+    display:block;
+    margin:3px 10px 2px 0px;
+    color:#474747;
+}
+.deprecatedLabel, .descfrmTypeLabel, .memberNameLabel, .memberNameLink,
+.overrideSpecifyLabel, .packageHierarchyLabel, .paramLabel, .returnLabel,
+.seeLabel, .simpleTagLabel, .throwsLabel, .typeNameLabel, .typeNameLink {
+    font-weight:bold;
+}
+.deprecationComment, .emphasizedPhrase, .interfaceName {
+    font-style:italic;
+}
+
+div.block div.block span.deprecationComment, div.block div.block span.emphasizedPhrase,
+div.block div.block span.interfaceName {
+    font-style:normal;
+}
+
+div.contentContainer ul.blockList li.blockList h2{
+    padding-bottom:0px;
+}
