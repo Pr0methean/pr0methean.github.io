@@ -1,9 +1,600 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> <!-- NewPage --> <html lang="en"> <head><script>!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-K9NNCTT",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer");</script> <title>AesCounterRandom (BetterRandom 0.11.0-SNAPSHOT API)</title> <style> body{ background-color:#ffffff;color:#353833;font-family:'DejaVu Sans', Arial, Helvetica, sans-serif;font-size:14px;margin:0;}a:link, a:visited{ text-decoration:none;color:#4A6782;}a:hover, a:focus{ text-decoration:none;color:#bb7a2a;}a:active{ text-decoration:none;color:#4A6782;}a[name]{ color:#353833;}a[name]:hover{ text-decoration:none;color:#353833;}pre{ font-family:'DejaVu Sans Mono', monospace;font-size:14px;}h1{ font-size:20px;}h2{ font-size:18px;}h3{ font-size:16px;font-style:italic;}h4{ font-size:13px;}h5{ font-size:12px;}h6{ font-size:11px;}ul{ list-style-type:disc;}code, tt{ font-family:'DejaVu Sans Mono', monospace;font-size:14px;padding-top:4px;margin-top:8px;line-height:1.4em;}dt code{ font-family:'DejaVu Sans Mono', monospace;font-size:14px;padding-top:4px;}table tr td dt code{ font-family:'DejaVu Sans Mono', monospace;font-size:14px;vertical-align:top;padding-top:4px;}sup{ font-size:8px;} .clear{ clear:both;height:0px;overflow:hidden;}.aboutLanguage{ float:right;padding:0px 21px;font-size:11px;z-index:200;margin-top:-9px;}.legalCopy{ margin-left:.5em;}.bar a, .bar a:link, .bar a:visited, .bar a:active{ color:#FFFFFF;text-decoration:none;}.bar a:hover, .bar a:focus{ color:#bb7a2a;}.tab{ background-color:#0066FF;color:#ffffff;padding:8px;width:5em;font-weight:bold;} .bar{ background-color:#4D7A97;color:#FFFFFF;padding:.8em .5em .4em .8em;height:auto;font-size:11px;margin:0;}.topNav{ background-color:#4D7A97;color:#FFFFFF;float:left;padding:0;width:100%;clear:right;height:2.8em;padding-top:10px;overflow:hidden;font-size:12px;}.bottomNav{ margin-top:10px;background-color:#4D7A97;color:#FFFFFF;float:left;padding:0;width:100%;clear:right;height:2.8em;padding-top:10px;overflow:hidden;font-size:12px;}.subNav{ background-color:#dee3e9;float:left;width:100%;overflow:hidden;font-size:12px;}.subNav div{ clear:left;float:left;padding:0 0 5px 6px;text-transform:uppercase;}ul.navList, ul.subNavList{ float:left;margin:0 25px 0 0;padding:0;}ul.navList li{ list-style:none;float:left;padding:5px 6px;text-transform:uppercase;}ul.subNavList li{ list-style:none;float:left;}.topNav a:link, .topNav a:active, .topNav a:visited, .bottomNav a:link, .bottomNav a:active, .bottomNav a:visited{ color:#FFFFFF;text-decoration:none;text-transform:uppercase;}.topNav a:hover, .bottomNav a:hover{ text-decoration:none;color:#bb7a2a;text-transform:uppercase;}.navBarCell1Rev{ background-color:#F8981D;color:#253441;margin:auto 5px;}.skipNav{ position:absolute;top:auto;left:-9999px;overflow:hidden;} .header, .footer{ clear:both;margin:0 20px;padding:5px 0 0 0;}.indexHeader{ margin:10px;position:relative;}.indexHeader span{ margin-right:15px;}.indexHeader h1{ font-size:13px;}.title{ color:#2c4557;margin:10px 0;}.subTitle{ margin:5px 0 0 0;}.header ul{ margin:0 0 15px 0;padding:0;}.footer ul{ margin:20px 0 5px 0;}.header ul li, .footer ul li{ list-style:none;font-size:13px;} div.details ul.blockList ul.blockList ul.blockList li.blockList h4, div.details ul.blockList ul.blockList ul.blockListLast li.blockList h4{ background-color:#dee3e9;border:1px solid #d0d9e0;margin:0 0 6px -8px;padding:7px 5px;}ul.blockList ul.blockList ul.blockList li.blockList h3{ background-color:#dee3e9;border:1px solid #d0d9e0;margin:0 0 6px -8px;padding:7px 5px;}ul.blockList ul.blockList li.blockList h3{ padding:0;margin:15px 0;}ul.blockList li.blockList h2{ padding:0px 0 20px 0;} .contentContainer, .sourceContainer, .classUseContainer, .serializedFormContainer, .constantValuesContainer{ clear:both;padding:10px 20px;position:relative;}.indexContainer{ margin:10px;position:relative;font-size:12px;}.indexContainer h2{ font-size:13px;padding:0 0 3px 0;}.indexContainer ul{ margin:0;padding:0;}.indexContainer ul li{ list-style:none;padding-top:2px;}.contentContainer .description dl dt, .contentContainer .details dl dt, .serializedFormContainer dl dt{ font-size:12px;font-weight:bold;margin:10px 0 0 0;color:#4E4E4E;}.contentContainer .description dl dd, .contentContainer .details dl dd, .serializedFormContainer dl dd{ margin:5px 0 10px 0px;font-size:14px;font-family:'DejaVu Sans Mono',monospace;}.serializedFormContainer dl.nameValue dt{ margin-left:1px;font-size:1.1em;display:inline;font-weight:bold;}.serializedFormContainer dl.nameValue dd{ margin:0 0 0 1px;font-size:1.1em;display:inline;} ul.horizontal li{ display:inline;font-size:0.9em;}ul.inheritance{ margin:0;padding:0;}ul.inheritance li{ display:inline;list-style:none;}ul.inheritance li ul.inheritance{ margin-left:15px;padding-left:15px;padding-top:1px;}ul.blockList, ul.blockListLast{ margin:10px 0 10px 0;padding:0;}ul.blockList li.blockList, ul.blockListLast li.blockList{ list-style:none;margin-bottom:15px;line-height:1.4;}ul.blockList ul.blockList li.blockList, ul.blockList ul.blockListLast li.blockList{ padding:0px 20px 5px 10px;border:1px solid #ededed;background-color:#f8f8f8;}ul.blockList ul.blockList ul.blockList li.blockList, ul.blockList ul.blockList ul.blockListLast li.blockList{ padding:0 0 5px 8px;background-color:#ffffff;border:none;}ul.blockList ul.blockList ul.blockList ul.blockList li.blockList{ margin-left:0;padding-left:0;padding-bottom:15px;border:none;}ul.blockList ul.blockList ul.blockList ul.blockList li.blockListLast{ list-style:none;border-bottom:none;padding-bottom:0;}table tr td dl, table tr td dl dt, table tr td dl dd{ margin-top:0;margin-bottom:1px;} .overviewSummary, .memberSummary, .typeSummary, .useSummary, .constantsSummary, .deprecatedSummary{ width:100%;border-left:1px solid #EEE;border-right:1px solid #EEE;border-bottom:1px solid #EEE;}.overviewSummary, .memberSummary{ padding:0px;}.overviewSummary caption, .memberSummary caption, .typeSummary caption, .useSummary caption, .constantsSummary caption, .deprecatedSummary caption{ position:relative;text-align:left;background-repeat:no-repeat;color:#253441;font-weight:bold;clear:none;overflow:hidden;padding:0px;padding-top:10px;padding-left:1px;margin:0px;white-space:pre;}.overviewSummary caption a:link, .memberSummary caption a:link, .typeSummary caption a:link, .useSummary caption a:link, .constantsSummary caption a:link, .deprecatedSummary caption a:link, .overviewSummary caption a:hover, .memberSummary caption a:hover, .typeSummary caption a:hover, .useSummary caption a:hover, .constantsSummary caption a:hover, .deprecatedSummary caption a:hover, .overviewSummary caption a:active, .memberSummary caption a:active, .typeSummary caption a:active, .useSummary caption a:active, .constantsSummary caption a:active, .deprecatedSummary caption a:active, .overviewSummary caption a:visited, .memberSummary caption a:visited, .typeSummary caption a:visited, .useSummary caption a:visited, .constantsSummary caption a:visited, .deprecatedSummary caption a:visited{ color:#FFFFFF;}.overviewSummary caption span, .memberSummary caption span, .typeSummary caption span, .useSummary caption span, .constantsSummary caption span, .deprecatedSummary caption span{ white-space:nowrap;padding-top:5px;padding-left:12px;padding-right:12px;padding-bottom:7px;display:inline-block;float:left;background-color:#F8981D;border:none;height:16px;}.memberSummary caption span.activeTableTab span{ white-space:nowrap;padding-top:5px;padding-left:12px;padding-right:12px;margin-right:3px;display:inline-block;float:left;background-color:#F8981D;height:16px;}.memberSummary caption span.tableTab span{ white-space:nowrap;padding-top:5px;padding-left:12px;padding-right:12px;margin-right:3px;display:inline-block;float:left;background-color:#4D7A97;height:16px;}.memberSummary caption span.tableTab, .memberSummary caption span.activeTableTab{ padding-top:0px;padding-left:0px;padding-right:0px;background-image:none;float:none;display:inline;}.overviewSummary .tabEnd, .memberSummary .tabEnd, .typeSummary .tabEnd, .useSummary .tabEnd, .constantsSummary .tabEnd, .deprecatedSummary .tabEnd{ display:none;width:5px;position:relative;float:left;background-color:#F8981D;}.memberSummary .activeTableTab .tabEnd{ display:none;width:5px;margin-right:3px;position:relative;float:left;background-color:#F8981D;}.memberSummary .tableTab .tabEnd{ display:none;width:5px;margin-right:3px;position:relative;background-color:#4D7A97;float:left;}.overviewSummary td, .memberSummary td, .typeSummary td, .useSummary td, .constantsSummary td, .deprecatedSummary td{ text-align:left;padding:0px 0px 12px 10px;}th.colOne, th.colFirst, th.colLast, .useSummary th, .constantsSummary th, td.colOne, td.colFirst, td.colLast, .useSummary td, .constantsSummary td{ vertical-align:top;padding-right:0px;padding-top:8px;padding-bottom:3px;}th.colFirst, th.colLast, th.colOne, .constantsSummary th{ background:#dee3e9;text-align:left;padding:8px 3px 3px 7px;}td.colFirst, th.colFirst{ white-space:nowrap;font-size:13px;}td.colLast, th.colLast{ font-size:13px;}td.colOne, th.colOne{ font-size:13px;}.overviewSummary td.colFirst, .overviewSummary th.colFirst, .useSummary td.colFirst, .useSummary th.colFirst, .overviewSummary td.colOne, .overviewSummary th.colOne, .memberSummary td.colFirst, .memberSummary th.colFirst, .memberSummary td.colOne, .memberSummary th.colOne, .typeSummary td.colFirst{ width:25%;vertical-align:top;}td.colOne a:link, td.colOne a:active, td.colOne a:visited, td.colOne a:hover, td.colFirst a:link, td.colFirst a:active, td.colFirst a:visited, td.colFirst a:hover, td.colLast a:link, td.colLast a:active, td.colLast a:visited, td.colLast a:hover, .constantValuesContainer td a:link, .constantValuesContainer td a:active, .constantValuesContainer td a:visited, .constantValuesContainer td a:hover{ font-weight:bold;}.tableSubHeadingColor{ background-color:#EEEEFF;}.altColor{ background-color:#FFFFFF;}.rowColor{ background-color:#EEEEEF;} .description pre{ margin-top:0;}.deprecatedContent{ margin:0;padding:10px 0;}.docSummary{ padding:0;}ul.blockList ul.blockList ul.blockList li.blockList h3{ font-style:normal;}div.block{ font-size:14px;font-family:'DejaVu Serif', Georgia, "Times New Roman", Times, serif;}td.colLast div{ padding-top:0px;}td.colLast a{ padding-bottom:3px;} .sourceLineNo{ color:green;padding:0 30px 0 0;}h1.hidden{ visibility:hidden;overflow:hidden;font-size:10px;}.block{ display:block;margin:3px 10px 2px 0px;color:#474747;}.deprecatedLabel, .descfrmTypeLabel, .memberNameLabel, .memberNameLink, .overrideSpecifyLabel, .packageHierarchyLabel, .paramLabel, .returnLabel, .seeLabel, .simpleTagLabel, .throwsLabel, .typeNameLabel, .typeNameLink{ font-weight:bold;}.deprecationComment, .emphasizedPhrase, .interfaceName{ font-style:italic;}div.block div.block span.deprecationComment, div.block div.block span.emphasizedPhrase, div.block div.block span.interfaceName{ font-style:normal;}div.contentContainer ul.blockList li.blockList h2{ padding-bottom:0px;}</style> <script type="text/javascript">function show(a){count=0;for(var t in methods){var e=document.getElementById(t);0!=(methods[t]&a)?(e.style.display="",e.className=count++%2?rowColor:altColor):e.style.display="none"}updateTabs(a)}function updateTabs(a){for(var t in tabs){var e=document.getElementById(tabs[t][0]),s=e.firstChild;t==a?(e.className=activeTableTab,s.innerHTML=tabs[t][1]):(e.className=tableTab,s.innerHTML='<a href="javascript:show('+t+');">'+tabs[t][1]+"</a>")}}</script> </head> <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <script type="text/javascript">try{-1==location.href.indexOf("is-external=true")&&(parent.document.title="AesCounterRandom (BetterRandom 0.11.0-SNAPSHOT API)")}catch(t){}var methods={i0:10,i1:9,i2:10,i3:10,i4:10,i5:10,i6:10,i7:10},tabs={65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]},altColor="altColor",rowColor="rowColor",tableTab="tableTab",activeTableTab="activeTableTab";</script> <noscript> <div>JavaScript is disabled on your browser.</div> </noscript> <div class="topNav"><a name="navbar.top"> </a> <div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div> <a name="navbar.top.firstrow"> </a> <ul class="navList" title="Navigation"> <li><a href="../../../../../overview-summary.html">Overview</a></li> <li><a href="package-summary.html">Package</a></li> <li class="navBarCell1Rev">Class</li> <li><a href="class-use/AesCounterRandom.html">Use</a></li> <li><a href="package-tree.html">Tree</a></li> <li><a href="../../../../../deprecated-list.html">Deprecated</a></li> <li><a href="../../../../../index-all.html">Index</a></li> <li><a href="../../../../../help-doc.html">Help</a></li> </ul> </div> <div class="subNav"> <ul class="navList"> <li>Prev&nbsp;Class</li> <li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><span class="typeNameLink">Next&nbsp;Class</span></a></li> </ul> <ul class="navList"> </ul> <ul class="navList" id="allclasses_navbar_top"> <li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li> </ul> <div> <script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_top"),window==top?allClassesLink.style.display="block":allClassesLink.style.display="none";</script> </div> <div> <ul class="subNavList"> <li>Summary:&nbsp;</li> <li>Nested&nbsp;|&nbsp;</li> <li><a href="#fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li> <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li> <li><a href="#method.summary">Method</a></li> </ul> <ul class="subNavList"> <li>Detail:&nbsp;</li> <li>Field&nbsp;|&nbsp;</li> <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li> <li><a href="#method.detail">Method</a></li> </ul> </div> <a name="skip.navbar.top"> </a></div> <div class="header"> <div class="subTitle">io.github.pr0methean.betterrandom.prng</div> <h2 title="Class AesCounterRandom" class="title">Class AesCounterRandom</h2> </div> <div class="contentContainer"> <ul class="inheritance"> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li> <li> <ul class="inheritance"> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random</a></li> <li> <ul class="inheritance"> <li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng.BaseRandom</a></li> <li> <ul class="inheritance"> <li>io.github.pr0methean.betterrandom.prng.AesCounterRandom</li> </ul> </li> </ul> </li> </ul> </li> </ul> <div class="description"> <ul class="blockList"> <li class="blockList"> <dl> <dt>All Implemented Interfaces:</dt> <dd><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom">EntropyCountingRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/util/Dumpable.html" title="interface in io.github.pr0methean.betterrandom.util">Dumpable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd> </dl> <hr> <br> <pre>public class <span class="typenamelabel">AesCounterRandom
-extends <a href=".. ..="" io="" github="" pr0methean="" betterrandom="" prng="" baserandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a href="..></span class="typenamelabel"></pre> <div class="block"><p>Non-linear random number generator based on the AES block cipher in counter mode. Uses the seed as a key to encrypt a 128-bit counter using AES(Rijndael).</p> <p>By default, we only use a 128-bit key for the cipher because any larger key requires the inconvenience of installing the unlimited strength cryptography policy files for the Java platform. Larger keys may be used (192 or 256 bits) but if the cryptography policy files are not installed, a <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security"><code>GeneralSecurityException</code></a> will be thrown.</p> <p><em>NOTE: Because instances of this class require 128-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed-long-"><code>setSeed(long)</code></a> method inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> until the seed array has been set.</em></p></div> <dl> <dt><span class="simpleTagLabel">Author:</span></dt> <dd>Daniel Dyer</dd> <dt><span class="seeLabel">See Also:</span></dt> <dd><a href="../../../../../serialized-form.html#io.github.pr0methean.betterrandom.prng.AesCounterRandom">Serialized Form</a></dd> </dl> </li> </ul> </div> <div class="summary"> <ul class="blockList"> <li class="blockList"> <ul class="blockList"> <li class="blockList"><a name="field.summary"> </a> <h3>Field Summary</h3> <ul class="blockList"> <li class="blockList"><a name="fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom"> </a> <h3>Fields inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3> <code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ENTROPY_OF_DOUBLE">ENTROPY_OF_DOUBLE</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ENTROPY_OF_FLOAT">ENTROPY_OF_FLOAT</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyBits">entropyBits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#lock">lock</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed">seed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seederThread">seederThread</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#superConstructorFinished">superConstructorFinished</a></code></li> </ul> </li> </ul> <ul class="blockList"> <li class="blockList"><a name="constructor.summary"> </a> <h3>Constructor Summary</h3> <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation"> <caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption> <tr> <th class="colOne" scope="col">Constructor and Description</th> </tr> <tr class="altColor"> <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom--">AesCounterRandom</a></span>()</code> <div class="block">Creates a new RNG and seeds it using 256 bits from the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div> </td> </tr> <tr class="rowColor"> <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom-byte:A-">AesCounterRandom</a></span>(byte[]&nbsp;seed)</code> <div class="block">Creates an RNG and seeds it with the specified seed data.</div> </td> </tr> <tr class="altColor"> <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom-int-">AesCounterRandom</a></span>(int&nbsp;seedSizeBytes)</code> <div class="block">Seed the RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create a seed of the specified size.</div> </td> </tr> <tr class="rowColor"> <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom-io.github.pr0methean.betterrandom.seed.SeedGenerator-">AesCounterRandom</a></span>(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code> <div class="block">Seed the RNG using the provided seed generation strategy to create a 256-bit seed.</div> </td> </tr> </table> </li> </ul> <ul class="blockList"> <li class="blockList"><a name="method.summary"> </a> <h3>Method Summary</h3> <table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation"> <caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption> <tr> <th class="colFirst" scope="col">Modifier and Type</th> <th class="colLast" scope="col">Method and Description</th> </tr> <tr id="i0" class="altColor"> <td class="colFirst"><code><a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a></code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></span>(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</code> <div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div> </td> </tr> <tr id="i1" class="rowColor"> <td class="colFirst"><code>static int</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--">getMaxKeyLengthBytes</a></span>()</code> <div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>.</div> </td> </tr> <tr id="i2" class="altColor"> <td class="colFirst"><code>int</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getNewSeedLength--">getNewSeedLength</a></span>()</code> <div class="block">Returns the longest supported seed length.</div> </td> </tr> <tr id="i3" class="rowColor"> <td class="colFirst"><code>protected void</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#initTransientFields--">initTransientFields</a></span>()</code> <div class="block">Called in constructor and readObject to initialize transient fields.</div> </td> </tr> <tr id="i4" class="altColor"> <td class="colFirst"><code>protected int</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#next-int-">next</a></span>(int&nbsp;bits)</code> <div class="block">Generates the next pseudorandom number.</div> </td> </tr> <tr id="i5" class="rowColor"> <td class="colFirst"><code>void</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed-byte:A-">setSeed</a></span>(byte[]&nbsp;seed)</code> <div class="block">Reseed this PRNG.</div> </td> </tr> <tr id="i6" class="altColor"> <td class="colFirst"><code>void</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed-long-">setSeed</a></span>(long&nbsp;seed)</code> <div class="block">Sets the seed of this random number generator using a single <code>long</code> seed.</div> </td> </tr> <tr id="i7" class="rowColor"> <td class="colFirst"><code>protected void</code></td> <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></span>(byte[]&nbsp;seed)</code> <div class="block">Sets the seed, and should be overridden to set other state that derives from the seed.</div> </td> </tr> </table> <ul class="blockList"> <li class="blockList"><a name="methods.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom"> </a> <h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3> <code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump--">dump</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt-int-int-">entropyOfInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong-long-long-">entropyOfLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--">fallbackSetSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits--">getEntropyBits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed--">getSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-">internalNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints--">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs--">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBoolean--">nextBoolean</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-E:A-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-java.util.List-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum-java.lang.Class-">nextEnum</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextFloat--">nextFloat</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#preferSeedWithLong--">preferSeedWithLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#recordEntropySpent-long-">recordEntropySpent</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-">withProbability</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal-double-">withProbabilityInternal</a></code></li> </ul> <ul class="blockList"> <li class="blockList"><a name="methods.inherited.from.class.java.util.Random"> </a> <h3>Methods inherited from class&nbsp;java.util.<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></h3> <code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles--" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-double-double-" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-double-double-" title="class or interface in java.util">doubles</a></code></li> </ul> <ul class="blockList"> <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object"> </a> <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3> <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li> </ul> </li> </ul> </li> </ul> </div> <div class="details"> <ul class="blockList"> <li class="blockList"> <ul class="blockList"> <li class="blockList"><a name="constructor.detail"> </a> <h3>Constructor Detail</h3> <a name="AesCounterRandom--"> </a> <ul class="blockList"> <li class="blockList"> <h4>AesCounterRandom</h4> <pre>public&nbsp;AesCounterRandom()
-                 throws <a href=".. ..="" io="" github="" pr0methean="" betterrandom="" seed="" seedexception.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a href="..></pre> <div class="block">Creates a new RNG and seeds it using 256 bits from the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div> <dl> <dt><span class="throwsLabel">Throws:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> fails to generate a seed.</dd> </dl> </li> </ul> <a name="AesCounterRandom-io.github.pr0methean.betterrandom.seed.SeedGenerator-"> </a> <ul class="blockList"> <li class="blockList"> <h4>AesCounterRandom</h4> <pre>public&nbsp;AesCounterRandom(<a href=".. ..="" io="" github="" pr0methean="" betterrandom="" seed="" seedgenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator&nbsp;seedGenerator)
-                 throws <a href=".. ..="" io="" github="" pr0methean="" betterrandom="" seed="" seedexception.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a href="..></a href="..></pre> <div class="block">Seed the RNG using the provided seed generation strategy to create a 256-bit seed.</div> <dl> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>seedGenerator</code> - The seed generation strategy that will provide the seed value for this RNG.</dd> <dt><span class="throwsLabel">Throws:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if there is a problem generating a seed.</dd> </dl> </li> </ul> <a name="AesCounterRandom-int-"> </a> <ul class="blockList"> <li class="blockList"> <h4>AesCounterRandom</h4> <pre>public&nbsp;AesCounterRandom(int&nbsp;seedSizeBytes)
-                 throws <a href=".. ..="" io="" github="" pr0methean="" betterrandom="" seed="" seedexception.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a href="..></pre> <div class="block">Seed the RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create a seed of the specified size.</div> <dl> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>seedSizeBytes</code> - The number of bytes to use for seed data. Valid values range from 16 to <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--"><code>getMaxKeyLengthBytes()</code></a>() + 16.</dd> <dt><span class="throwsLabel">Throws:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if there is a problem generating a seed.</dd> </dl> </li> </ul> <a name="AesCounterRandom-byte:A-"> </a> <ul class="blockListLast"> <li class="blockList"> <h4>AesCounterRandom</h4> <pre>public&nbsp;AesCounterRandom(byte[]&nbsp;seed)</pre> <div class="block">Creates an RNG and seeds it with the specified seed data.</div> <dl> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>seed</code> - The seed data used to initialise the RNG. Length must be at least 16 and no more than <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--"><code>getMaxKeyLengthBytes()</code></a>() + 16.</dd> </dl> </li> </ul> </li> </ul> <ul class="blockList"> <li class="blockList"><a name="method.detail"> </a> <h3>Method Detail</h3> <a name="getMaxKeyLengthBytes--"> </a> <ul class="blockList"> <li class="blockList"> <h4>getMaxKeyLengthBytes</h4> <pre>public static&nbsp;int&nbsp;getMaxKeyLengthBytes()</pre> <div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>. If the seed is longer than this, part of it becomes the counter's initial value. Otherwise, the full seed becomes the AES key and the counter is initially zero. Public for testing of its initialization.</div> <dl> <dt><span class="returnLabel">Returns:</span></dt> <dd>the maximum length in bytes of an AES key.</dd> </dl> </li> </ul> <a name="addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-"> </a> <ul class="blockList"> <li class="blockList"> <h4>addSubSubclassFields</h4> <pre>public&nbsp;<a href="https: google.github.io="" guava="" releases="" 19.0="" api="" docs="" com="" google="" common="" base="" moreobjects.tostringhelper.html?is-external="true" title="class or interface in com.google.common.base"">MoreObjects.ToStringHelper&nbsp;addSubSubclassFields(<a href="https: google.github.io="" guava="" releases="" 19.0="" api="" docs="" com="" google="" common="" base="" moreobjects.tostringhelper.html?is-external="true" title="class or interface in com.google.common.base"">MoreObjects.ToStringHelper&nbsp;original)</a href="https:></a href="https:></pre> <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">BaseRandom</a></code></span></div> <div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div> <dl> <dt><span class="overrideSpecifyLabel">Specified by:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>original</code> - a <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> object.</dd> <dt><span class="returnLabel">Returns:</span></dt> <dd><code>original</code> with the fields not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> written to it.</dd> </dl> </li> </ul> <a name="initTransientFields--"> </a> <ul class="blockList"> <li class="blockList"> <h4>initTransientFields</h4> <pre><a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" nullness="" qual="" ensuresnonnull.html?is-external="true" title="class or interface in org.checkerframework.checker.nullness.qual"">@EnsuresNonNull(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" nullness="" qual="" ensuresnonnull.html?is-external="true#value--" title="class or interface in org.checkerframework.checker.nullness.qual"">value={"counter","counterInput","cipher","lock","longSeedArray","longSeedBuffer"})
-protected&nbsp;void&nbsp;initTransientFields(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" initialization="" qual="" unknowninitialization.html?is-external="true" title="class or interface in org.checkerframework.checker.initialization.qual"">@UnknownInitialization&nbsp;AesCounterRandom&nbsp;this)</a href="https:></a href="https:></a href="https:></pre> <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">BaseRandom</a></code></span></div> <div class="block">Called in constructor and readObject to initialize transient fields.</div> <dl> <dt><span class="overrideSpecifyLabel">Overrides:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">initTransientFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> </dl> </li> </ul> <a name="next-int-"> </a> <ul class="blockList"> <li class="blockList"> <h4>next</h4> <pre>protected final&nbsp;int&nbsp;next(int&nbsp;bits)</pre> <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">BaseRandom</a></code></span></div> <div class="block">Generates the next pseudorandom number. Called by all other random-number-generating methods. Should not debit the entropy count, since that's done by the calling methods according to the amount they actually output (see for example <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a>, which uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ENTROPY_OF_DOUBLE"><code>BaseRandom.ENTROPY_OF_DOUBLE</code></a> random bits but outputs only one).</div> <dl> <dt><span class="overrideSpecifyLabel">Specified by:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">next</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>bits</code> - random bits</dd> <dt><span class="returnLabel">Returns:</span></dt> <dd>the next pseudorandom value from this random number generator's sequence</dd> </dl> </li> </ul> <a name="setSeed-byte:A-"> </a> <ul class="blockList"> <li class="blockList"> <h4>setSeed</h4> <pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre> <div class="block">Reseed this PRNG. If the seed is not of the maximum length, it is combined with the existing seed using SHA-256.</div> <dl> <dt><span class="overrideSpecifyLabel">Specified by:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd> <dt><span class="overrideSpecifyLabel">Overrides:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>seed</code> - The PRNG's new seed.</dd> </dl> </li> </ul> <a name="setSeed-long-"> </a> <ul class="blockList"> <li class="blockList"> <h4>setSeed</h4> <pre>public&nbsp;void&nbsp;setSeed(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" initialization="" qual="" unknowninitialization.html?is-external="true" title="class or interface in org.checkerframework.checker.initialization.qual"">@UnknownInitialization(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" initialization="" qual="" unknowninitialization.html?is-external="true#value--" title="class or interface in org.checkerframework.checker.initialization.qual"">value=<a href="https: 8="" docs.oracle.com="" javase="" docs="" api="" java="" util="" random.html?is-external="true" title="class or interface in java.util"">java.util.Random.class)&nbsp;AesCounterRandom&nbsp;this,
-                    long&nbsp;seed)</a href="https:></a href="https:></a href="https:></pre> <div class="block">Sets the seed of this random number generator using a single <code>long</code> seed. The general contract of <code>setSeed</code> is that it alters the state of this random number generator object so as to be in exactly the same state as if it had just been created with the argument <code>seed</code> as a seed. The method <code>setSeed</code> is implemented by class <code>Random</code> by atomically updating the seed to <pre><code> (seed ^ 0x5DEECE66DL) &amp; ((1L &lt;&lt; 48) - 1)</code></pre> and clearing the <code>haveNextNextGaussian</code> flag used by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextGaussian--" title="class or interface in java.util"><code>Random.nextGaussian()</code></a>. <p>The implementation of <code>setSeed</code> by class <code>Random</code> happens to use only 48 bits of the given seed. In general, however, an overriding method may use all 64 bits of the <code>long</code> argument as a seed value. The seed is combined with the existing seed using SHA-256.</p></div> <dl> <dt><span class="overrideSpecifyLabel">Overrides:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>seed</code> - the initial seed</dd> </dl> </li> </ul> <a name="setSeedInternal-byte:A-"> </a> <ul class="blockList"> <li class="blockList"> <h4>setSeedInternal</h4> <pre><a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" nullness="" qual="" ensuresnonnull.html?is-external="true" title="class or interface in org.checkerframework.checker.nullness.qual"">@EnsuresNonNull(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" nullness="" qual="" ensuresnonnull.html?is-external="true#value--" title="class or interface in org.checkerframework.checker.nullness.qual"">value={"counter","this.seed","getEntropyBits"})
-protected&nbsp;void&nbsp;setSeedInternal(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" initialization="" qual="" unknowninitialization.html?is-external="true" title="class or interface in org.checkerframework.checker.initialization.qual"">@UnknownInitialization(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" initialization="" qual="" unknowninitialization.html?is-external="true#value--" title="class or interface in org.checkerframework.checker.initialization.qual"">value=<a href="https: 8="" docs.oracle.com="" javase="" docs="" api="" java="" util="" random.html?is-external="true" title="class or interface in java.util"">java.util.Random.class)&nbsp;AesCounterRandom&nbsp;this,
-                                                                                               byte[]&nbsp;seed)</a href="https:></a href="https:></a href="https:></a href="https:></a href="https:></pre> <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">BaseRandom</a></code></span></div> <div class="block">Sets the seed, and should be overridden to set other state that derives from the seed. Called by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-"><code>BaseRandom.setSeed(byte[])</code></a>, whose default implementation ensures that the lock is held while doing so. Also called by constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject-java.io.ObjectInputStream-"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObjectNoData--"><code>BaseRandom.readObjectNoData()</code></a>.</div> <dl> <dt><span class="overrideSpecifyLabel">Overrides:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> <dt><span class="paramLabel">Parameters:</span></dt> <dd><code>seed</code> - The new seed.</dd> </dl> </li> </ul> <a name="getNewSeedLength--"> </a> <ul class="blockListLast"> <li class="blockList"> <h4>getNewSeedLength</h4> <pre>public&nbsp;int&nbsp;getNewSeedLength(<a href="https: checkerframework.org="" api="" org="" checkerframework="" checker="" initialization="" qual="" unknowninitialization.html?is-external="true" title="class or interface in org.checkerframework.checker.initialization.qual"">@UnknownInitialization&nbsp;AesCounterRandom&nbsp;this)</a href="https:></pre> <div class="block">Returns the longest supported seed length.</div> <dl> <dt><span class="overrideSpecifyLabel">Specified by:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#getNewSeedLength--">getNewSeedLength</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd> <dt><span class="overrideSpecifyLabel">Specified by:</span></dt> <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getNewSeedLength--">getNewSeedLength</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd> <dt><span class="returnLabel">Returns:</span></dt> <dd>The desired length of a new byte-array seed.</dd> </dl> </li> </ul> </li> </ul> </li> </ul> </div> </div> <div class="bottomNav"><a name="navbar.bottom"> </a> <div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div> <a name="navbar.bottom.firstrow"> </a> <ul class="navList" title="Navigation"> <li><a href="../../../../../overview-summary.html">Overview</a></li> <li><a href="package-summary.html">Package</a></li> <li class="navBarCell1Rev">Class</li> <li><a href="class-use/AesCounterRandom.html">Use</a></li> <li><a href="package-tree.html">Tree</a></li> <li><a href="../../../../../deprecated-list.html">Deprecated</a></li> <li><a href="../../../../../index-all.html">Index</a></li> <li><a href="../../../../../help-doc.html">Help</a></li> </ul> </div> <div class="subNav"> <ul class="navList"> <li>Prev&nbsp;Class</li> <li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><span class="typeNameLink">Next&nbsp;Class</span></a></li> </ul> <ul class="navList"> </ul> <ul class="navList" id="allclasses_navbar_bottom"> <li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li> </ul> <div> <script type="text/javascript">allClassesLink=document.getElementById("allclasses_navbar_bottom"),window==top?allClassesLink.style.display="block":allClassesLink.style.display="none";</script> </div> <div> <ul class="subNavList"> <li>Summary:&nbsp;</li> <li>Nested&nbsp;|&nbsp;</li> <li><a href="#fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li> <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li> <li><a href="#method.summary">Method</a></li> </ul> <ul class="subNavList"> <li>Detail:&nbsp;</li> <li>Field&nbsp;|&nbsp;</li> <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li> <li><a href="#method.detail">Method</a></li> </ul> </div> <a name="skip.navbar.bottom"> </a></div> <p class="legalCopy"><small>Copyright &#169; 2017. All rights reserved.</small></p> </body> </html> 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- NewPage -->
+<html lang="en">
+<head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
+<!-- Generated by javadoc -->
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>AesCounterRandom (BetterRandom 0.11.0-SNAPSHOT API)</title>
+<link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
+<script type="text/javascript" src="../../../../../script.js"></script>
+</head>
+<body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script type="text/javascript"><!--
+    try {
+        if (location.href.indexOf('is-external=true') == -1) {
+            parent.document.title="AesCounterRandom (BetterRandom 0.11.0-SNAPSHOT API)";
+        }
+    }
+    catch(err) {
+    }
+//-->
+var methods = {"i0":10,"i1":9,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
+var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
+var altColor = "altColor";
+var rowColor = "rowColor";
+var tableTab = "tableTab";
+var activeTableTab = "activeTableTab";
+</script>
+<noscript>
+<div>JavaScript is disabled on your browser.</div>
+</noscript>
+<!-- ========= START OF TOP NAVBAR ======= -->
+<div class="topNav"><a name="navbar.top">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.top" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.top.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AesCounterRandom.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+
+
+</ul>
+<ul class="navList" id="allclasses_navbar_top">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_top");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.top">
+<!--   -->
+</a></div>
+<!-- ========= END OF TOP NAVBAR ========= -->
+<!-- ======== START OF CLASS DATA ======== -->
+<div class="header">
+<div class="subTitle">io.github.pr0methean.betterrandom.prng</div>
+<h2 title="Class AesCounterRandom" class="title">Class AesCounterRandom</h2>
+</div>
+<div class="contentContainer">
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random</a></li>
+<li>
+<ul class="inheritance">
+<li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng.BaseRandom</a></li>
+<li>
+<ul class="inheritance">
+<li>io.github.pr0methean.betterrandom.prng.AesCounterRandom</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="description">
+<ul class="blockList">
+<li class="blockList">
+<dl>
+<dt>All Implemented Interfaces:</dt>
+<dd><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom">EntropyCountingRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/util/Dumpable.html" title="interface in io.github.pr0methean.betterrandom.util">Dumpable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
+</dl>
+<hr>
+<br>
+<pre>public class <span class="typeNameLabel">AesCounterRandom</span>
+extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></pre>
+<div class="block"><p>Non-linear random number generator based on the AES block cipher in counter mode. Uses the
+ seed as a key to encrypt a 128-bit counter using AES(Rijndael).</p> <p>By default, we only use a
+ 128-bit key for the cipher because any larger key requires the inconvenience of installing the
+ unlimited strength cryptography policy files for the Java platform.  Larger keys may be used (192
+ or 256 bits) but if the cryptography policy files are not installed, a <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security"><code>GeneralSecurityException</code></a> will be thrown.</p> <p><em>NOTE: Because instances of this class
+ require 128-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed-long-"><code>setSeed(long)</code></a>
+ method inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> until the seed array has been set.</em></p></div>
+<dl>
+<dt><span class="simpleTagLabel">Author:</span></dt>
+<dd>Daniel Dyer</dd>
+<dt><span class="seeLabel">See Also:</span></dt>
+<dd><a href="../../../../../serialized-form.html#io.github.pr0methean.betterrandom.prng.AesCounterRandom">Serialized Form</a></dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="summary">
+<ul class="blockList">
+<li class="blockList">
+<!-- =========== FIELD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="field.summary">
+<!--   -->
+</a>
+<h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ENTROPY_OF_DOUBLE">ENTROPY_OF_DOUBLE</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ENTROPY_OF_FLOAT">ENTROPY_OF_FLOAT</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyBits">entropyBits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#lock">lock</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed">seed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seederThread">seederThread</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#superConstructorFinished">superConstructorFinished</a></code></li>
+</ul>
+</li>
+</ul>
+<!-- ======== CONSTRUCTOR SUMMARY ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.summary">
+<!--   -->
+</a>
+<h3>Constructor Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Constructor Summary table, listing constructors, and an explanation">
+<caption><span>Constructors</span><span class="tabEnd">&nbsp;</span></caption>
+<tr>
+<th class="colOne" scope="col">Constructor and Description</th>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom--">AesCounterRandom</a></span>()</code>
+<div class="block">Creates a new RNG and seeds it using 256 bits from the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom-byte:A-">AesCounterRandom</a></span>(byte[]&nbsp;seed)</code>
+<div class="block">Creates an RNG and seeds it with the specified seed data.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom-int-">AesCounterRandom</a></span>(int&nbsp;seedSizeBytes)</code>
+<div class="block">Seed the RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create a seed of the specified size.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#AesCounterRandom-io.github.pr0methean.betterrandom.seed.SeedGenerator-">AesCounterRandom</a></span>(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
+<div class="block">Seed the RNG using the provided seed generation strategy to create a 256-bit seed.</div>
+</td>
+</tr>
+</table>
+</li>
+</ul>
+<!-- ========== METHOD SUMMARY =========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.summary">
+<!--   -->
+</a>
+<h3>Method Summary</h3>
+<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
+<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t1" class="tableTab"><span><a href="javascript:show(1);">Static Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t4" class="tableTab"><span><a href="javascript:show(8);">Concrete Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
+<tr>
+<th class="colFirst" scope="col">Modifier and Type</th>
+<th class="colLast" scope="col">Method and Description</th>
+</tr>
+<tr id="i0" class="altColor">
+<td class="colFirst"><code><a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></span>(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</code>
+<div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
+</td>
+</tr>
+<tr id="i1" class="rowColor">
+<td class="colFirst"><code>static int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--">getMaxKeyLengthBytes</a></span>()</code>
+<div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>.</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getNewSeedLength--">getNewSeedLength</a></span>()</code>
+<div class="block">Returns the longest supported seed length.</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#initTransientFields--">initTransientFields</a></span>()</code>
+<div class="block">Called in constructor and readObject to initialize transient fields.</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#next-int-">next</a></span>(int&nbsp;bits)</code>
+<div class="block">Generates the next pseudorandom number.</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed-byte:A-">setSeed</a></span>(byte[]&nbsp;seed)</code>
+<div class="block">Reseed this PRNG.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed-long-">setSeed</a></span>(long&nbsp;seed)</code>
+<div class="block">Sets the seed of this random number generator using a single
+ <code>long</code> seed.</div>
+</td>
+</tr>
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code>protected void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></span>(byte[]&nbsp;seed)</code>
+<div class="block">Sets the seed, and should be overridden to set other state that derives from the seed.</div>
+</td>
+</tr>
+</table>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump--">dump</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt-int-int-">entropyOfInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong-long-long-">entropyOfLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--">fallbackSetSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits--">getEntropyBits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed--">getSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-">internalNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints--">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs--">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBoolean--">nextBoolean</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-E:A-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-java.util.List-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum-java.lang.Class-">nextEnum</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextFloat--">nextFloat</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#preferSeedWithLong--">preferSeedWithLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#recordEntropySpent-long-">recordEntropySpent</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-">withProbability</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal-double-">withProbabilityInternal</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.util.Random">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.util.<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles--" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-double-double-" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-double-double-" title="class or interface in java.util">doubles</a></code></li>
+</ul>
+<ul class="blockList">
+<li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="details">
+<ul class="blockList">
+<li class="blockList">
+<!-- ========= CONSTRUCTOR DETAIL ======== -->
+<ul class="blockList">
+<li class="blockList"><a name="constructor.detail">
+<!--   -->
+</a>
+<h3>Constructor Detail</h3>
+<a name="AesCounterRandom--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AesCounterRandom</h4>
+<pre>public&nbsp;AesCounterRandom()
+                 throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
+<div class="block">Creates a new RNG and seeds it using 256 bits from the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> fails to generate a seed.</dd>
+</dl>
+</li>
+</ul>
+<a name="AesCounterRandom-io.github.pr0methean.betterrandom.seed.SeedGenerator-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AesCounterRandom</h4>
+<pre>public&nbsp;AesCounterRandom(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)
+                 throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
+<div class="block">Seed the RNG using the provided seed generation strategy to create a 256-bit seed.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seedGenerator</code> - The seed generation strategy that will provide the seed value for this
+     RNG.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if there is a problem generating a seed.</dd>
+</dl>
+</li>
+</ul>
+<a name="AesCounterRandom-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>AesCounterRandom</h4>
+<pre>public&nbsp;AesCounterRandom(int&nbsp;seedSizeBytes)
+                 throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
+<div class="block">Seed the RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create a seed of the specified size.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seedSizeBytes</code> - The number of bytes to use for seed data. Valid values range from 16
+     to <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--"><code>getMaxKeyLengthBytes()</code></a>() + 16.</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if there is a problem generating a seed.</dd>
+</dl>
+</li>
+</ul>
+<a name="AesCounterRandom-byte:A-">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>AesCounterRandom</h4>
+<pre>public&nbsp;AesCounterRandom(byte[]&nbsp;seed)</pre>
+<div class="block">Creates an RNG and seeds it with the specified seed data.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - The seed data used to initialise the RNG. Length must be at least 16 and no
+     more than <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--"><code>getMaxKeyLengthBytes()</code></a>() + 16.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+<!-- ============ METHOD DETAIL ========== -->
+<ul class="blockList">
+<li class="blockList"><a name="method.detail">
+<!--   -->
+</a>
+<h3>Method Detail</h3>
+<a name="getMaxKeyLengthBytes--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaxKeyLengthBytes</h4>
+<pre>public static&nbsp;int&nbsp;getMaxKeyLengthBytes()</pre>
+<div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>. If the seed is longer
+ than this, part of it becomes the counter's initial value. Otherwise, the full seed becomes the
+ AES key and the counter is initially zero. Public for testing of its initialization.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the maximum length in bytes of an AES key.</dd>
+</dl>
+</li>
+</ul>
+<a name="addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>addSubSubclassFields</h4>
+<pre>public&nbsp;<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;addSubSubclassFields(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">BaseRandom</a></code></span></div>
+<div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>original</code> - a <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> object.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>original</code> with the fields not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> written to it.</dd>
+</dl>
+</li>
+</ul>
+<a name="initTransientFields--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>initTransientFields</h4>
+<pre><a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@EnsuresNonNull</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.nullness.qual">value</a>={"counter","counterInput","cipher","lock","longSeedArray","longSeedBuffer"})
+protected&nbsp;void&nbsp;initTransientFields(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>&nbsp;AesCounterRandom&nbsp;this)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">BaseRandom</a></code></span></div>
+<div class="block">Called in constructor and readObject to initialize transient fields.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">initTransientFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+</dl>
+</li>
+</ul>
+<a name="next-int-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>next</h4>
+<pre>protected final&nbsp;int&nbsp;next(int&nbsp;bits)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">BaseRandom</a></code></span></div>
+<div class="block">Generates the next pseudorandom number. Called by all other random-number-generating methods.
+ Should not debit the entropy count, since that's done by the calling methods according to the
+ amount they actually output (see for example <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a>, which uses
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ENTROPY_OF_DOUBLE"><code>BaseRandom.ENTROPY_OF_DOUBLE</code></a> random bits but outputs only one).</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">next</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>bits</code> - random bits</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the next pseudorandom value from this random number
+         generator's sequence</dd>
+</dl>
+</li>
+</ul>
+<a name="setSeed-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeed</h4>
+<pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre>
+<div class="block">Reseed this PRNG. If the seed is not of the maximum length, it is combined with the existing seed
+ using SHA-256.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - The PRNG's new seed.</dd>
+</dl>
+</li>
+</ul>
+<a name="setSeed-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeed</h4>
+<pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.initialization.qual">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random.class</a>)&nbsp;AesCounterRandom&nbsp;this,
+                    long&nbsp;seed)</pre>
+<div class="block">Sets the seed of this random number generator using a single
+ <code>long</code> seed. The general contract of <code>setSeed</code> is
+ that it alters the state of this random number generator object
+ so as to be in exactly the same state as if it had just been
+ created with the argument <code>seed</code> as a seed. The method
+ <code>setSeed</code> is implemented by class <code>Random</code> by
+ atomically updating the seed to
+  <pre><code> (seed ^ 0x5DEECE66DL) &amp; ((1L &lt;&lt; 48) - 1)</code></pre>
+ and clearing the <code>haveNextNextGaussian</code> flag used by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextGaussian--" title="class or interface in java.util"><code>Random.nextGaussian()</code></a>.
+
+ <p>The implementation of <code>setSeed</code> by class <code>Random</code>
+ happens to use only 48 bits of the given seed. In general, however,
+ an overriding method may use all 64 bits of the <code>long</code>
+ argument as a seed value. The seed is combined with the existing seed using SHA-256.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - the initial seed</dd>
+</dl>
+</li>
+</ul>
+<a name="setSeedInternal-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeedInternal</h4>
+<pre><a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@EnsuresNonNull</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.nullness.qual">value</a>={"counter","this.seed","getEntropyBits"})
+protected&nbsp;void&nbsp;setSeedInternal(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.initialization.qual">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random.class</a>)&nbsp;AesCounterRandom&nbsp;this,
+                                                                                               byte[]&nbsp;seed)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">BaseRandom</a></code></span></div>
+<div class="block">Sets the seed, and should be overridden to set other state that derives from the seed. Called
+ by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-"><code>BaseRandom.setSeed(byte[])</code></a>, whose default implementation ensures that the lock is held while
+ doing so. Also called by constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject-java.io.ObjectInputStream-"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObjectNoData--"><code>BaseRandom.readObjectNoData()</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - The new seed.</dd>
+</dl>
+</li>
+</ul>
+<a name="getNewSeedLength--">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>getNewSeedLength</h4>
+<pre>public&nbsp;int&nbsp;getNewSeedLength(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>&nbsp;AesCounterRandom&nbsp;this)</pre>
+<div class="block">Returns the longest supported seed length.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#getNewSeedLength--">getNewSeedLength</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getNewSeedLength--">getNewSeedLength</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The desired length of a new byte-array seed.</dd>
+</dl>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<!-- ========= END OF CLASS DATA ========= -->
+<!-- ======= START OF BOTTOM NAVBAR ====== -->
+<div class="bottomNav"><a name="navbar.bottom">
+<!--   -->
+</a>
+<div class="skipNav"><a href="#skip.navbar.bottom" title="Skip navigation links">Skip navigation links</a></div>
+<a name="navbar.bottom.firstrow">
+<!--   -->
+</a>
+<ul class="navList" title="Navigation">
+<li><a href="../../../../../overview-summary.html">Overview</a></li>
+<li><a href="package-summary.html">Package</a></li>
+<li class="navBarCell1Rev">Class</li>
+<li><a href="class-use/AesCounterRandom.html">Use</a></li>
+<li><a href="package-tree.html">Tree</a></li>
+<li><a href="../../../../../deprecated-list.html">Deprecated</a></li>
+<li><a href="../../../../../index-all.html">Index</a></li>
+<li><a href="../../../../../help-doc.html">Help</a></li>
+</ul>
+</div>
+<div class="subNav">
+<ul class="navList">
+<li>Prev&nbsp;Class</li>
+<li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+</ul>
+<ul class="navList">
+
+
+</ul>
+<ul class="navList" id="allclasses_navbar_bottom">
+<li><a href="../../../../../allclasses-noframe.html">All&nbsp;Classes</a></li>
+</ul>
+<div>
+<script type="text/javascript"><!--
+  allClassesLink = document.getElementById("allclasses_navbar_bottom");
+  if(window==top) {
+    allClassesLink.style.display = "block";
+  }
+  else {
+    allClassesLink.style.display = "none";
+  }
+  //-->
+</script>
+</div>
+<div>
+<ul class="subNavList">
+<li>Summary:&nbsp;</li>
+<li>Nested&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.summary">Method</a></li>
+</ul>
+<ul class="subNavList">
+<li>Detail:&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
+<li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
+<li><a href="#method.detail">Method</a></li>
+</ul>
+</div>
+<a name="skip.navbar.bottom">
+<!--   -->
+</a></div>
+<!-- ======== END OF BOTTOM NAVBAR ======= -->
+<p class="legalCopy"><small>Copyright &#169; 2017. All rights reserved.</small></p>
+</body>
+</html>
