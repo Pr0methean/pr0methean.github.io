@@ -126,9 +126,9 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">XorShiftRandom</span>
 extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></pre>
 <div class="block"><p>Very fast pseudo random number generator.  See <a href="http://school.anhb.uwa.edu.au/personalpages/kwessen/shared/Marsaglia03.html">this
- page</a> for a description.  This RNG has a period of about 2^160, which is not as long as the
- <a href="../../../../../io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>MersenneTwisterRandom</code></a> but it is faster.</p> <p><em>NOTE: Because instances of this class
- require 160-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-"><code>setSeed(long)</code></a>
+ page</a> for a description.  This RNG has a period of about 2<sup>160</sup>, which is not as long
+ as the <a href="../../../../../io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>MersenneTwisterRandom</code></a> but it is faster.</p> <p><em>NOTE: Because instances of this
+ class require 160-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-"><code>setSeed(long)</code></a>
  method inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a>.  Calls to this method will have no effect. Instead the seed
  must be set by a constructor.</em></p></div>
 <dl>
