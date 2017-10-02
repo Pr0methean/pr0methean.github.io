@@ -125,7 +125,7 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">BaseRandom</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>
 implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/util/Dumpable.html" title="interface in io.github.pr0methean.betterrandom.util">Dumpable</a>, <a href="../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom">EntropyCountingRandom</a></pre>
-<div class="block">Abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> with a seed field and an implementations of entropy counting.</div>
+<div class="block">Abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> with a seed field and an implementation of entropy counting.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Chris Hennick</dd>
@@ -325,8 +325,8 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-int-int-">ints</a></span>(int&nbsp;randomNumberOrigin,
     int&nbsp;randomNumberBound)</code>
-<div class="block">Returns an effectively unlimited stream of pseudorandom <code>int</code> values, each conforming to the given origin (inclusive) and bound
- (exclusive).</div>
+<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom longs, each
+ conforming to the given origin (inclusive) and bound (exclusive).</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
@@ -373,9 +373,8 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-">longs</a></span>(long&nbsp;streamSize,
      long&nbsp;randomNumberOrigin,
      long&nbsp;randomNumberBound)</code>
-<div class="block">Returns a stream producing the given <code>streamSize</code> number of
- pseudorandom <code>long</code>, each conforming to the given origin
- (inclusive) and bound (exclusive).</div>
+<div class="block">Returns a stream producing the given number of pseudorandom longs, each conforming to the given
+ origin (inclusive) and bound (exclusive).</div>
 </td>
 </tr>
 <tr id="i18" class="altColor">
@@ -1331,26 +1330,9 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <h4>ints</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a>&nbsp;ints(int&nbsp;randomNumberOrigin,
                       int&nbsp;randomNumberBound)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#ints-int-int-" title="class or interface in java.util">java.util.Random</a></code></span></div>
-<div class="block">Returns an effectively unlimited stream of pseudorandom <code>int</code> values, each conforming to the given origin (inclusive) and bound
- (exclusive).
-
- <p>A pseudorandom <code>int</code> value is generated as if it's the result of
- calling the following method with the origin and bound:
- <pre> <code>
- int nextInt(int origin, int bound) {
-   int n = bound - origin;
-   if (n &gt; 0) {
-     return nextInt(n) + origin;
-   }
-   else {  // range not representable as int
-     int r;
-     do {
-       r = nextInt();
-     } while (r &lt; origin || r &gt;= bound);
-     return r;
-   }
- }</code></pre></div>
+<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom longs, each
+ conforming to the given origin (inclusive) and bound (exclusive). This implementation uses
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long, long)</code></a> to generate these numbers.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#ints-int-int-" title="class or interface in java.util">ints</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
@@ -1416,32 +1398,9 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a>&nbsp;longs(long&nbsp;streamSize,
                         long&nbsp;randomNumberOrigin,
                         long&nbsp;randomNumberBound)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs-long-long-long-" title="class or interface in java.util">java.util.Random</a></code></span></div>
-<div class="block">Returns a stream producing the given <code>streamSize</code> number of
- pseudorandom <code>long</code>, each conforming to the given origin
- (inclusive) and bound (exclusive).
-
- <p>A pseudorandom <code>long</code> value is generated as if it's the result
- of calling the following method with the origin and bound:
- <pre> <code>
- long nextLong(long origin, long bound) {
-   long r = nextLong();
-   long n = bound - origin, m = n - 1;
-   if ((n &amp; m) == 0L)  // power of two
-     r = (r &amp; m) + origin;
-   else if (n &gt; 0L) {  // reject over-represented candidates
-     for (long u = r &gt;&gt;&gt; 1;            // ensure nonnegative
-          u + m - (r = u % n) &lt; 0L;    // rejection check
-          u = nextLong() &gt;&gt;&gt; 1) // retry
-         ;
-     r += origin;
-   }
-   else {              // range not representable as long
-     while (r &lt; origin || r &gt;= bound)
-       r = nextLong();
-   }
-   return r;
- }</code></pre></div>
+<div class="block">Returns a stream producing the given number of pseudorandom longs, each conforming to the given
+ origin (inclusive) and bound (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long,
+ long)</code></a> to generate these numbers.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs-long-long-long-" title="class or interface in java.util">longs</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
