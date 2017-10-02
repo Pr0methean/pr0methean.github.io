@@ -163,13 +163,6 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.adapter.BaseSplittableRandomAdapter">
-<!--   -->
-</a>
-<h3>Fields inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.adapter.<a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></h3>
-<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#SEED_LENGTH_BYTES">SEED_LENGTH_BYTES</a></code></li>
-</ul>
-<ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">
 <!--   -->
 </a>
@@ -213,7 +206,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></span>()</code>
-<div class="block">getSplittableRandom.</div>
+<div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
+ current calling context.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -357,12 +351,14 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <h4>getSplittableRandom</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a>&nbsp;getSplittableRandom()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">BaseSplittableRandomAdapter</a></code></span></div>
-<div class="block"><p>getSplittableRandom.</p></div>
+<div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
+ current calling context. Note that <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> instances aren't thread-safe.
+ Called by all the <code>next*</code> methods.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> object.</dd>
+<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</dd>
 </dl>
 </li>
 </ul>

@@ -267,9 +267,8 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#nextGaussian--">nextGaussian</a></span>()</code>
-<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed
- <code>double</code> value with mean <code>0.0</code> and standard
- deviation <code>1.0</code> from this random number generator's sequence.</div>
+<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
+ standard deviation 1.0 from this random number generator's sequence.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -845,44 +844,8 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <h4>nextGaussian</h4>
 <pre>public&nbsp;double&nbsp;nextGaussian()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">BaseRandom</a></code></span></div>
-<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed
- <code>double</code> value with mean <code>0.0</code> and standard
- deviation <code>1.0</code> from this random number generator's sequence.
- <p>
- The general contract of <code>nextGaussian</code> is that one
- <code>double</code> value, chosen from (approximately) the usual
- normal distribution with mean <code>0.0</code> and standard deviation
- <code>1.0</code>, is pseudorandomly generated and returned.
-
- <p>The method <code>nextGaussian</code> is implemented by class
- <code>Random</code> as if by a threadsafe version of the following:
-  <pre> <code>
- private double nextNextGaussian;
- private boolean haveNextNextGaussian = false;
-
- public double nextGaussian() {
-   if (haveNextNextGaussian) {
-     haveNextNextGaussian = false;
-     return nextNextGaussian;
-   } else {
-     double v1, v2, s;
-     do {
-       v1 = 2 * nextDouble() - 1;   // between -1.0 and 1.0
-       v2 = 2 * nextDouble() - 1;   // between -1.0 and 1.0
-       s = v1 * v1 + v2 * v2;
-     } while (s &gt;= 1 || s == 0);
-     double multiplier = StrictMath.sqrt(-2 * StrictMath.log(s)/s);
-     nextNextGaussian = v2 * multiplier;
-     haveNextNextGaussian = true;
-     return v1 * multiplier;
-   }
- }</code></pre>
- This uses the <i>polar method</i> of G. E. P. Box, M. E. Muller, and
- G. Marsaglia, as described by Donald E. Knuth in <i>The Art of
- Computer Programming</i>, Volume 3: <i>Seminumerical Algorithms</i>,
- section 3.4.1, subsection C, algorithm P. Note that it generates two
- independent values at the cost of only one call to <code>StrictMath.log</code>
- and one call to <code>StrictMath.sqrt</code>. This is overridden both for entropy-counting purposes and to make it lockless.</div>
+<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
+ standard deviation 1.0 from this random number generator's sequence. Unlike the one in <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a>, this implementation is lockless.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>

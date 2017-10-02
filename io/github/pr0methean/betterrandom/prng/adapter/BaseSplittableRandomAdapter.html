@@ -75,13 +75,13 @@ var activeTableTab = "activeTableTab";
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
@@ -148,17 +148,6 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <!--   -->
 </a>
 <h3>Field Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
-<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#SEED_LENGTH_BYTES">SEED_LENGTH_BYTES</a></span></code>&nbsp;</td>
-</tr>
-</table>
 <ul class="blockList">
 <li class="blockList"><a name="fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">
 <!--   -->
@@ -181,11 +170,13 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#BaseSplittableRandomAdapter-byte:A-">BaseSplittableRandomAdapter</a></span>(byte[]&nbsp;seed)</code>
-<div class="block">Constructor for BaseSplittableRandomAdapter.</div>
+<div class="block">Constructs an instance with the given seed.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#BaseSplittableRandomAdapter-long-">BaseSplittableRandomAdapter</a></span>(long&nbsp;seed)</code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#BaseSplittableRandomAdapter-long-">BaseSplittableRandomAdapter</a></span>(long&nbsp;seed)</code>
+<div class="block">Constructs an instance with the given seed.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -211,7 +202,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></span>()</code>
-<div class="block">getSplittableRandom.</div>
+<div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
+ current calling context.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -269,9 +261,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextGaussian--">nextGaussian</a></span>()</code>
-<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed
- <code>double</code> value with mean <code>0.0</code> and standard
- deviation <code>1.0</code> from this random number generator's sequence.</div>
+<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
+ standard deviation 1.0 from this random number generator's sequence.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -368,27 +359,6 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <div class="details">
 <ul class="blockList">
 <li class="blockList">
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.detail">
-<!--   -->
-</a>
-<h3>Field Detail</h3>
-<a name="SEED_LENGTH_BYTES">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>SEED_LENGTH_BYTES</h4>
-<pre>protected static final&nbsp;int SEED_LENGTH_BYTES</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../../constant-values.html#io.github.pr0methean.betterrandom.prng.adapter.BaseSplittableRandomAdapter.SEED_LENGTH_BYTES">Constant Field Values</a></dd>
-</dl>
-</li>
-</ul>
-</li>
-</ul>
 <!-- ========= CONSTRUCTOR DETAIL ======== -->
 <ul class="blockList">
 <li class="blockList"><a name="constructor.detail">
@@ -402,10 +372,10 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>BaseSplittableRandomAdapter</h4>
 <pre>public&nbsp;BaseSplittableRandomAdapter(byte[]&nbsp;seed)</pre>
-<div class="block"><p>Constructor for BaseSplittableRandomAdapter.</p></div>
+<div class="block">Constructs an instance with the given seed.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seed</code> - an array of byte.</dd>
+<dd><code>seed</code> - The seed.</dd>
 </dl>
 </li>
 </ul>
@@ -416,6 +386,11 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>BaseSplittableRandomAdapter</h4>
 <pre>public&nbsp;BaseSplittableRandomAdapter(long&nbsp;seed)</pre>
+<div class="block">Constructs an instance with the given seed.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - The seed.</dd>
+</dl>
 </li>
 </ul>
 </li>
@@ -453,10 +428,12 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>getSplittableRandom</h4>
 <pre>protected abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a>&nbsp;getSplittableRandom()</pre>
-<div class="block"><p>getSplittableRandom.</p></div>
+<div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
+ current calling context. Note that <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> instances aren't thread-safe.
+ Called by all the <code>next*</code> methods.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> object.</dd>
+<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</dd>
 </dl>
 </li>
 </ul>
@@ -788,44 +765,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <h4>nextGaussian</h4>
 <pre>public&nbsp;double&nbsp;nextGaussian()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">BaseRandom</a></code></span></div>
-<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed
- <code>double</code> value with mean <code>0.0</code> and standard
- deviation <code>1.0</code> from this random number generator's sequence.
- <p>
- The general contract of <code>nextGaussian</code> is that one
- <code>double</code> value, chosen from (approximately) the usual
- normal distribution with mean <code>0.0</code> and standard deviation
- <code>1.0</code>, is pseudorandomly generated and returned.
-
- <p>The method <code>nextGaussian</code> is implemented by class
- <code>Random</code> as if by a threadsafe version of the following:
-  <pre> <code>
- private double nextNextGaussian;
- private boolean haveNextNextGaussian = false;
-
- public double nextGaussian() {
-   if (haveNextNextGaussian) {
-     haveNextNextGaussian = false;
-     return nextNextGaussian;
-   } else {
-     double v1, v2, s;
-     do {
-       v1 = 2 * nextDouble() - 1;   // between -1.0 and 1.0
-       v2 = 2 * nextDouble() - 1;   // between -1.0 and 1.0
-       s = v1 * v1 + v2 * v2;
-     } while (s &gt;= 1 || s == 0);
-     double multiplier = StrictMath.sqrt(-2 * StrictMath.log(s)/s);
-     nextNextGaussian = v2 * multiplier;
-     haveNextNextGaussian = true;
-     return v1 * multiplier;
-   }
- }</code></pre>
- This uses the <i>polar method</i> of G. E. P. Box, M. E. Muller, and
- G. Marsaglia, as described by Donald E. Knuth in <i>The Art of
- Computer Programming</i>, Volume 3: <i>Seminumerical Algorithms</i>,
- section 3.4.1, subsection C, algorithm P. Note that it generates two
- independent values at the cost of only one call to <code>StrictMath.log</code>
- and one call to <code>StrictMath.sqrt</code>. This is overridden both for entropy-counting purposes and to make it lockless.</div>
+<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
+ standard deviation 1.0 from this random number generator's sequence. Unlike the one in <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a>, this implementation is lockless.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -1033,13 +974,13 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields.inherited.from.class.io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor.summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#constructor.detail">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>

@@ -224,12 +224,12 @@
 <tbody>
 <tr class="altColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter-io.github.pr0methean.betterrandom.seed.SeedGenerator-">SingleThreadSplittableRandomAdapter</a></span>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Constructor for SingleThreadSplittableRandomAdapter.</div>
+<div class="block">Use the provided seed generation strategy to create the seed for the underlying <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter-io.github.pr0methean.betterrandom.seed.SeedGenerator-">SplittableRandomAdapter</a></span>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Constructor for SplittableRandomAdapter.</div>
+<div class="block">Use the provided seed generation strategy to create the seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate an instance for each thread.</div>
 </td>
 </tr>
 </tbody>
