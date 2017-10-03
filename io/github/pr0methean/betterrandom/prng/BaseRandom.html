@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":10,"i2":9,"i3":9,"i4":10,"i5":10,"i6":6,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":6,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10};
+var methods = {"i0":6,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":9,"i7":9,"i8":10,"i9":10,"i10":10,"i11":10,"i12":6,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":6,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10};
 var tabs = {65535:["t0","All Methods"],1:["t1","Static Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -256,13 +256,45 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 </td>
 </tr>
 <tr id="i1" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles--">doubles</a></span>()</code>
+<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom doubles, each
+ between 0.0 (inclusive) and 1.0 (exclusive).</div>
+</td>
+</tr>
+<tr id="i2" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-double-double-">doubles</a></span>(double&nbsp;randomNumberOrigin,
+       double&nbsp;randomNumberBound)</code>
+<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom doubles, each
+ conforming to the given origin (inclusive) and bound (exclusive).</div>
+</td>
+</tr>
+<tr id="i3" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-">doubles</a></span>(long&nbsp;streamSize)</code>
+<div class="block">Returns a stream producing the given <code>streamSize</code> number of
+ pseudorandom <code>double</code> values, each between zero
+ (inclusive) and one (exclusive).</div>
+</td>
+</tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-double-double-">doubles</a></span>(long&nbsp;streamSize,
+       double&nbsp;randomNumberOrigin,
+       double&nbsp;randomNumberBound)</code>
+<div class="block">Returns a stream producing the given number of pseudorandom doubles, each conforming to the
+ given origin (inclusive) and bound (exclusive).</div>
+</td>
+</tr>
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump--">dump</a></span>()</code>
 <div class="block">Returns a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> representing the state of this object for debugging purposes,
  including mutable state that <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang"><code>Object.toString()</code></a> usually doesn't return.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt-int-int-">entropyOfInt</a></span>(int&nbsp;origin,
             int&nbsp;bound)</code>
@@ -270,7 +302,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  (inclusive) and <code>bound</code> (exclusive).</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>protected static int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong-long-long-">entropyOfLong</a></span>(long&nbsp;origin,
              long&nbsp;bound)</code>
@@ -278,50 +310,64 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  (inclusive) and <code>bound</code> (exclusive).</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i8" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--">fallbackSetSeed</a></span>()</code>
 <div class="block">Generates a seed using the default seed generator if there isn't one already.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i9" class="rowColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians--">gaussians</a></span>()</code>
+<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom doubles that are
+ normally distributed with mean 0.0 and standard deviation 1.0.</div>
+</td>
+</tr>
+<tr id="i10" class="altColor">
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians-long-">gaussians</a></span>(long&nbsp;streamSize)</code>
+<div class="block">Returns a stream producing the given number of pseudorandom doubles that are normally
+ distributed with mean 0.0 and standard deviation 1.0.</div>
+</td>
+</tr>
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits--">getEntropyBits</a></span>()</code>
 <div class="block">Returns an estimate of the current amount of entropy.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code>abstract int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getNewSeedLength--">getNewSeedLength</a></span>()</code>
 <div class="block">Returns the preferred length of a new byte-array seed.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code>byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed--">getSeed</a></span>()</code>
 <div class="block">Returns the seed.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">initTransientFields</a></span>()</code>
 <div class="block">Called in constructor and readObject to initialize transient fields.</div>
 </td>
 </tr>
-<tr id="i9" class="rowColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>protected double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-">internalNextGaussian</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/DoubleSupplier.html?is-external=true" title="class or interface in java.util.function">DoubleSupplier</a>&nbsp;nextDouble)</code>
 <div class="block">Core of a lockless reimplementation of <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--"><code>nextGaussian()</code></a>.</div>
 </td>
 </tr>
-<tr id="i10" class="altColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints--">ints</a></span>()</code>
 <div class="block">Returns an effectively unlimited stream of pseudorandom <code>int</code>
  values.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-int-int-">ints</a></span>(int&nbsp;randomNumberOrigin,
     int&nbsp;randomNumberBound)</code>
@@ -329,14 +375,14 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  conforming to the given origin (inclusive) and bound (exclusive).</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-">ints</a></span>(long&nbsp;streamSize)</code>
 <div class="block">Returns a stream producing the given <code>streamSize</code> number of
  pseudorandom <code>int</code> values.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-">ints</a></span>(long&nbsp;streamSize,
     int&nbsp;randomNumberOrigin,
@@ -345,21 +391,21 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  origin (inclusive) and bound (exclusive).</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs--">longs</a></span>()</code>
 <div class="block">Returns an effectively unlimited stream of pseudorandom <code>long</code>
  values.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-">longs</a></span>(long&nbsp;streamSize)</code>
 <div class="block">Returns a stream producing the given <code>streamSize</code> number of
  pseudorandom <code>long</code> values.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-">longs</a></span>(long&nbsp;randomNumberOrigin,
      long&nbsp;randomNumberBound)</code>
@@ -367,22 +413,22 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  conforming to the given origin (inclusive) and bound (exclusive).</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-">longs</a></span>(long&nbsp;streamSize,
      long&nbsp;randomNumberOrigin,
      long&nbsp;randomNumberBound)</code>
-<div class="block">Returns a stream producing the given number of pseudorandom longs, each conforming to the given
- origin (inclusive) and bound (exclusive).</div>
+<div class="block">Returns a stream producing the given number of pseudorandom longs, each conforming to the
+ given origin (inclusive) and bound (exclusive).</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>protected abstract int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">next</a></span>(int&nbsp;bits)</code>
 <div class="block">Generates the next pseudorandom number.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBoolean--">nextBoolean</a></span>()</code>
 <div class="block">Returns the next pseudorandom, uniformly distributed
@@ -390,14 +436,14 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  sequence.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes</a></span>(byte[]&nbsp;bytes)</code>
 <div class="block">Generates random bytes and places them into a user-supplied
  byte array.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--">nextDouble</a></span>()</code>
 <div class="block">Returns the next pseudorandom, uniformly distributed
@@ -405,25 +451,40 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  <code>1.0</code> from this random number generator's sequence.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i28" class="altColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-">nextDouble</a></span>(double&nbsp;bound)</code>
+<div class="block">Returns a pseudorandom <code>double</code> value between 0.0 (inclusive) and the specified bound
+ (exclusive).</div>
+</td>
+</tr>
+<tr id="i29" class="rowColor">
+<td class="colFirst"><code>double</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-double-">nextDouble</a></span>(double&nbsp;origin,
+          double&nbsp;bound)</code>
+<div class="block">Returns a pseudorandom <code>double</code> value between the specified origin (inclusive) and bound
+ (exclusive).</div>
+</td>
+</tr>
+<tr id="i30" class="altColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;E</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-E:A-">nextElement</a></span>(E[]&nbsp;array)</code>
 <div class="block">Chooses a random element from the given array.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>&lt;E&gt;&nbsp;E</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-java.util.List-">nextElement</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html?is-external=true" title="class or interface in java.util">List</a>&lt;E&gt;&nbsp;list)</code>
 <div class="block">Chooses a random element from the given list.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>&lt;E extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang">Enum</a>&lt;E&gt;&gt;<br>E</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum-java.lang.Class-">nextEnum</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;E&gt;&nbsp;enumClass)</code>
 <div class="block">Chooses a random value of the given enum class.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextFloat--">nextFloat</a></span>()</code>
 <div class="block">Returns the next pseudorandom, uniformly distributed <code>float</code>
@@ -431,21 +492,21 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  number generator's sequence.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a></span>()</code>
 <div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
  standard deviation 1.0 from this random number generator's sequence.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt</a></span>()</code>
 <div class="block">Returns the next pseudorandom, uniformly distributed <code>int</code>
  value from this random number generator's sequence.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-">nextInt</a></span>(int&nbsp;bound)</code>
 <div class="block">Returns a pseudorandom, uniformly distributed <code>int</code> value
@@ -453,7 +514,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  this random number generator's sequence.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-">nextInt</a></span>(int&nbsp;origin,
        int&nbsp;bound)</code>
@@ -461,14 +522,21 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  specified bound (exclusive).</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong</a></span>()</code>
 <div class="block">Returns the next pseudorandom, uniformly distributed <code>long</code>
  value from this random number generator's sequence.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i39" class="rowColor">
+<td class="colFirst"><code>long</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-">nextLong</a></span>(long&nbsp;bound)</code>
+<div class="block">Returns a pseudorandom <code>long</code> value between zero (inclusive) and the specified bound
+ (exclusive).</div>
+</td>
+</tr>
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-">nextLong</a></span>(long&nbsp;origin,
         long&nbsp;bound)</code>
@@ -476,52 +544,59 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  specified bound (exclusive).</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a></span>()</code>
 <div class="block">Returns the next random <code>long</code>, but does not debit entropy.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#preferSeedWithLong--">preferSeedWithLong</a></span>()</code>
 <div class="block">Indicates whether <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed-long-" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> is recommended over <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-"><code>ByteArrayReseedableRandom.setSeed(byte[])</code></a> when the seed is already in the form of a <code>long</code>.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#recordEntropySpent-long-">recordEntropySpent</a></span>(long&nbsp;bits)</code>
 <div class="block">Record that entropy has been spent, and schedule a reseeding if this PRNG has now spent as much
  as it's been seeded with.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-">setSeed</a></span>(byte[]&nbsp;seed)</code>
 <div class="block">Reseed this PRNG.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">setSeed</a></span>(long&nbsp;seed)</code>
 <div class="block">Sets the seed of this random number generator using a single
  <code>long</code> seed.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a></span>(<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@Nullable</a> <a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed">RandomSeederThread</a>&nbsp;thread)</code>
 <div class="block">Registers this PRNG with the given <a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> to schedule reseeding when we run
  out of entropy.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></span>(byte[]&nbsp;seed)</code>
 <div class="block">Sets the seed, and should be overridden to set other state that derives from the seed.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i48" class="altColor">
+<td class="colFirst"><code>protected boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#useParallelStreams--">useParallelStreams</a></span>()</code>
+<div class="block">Returns true if streams created by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-double-double-"><code>doubles(long, double, double)</code></a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-"><code>ints(long,
+ int, int)</code></a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-"><code>longs(long, long, long)</code></a> and their overloads should be parallel streams.</div>
+</td>
+</tr>
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-">withProbability</a></span>(double&nbsp;probability)</code>
 <div class="block">The purpose of this method is so that entropy-counting subclasses can detect that no more than
@@ -529,7 +604,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  which normally consumes 53 bits.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal-double-">withProbabilityInternal</a></span>(double&nbsp;probability)</code>
 <div class="block">Called by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>withProbability(double)</code></a> to generate a boolean with a specified probability
@@ -538,13 +613,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 </td>
 </tr>
 </table>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.java.util.Random">
-<!--   -->
-</a>
-<h3>Methods inherited from class&nbsp;java.util.<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></h3>
-<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles--" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-double-double-" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-" title="class or interface in java.util">doubles</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-double-double-" title="class or interface in java.util">doubles</a></code></li>
-</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
 <!--   -->
@@ -768,6 +836,21 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <dd><code>bound</code> - the maximum, exclusive.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the entropy.</dd>
+</dl>
+</li>
+</ul>
+<a name="useParallelStreams--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>useParallelStreams</h4>
+<pre>protected&nbsp;boolean&nbsp;useParallelStreams()</pre>
+<div class="block">Returns true if streams created by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-double-double-"><code>doubles(long, double, double)</code></a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-"><code>ints(long,
+ int, int)</code></a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-"><code>longs(long, long, long)</code></a> and their overloads should be parallel streams.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if this PRNG should create parallel streams; false otherwise.</dd>
 </dl>
 </li>
 </ul>
@@ -1043,6 +1126,191 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 </dl>
 </li>
 </ul>
+<a name="nextLong-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nextLong</h4>
+<pre>public&nbsp;long&nbsp;nextLong(long&nbsp;bound)</pre>
+<div class="block">Returns a pseudorandom <code>long</code> value between zero (inclusive) and the specified bound
+ (exclusive).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>bound</code> - the upper bound (exclusive).  Must be positive.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a pseudorandom <code>long</code> value between zero (inclusive) and the bound (exclusive)</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>bound</code> is not positive</dd>
+</dl>
+</li>
+</ul>
+<a name="nextDouble-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nextDouble</h4>
+<pre>public&nbsp;double&nbsp;nextDouble(double&nbsp;bound)</pre>
+<div class="block">Returns a pseudorandom <code>double</code> value between 0.0 (inclusive) and the specified bound
+ (exclusive).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>bound</code> - the upper bound (exclusive).  Must be positive.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a pseudorandom <code>double</code> value between zero (inclusive) and the bound (exclusive)</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>bound</code> is not positive</dd>
+</dl>
+</li>
+</ul>
+<a name="nextDouble-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>nextDouble</h4>
+<pre>public&nbsp;double&nbsp;nextDouble(double&nbsp;origin,
+                         double&nbsp;bound)</pre>
+<div class="block">Returns a pseudorandom <code>double</code> value between the specified origin (inclusive) and bound
+ (exclusive).</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>origin</code> - the least value returned</dd>
+<dd><code>bound</code> - the upper bound (exclusive)</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a pseudorandom <code>double</code> value between the origin (inclusive) and the bound
+     (exclusive)</dd>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>origin</code> is greater than or equal to <code>bound</code></dd>
+</dl>
+</li>
+</ul>
+<a name="doubles-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doubles</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a>&nbsp;doubles(double&nbsp;randomNumberOrigin,
+                            double&nbsp;randomNumberBound)</pre>
+<div class="block"><p>Returns a stream producing an effectively unlimited number of pseudorandom doubles, each
+ conforming to the given origin (inclusive) and bound (exclusive). This implementation uses
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-double-"><code>nextDouble(double, double)</code></a> to generate these numbers.</p> <p>If the returned stream is
+ a parallel stream, consuming it in parallel after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may
+ cause extra entropy to be spuriously consumed.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-double-double-" title="class or interface in java.util">doubles</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>randomNumberOrigin</code> - the origin (inclusive) of each random value</dd>
+<dd><code>randomNumberBound</code> - the bound (exclusive) of each random value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a stream of pseudorandom <code>double</code> values,
+         each with the given origin (inclusive) and bound (exclusive)</dd>
+</dl>
+</li>
+</ul>
+<a name="doubles--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doubles</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a>&nbsp;doubles()</pre>
+<div class="block"><p>Returns a stream producing an effectively unlimited number of pseudorandom doubles, each
+ between 0.0 (inclusive) and 1.0 (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--"><code>nextDouble()</code></a> to
+ generate these numbers.</p> <p>If the returned stream is a parallel stream, consuming it in
+ parallel after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may cause extra entropy to be
+ spuriously consumed.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles--" title="class or interface in java.util">doubles</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a stream of pseudorandom <code>double</code> values</dd>
+</dl>
+</li>
+</ul>
+<a name="doubles-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doubles</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a>&nbsp;doubles(long&nbsp;streamSize)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-" title="class or interface in java.util">java.util.Random</a></code></span></div>
+<div class="block">Returns a stream producing the given <code>streamSize</code> number of
+ pseudorandom <code>double</code> values, each between zero
+ (inclusive) and one (exclusive).
+
+ <p>A pseudorandom <code>double</code> value is generated as if it's the result
+ of calling the method <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>Random.nextDouble()</code></a>.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-" title="class or interface in java.util">doubles</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>streamSize</code> - the number of values to generate</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a stream of <code>double</code> values</dd>
+</dl>
+</li>
+</ul>
+<a name="doubles-long-double-double-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>doubles</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a>&nbsp;doubles(long&nbsp;streamSize,
+                            double&nbsp;randomNumberOrigin,
+                            double&nbsp;randomNumberBound)</pre>
+<div class="block">Returns a stream producing the given number of pseudorandom doubles, each conforming to the
+ given origin (inclusive) and bound (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-double-"><code>nextDouble(double, double)</code></a> to generate these numbers.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#doubles-long-double-double-" title="class or interface in java.util">doubles</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>streamSize</code> - the number of values to generate</dd>
+<dd><code>randomNumberOrigin</code> - the origin (inclusive) of each random value</dd>
+<dd><code>randomNumberBound</code> - the bound (exclusive) of each random value</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a stream of pseudorandom <code>double</code> values,
+         each with the given origin (inclusive) and bound (exclusive)</dd>
+</dl>
+</li>
+</ul>
+<a name="gaussians--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>gaussians</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a>&nbsp;gaussians()</pre>
+<div class="block"><p>Returns a stream producing an effectively unlimited number of pseudorandom doubles that are
+ normally distributed with mean 0.0 and standard deviation 1.0. This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--"><code>nextGaussian()</code></a>.</p> <p>If the returned stream is a parallel stream, consuming it in parallel
+ after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may cause extra entropy to be spuriously
+ consumed.</p></div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a stream of normally-distributed random numbers.</dd>
+</dl>
+</li>
+</ul>
+<a name="gaussians-long-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>gaussians</h4>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true" title="class or interface in java.util.stream">DoubleStream</a>&nbsp;gaussians(long&nbsp;streamSize)</pre>
+<div class="block">Returns a stream producing the given number of pseudorandom doubles that are normally
+ distributed with mean 0.0 and standard deviation 1.0. This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--"><code>nextGaussian()</code></a>.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>streamSize</code> - the number of doubles to generate.</dd>
+</dl>
+</li>
+</ul>
 <a name="nextBoolean--">
 <!--   -->
 </a>
@@ -1242,12 +1510,13 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <li class="blockList">
 <h4>ints</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a>&nbsp;ints()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#ints--" title="class or interface in java.util">java.util.Random</a></code></span></div>
-<div class="block">Returns an effectively unlimited stream of pseudorandom <code>int</code>
+<div class="block"><p>Returns an effectively unlimited stream of pseudorandom <code>int</code>
  values.
 
  <p>A pseudorandom <code>int</code> value is generated as if it's the result of
- calling the method <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextInt--" title="class or interface in java.util"><code>Random.nextInt()</code></a>.</div>
+ calling the method <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextInt--" title="class or interface in java.util"><code>Random.nextInt()</code></a>.</p> <p>If the returned stream is a parallel stream, consuming it in parallel
+ after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may cause extra entropy to be spuriously
+ consumed.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#ints--" title="class or interface in java.util">ints</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
@@ -1311,9 +1580,11 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <h4>ints</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/IntStream.html?is-external=true" title="class or interface in java.util.stream">IntStream</a>&nbsp;ints(int&nbsp;randomNumberOrigin,
                       int&nbsp;randomNumberBound)</pre>
-<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom ints, each
+<div class="block"><p>Returns a stream producing an effectively unlimited number of pseudorandom ints, each
  conforming to the given origin (inclusive) and bound (exclusive). This implementation uses
- <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-"><code>nextInt(int, int)</code></a> to generate these numbers.</div>
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-"><code>nextInt(int, int)</code></a> to generate these numbers.</p> <p>If the returned stream is a
+ parallel stream, consuming it in parallel after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may
+ cause extra entropy to be spuriously consumed.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#ints-int-int-" title="class or interface in java.util">ints</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
@@ -1356,12 +1627,13 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <li class="blockList">
 <h4>longs</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a>&nbsp;longs()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs--" title="class or interface in java.util">java.util.Random</a></code></span></div>
-<div class="block">Returns an effectively unlimited stream of pseudorandom <code>long</code>
+<div class="block"><p>Returns an effectively unlimited stream of pseudorandom <code>long</code>
  values.
 
  <p>A pseudorandom <code>long</code> value is generated as if it's the result
- of calling the method <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextLong--" title="class or interface in java.util"><code>Random.nextLong()</code></a>.</div>
+ of calling the method <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextLong--" title="class or interface in java.util"><code>Random.nextLong()</code></a>.</p> <p>If the returned stream is a parallel stream, consuming it in parallel
+ after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may cause extra entropy to be spuriously
+ consumed.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs--" title="class or interface in java.util">longs</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
@@ -1379,9 +1651,11 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a>&nbsp;longs(long&nbsp;streamSize,
                         long&nbsp;randomNumberOrigin,
                         long&nbsp;randomNumberBound)</pre>
-<div class="block">Returns a stream producing the given number of pseudorandom longs, each conforming to the given
- origin (inclusive) and bound (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long,
- long)</code></a> to generate these numbers.</div>
+<div class="block"><p>Returns a stream producing the given number of pseudorandom longs, each conforming to the
+ given origin (inclusive) and bound (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long,
+ long)</code></a> to generate these numbers.</p><p>If the returned stream is a parallel stream, consuming
+ it in parallel after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may cause extra entropy to be
+ spuriously consumed.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs-long-long-long-" title="class or interface in java.util">longs</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
@@ -1439,9 +1713,11 @@ public&nbsp;BaseRandom(byte[]&nbsp;seed)</pre>
 <h4>longs</h4>
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/LongStream.html?is-external=true" title="class or interface in java.util.stream">LongStream</a>&nbsp;longs(long&nbsp;randomNumberOrigin,
                         long&nbsp;randomNumberBound)</pre>
-<div class="block">Returns a stream producing an effectively unlimited number of pseudorandom longs, each
+<div class="block"><p>Returns a stream producing an effectively unlimited number of pseudorandom longs, each
  conforming to the given origin (inclusive) and bound (exclusive). This implementation uses
- <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long, long)</code></a> to generate these numbers.</div>
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long, long)</code></a> to generate these numbers.</p> <p>If the returned stream is a
+ parallel stream, consuming it in parallel after calling <a href="https://docs.oracle.com/javase/8/docs/api/java/util/stream/DoubleStream.html?is-external=true#limit-long-" title="class or interface in java.util.stream"><code>DoubleStream.limit(long)</code></a> may
+ cause extra entropy to be spuriously consumed.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs-long-long-" title="class or interface in java.util">longs</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
