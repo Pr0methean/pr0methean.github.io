@@ -121,12 +121,19 @@ var activeTableTab = "activeTableTab";
 <pre>public enum <span class="typeNameLabel">RandomDotOrgSeedGenerator</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang">Enum</a>&lt;<a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">RandomDotOrgSeedGenerator</a>&gt;
 implements <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a></pre>
-<div class="block">Connects to the <a href="http://www.random.org" target="_top">random.org</a> website (via HTTPS)
+<div class="block"><p>Connects to <a href="https://www.random.org/clients/http/" target="_top">random.org's old API</a> (via HTTPS)
  and downloads a set of random bits to use as seed data.  It is generally better to use the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DevRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DevRandomSeedGenerator</code></a> where possible, as it should be much quicker. This seed generator is most
- useful on Microsoft Windows without Cygwin, and other platforms that do not provide /dev/random.</div>
+ useful on Microsoft Windows without Cygwin, and other platforms that do not provide /dev/random.</p>
+ <p>Random.org collects randomness from atmospheric noise using 9 radios, located at undisclosed
+ addresses in Dublin and Copenhagen and tuned to undisclosed AM/FM frequencies. (The secrecy is
+  intended to help prevent tampering with the output using a well-placed radio transmitter, and the
+ use of AM/FM helps ensure that any such tampering would cause illegal interference with broadcasts
+  and quickly attract regulatory attention.) Note that random.org limits the supply of free random
+  numbers to any one IP address; if you operate from a fixed address (at least if you use IPv4), you
+  can <a href="https://www.random.org/quota/">check your quota and buy more</a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
-<dd>Daniel Dyer</dd>
+<dd>Daniel Dyer, Chris Hennick</dd>
 </dl>
 </li>
 </ul>
@@ -146,10 +153,16 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGe
 <th class="colOne" scope="col">Enum Constant and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#RANDOM_DOT_ORG_SEED_GENERATOR">RANDOM_DOT_ORG_SEED_GENERATOR</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#RANDOM_DOT_ORG_SEED_GENERATOR">RANDOM_DOT_ORG_SEED_GENERATOR</a></span></code>
+<div class="block">This version of the client may make HTTP requests as fast as your computer is capable of
+ sending them.</div>
+</td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#RATE_LIMITED_ON_FAIL">RATE_LIMITED_ON_FAIL</a></span></code>&nbsp;</td>
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#RATE_LIMITED_ON_FAIL">RATE_LIMITED_ON_FAIL</a></span></code>
+<div class="block">Upon a failed request, this version of the client requires that you wait 10 seconds before
+ trying again.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -268,6 +281,9 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>RANDOM_DOT_ORG_SEED_GENERATOR</h4>
 <pre>public static final&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">RandomDotOrgSeedGenerator</a> RANDOM_DOT_ORG_SEED_GENERATOR</pre>
+<div class="block">This version of the client may make HTTP requests as fast as your computer is capable of
+ sending them. Since it is inherently spammy, it is recommended only when you know your usage is
+ light and/or no other source of randomness will do.</div>
 </li>
 </ul>
 <a name="RATE_LIMITED_ON_FAIL">
@@ -277,6 +293,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>RATE_LIMITED_ON_FAIL</h4>
 <pre>public static final&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">RandomDotOrgSeedGenerator</a> RATE_LIMITED_ON_FAIL</pre>
+<div class="block">Upon a failed request, this version of the client requires that you wait 10 seconds before
+ trying again. The <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> uses it and will fall back to the <a href="../../../../../io/github/pr0methean/betterrandom/seed/SecureRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>SecureRandomSeedGenerator</code></a> during this waiting period.</div>
 </li>
 </ul>
 </li>
