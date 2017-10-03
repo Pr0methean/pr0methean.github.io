@@ -335,6 +335,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <div class="block">Should wrap a constructor that calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator(AtomicLong,
  AtomicLong, Object, boolean)</code></a>.</div>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>remaining</code> - An <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic"><code>AtomicLong</code></a> (shared between splits) that stores how many more
+     items will be output by <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#tryAdvance-TConsumer-"><code>tryAdvance(Object)</code></a>.</dd>
+<dd><code>splitsRemaining</code> - An <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic"><code>AtomicLong</code></a> (shared between splits) that stores how many
+     more times the <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a> command will return non-null.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a descendant spliterator.</dd>
 </dl>
@@ -364,8 +369,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>characteristics</h4>
 <pre>public&nbsp;int&nbsp;characteristics()</pre>
 <dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>{@code</code> - IMMUTABLE | NONNULL | SIZED} in the root spliterator, and
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>IMMUTABLE | NONNULL | SIZED</code> in the root spliterator, and
  <code>IMMUTABLE | NONNULL</code> in descendants.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#characteristics--" title="class or interface in java.util"><code>Spliterator.characteristics()</code></a></dd>
