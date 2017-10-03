@@ -334,6 +334,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining)</pre>
 <div class="block">Should wrap a constructor that calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator(AtomicLong,
  AtomicLong, Object, boolean)</code></a>.</div>
+<dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>a descendant spliterator.</dd>
+</dl>
 </li>
 </ul>
 <a name="estimateSize--">
@@ -344,6 +348,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>estimateSize</h4>
 <pre>public&nbsp;long&nbsp;estimateSize()</pre>
 <dl>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>the total number of items remaining in the root spliterator, and thus an upper bound
+ on the number available to any one descendant.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#estimateSize--" title="class or interface in java.util"><code>Spliterator.estimateSize()</code></a></dd>
 </dl>
@@ -357,6 +364,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>characteristics</h4>
 <pre>public&nbsp;int&nbsp;characteristics()</pre>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>{@code</code> - IMMUTABLE | NONNULL | SIZED} in the root spliterator, and
+ <code>IMMUTABLE | NONNULL</code> in descendants.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#characteristics--" title="class or interface in java.util"><code>Spliterator.characteristics()</code></a></dd>
 </dl>
@@ -372,6 +382,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>tryAdvance</h4>
 <pre>public&nbsp;boolean&nbsp;tryAdvance(<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TConsumer</a>&nbsp;action)</pre>
 <dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>action</code> - the consumer that will receive the next output value if there is one.</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>true if an output was produced and consumed.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#tryAdvance-java.util.function.Consumer-" title="class or interface in java.util"><code>Spliterator.tryAdvance(Consumer)</code></a></dd>
 </dl>
@@ -387,6 +401,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>internalSupplyAndAccept</h4>
 <pre>protected abstract&nbsp;void&nbsp;internalSupplyAndAccept(<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TConsumer</a>&nbsp;action)</pre>
 <div class="block">Should be <code>action.accept(supplier.get())</code> or an equivalent.</div>
+<dl>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>action</code> - the consumer that will receive the next output value if there is one.</dd>
+</dl>
 </li>
 </ul>
 </li>
