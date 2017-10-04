@@ -203,44 +203,44 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <td class="colFirst"><code>protected abstract <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></span>()</code>
 <div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
- current calling context.</div>
+ current thread.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#next-int-">next</a></span>(int&nbsp;bits)</code>
-<div class="block">Generates the next pseudorandom number.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt--" title="class or interface in java.util"><code>SplittableRandom.nextInt()</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextBoolean--">nextBoolean</a></span>()</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextBoolean--" title="class or interface in java.util"><code>SplittableRandom.nextBoolean()</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextBoolean--" title="class or interface in java.util"><code>SplittableRandom.nextBoolean()</code></a>.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextBytes-byte:A-">nextBytes</a></span>(byte[]&nbsp;bytes)</code>
-<div class="block">Generates random bytes and places them into a user-supplied byte array.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble--">nextDouble</a></span>()</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a>.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble-double-">nextDouble</a></span>(double&nbsp;bound)</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double)</code></a>.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble-double-double-">nextDouble</a></span>(double&nbsp;origin,
           double&nbsp;bound)</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double, double)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double, double)</code></a>.</div>
 </td>
 </tr>
 <tr id="i8" class="altColor">
@@ -261,33 +261,33 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <tr id="i10" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextInt--">nextInt</a></span>()</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt--" title="class or interface in java.util"><code>SplittableRandom.nextInt()</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt--" title="class or interface in java.util"><code>SplittableRandom.nextInt()</code></a>.</div>
 </td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextInt-int-">nextInt</a></span>(int&nbsp;bound)</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 </td>
 </tr>
 <tr id="i12" class="altColor">
 <td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextInt-int-int-">nextInt</a></span>(int&nbsp;origin,
        int&nbsp;bound)</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int, int)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int, int)</code></a>.</div>
 </td>
 </tr>
 <tr id="i13" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextLong-long-">nextLong</a></span>(long&nbsp;bound)</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long)</code></a>.</div>
 </td>
 </tr>
 <tr id="i14" class="altColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextLong-long-long-">nextLong</a></span>(long&nbsp;origin,
         long&nbsp;bound)</code>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long, long)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long, long)</code></a>.</div>
 </td>
 </tr>
 <tr id="i15" class="rowColor">
@@ -407,8 +407,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <h4>getSplittableRandom</h4>
 <pre>protected abstract&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a>&nbsp;getSplittableRandom()</pre>
 <div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
- current calling context. Note that <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> instances aren't thread-safe.
- Called by all the <code>next*</code> methods.</div>
+ current thread. (<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> isn't thread-safe.) Called by all the <code>next*</code>
+ methods.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</dd>
@@ -422,7 +422,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextDouble</h4>
 <pre>public&nbsp;double&nbsp;nextDouble(double&nbsp;bound)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-">nextDouble</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -441,7 +441,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <h4>nextDouble</h4>
 <pre>public&nbsp;double&nbsp;nextDouble(double&nbsp;origin,
                          double&nbsp;bound)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double, double)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double, double)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-double-">nextDouble</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -461,11 +461,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>next</h4>
 <pre>protected&nbsp;int&nbsp;next(int&nbsp;bits)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">BaseRandom</a></code></span></div>
-<div class="block">Generates the next pseudorandom number. Called by all other random-number-generating methods.
- Should not debit the entropy count, since that's done by the calling methods according to the
- amount they actually output (see for example <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a>, which uses 53
- random bits but outputs only one, and thus debits only 1 bit of entropy).</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt--" title="class or interface in java.util"><code>SplittableRandom.nextInt()</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next-int-">next</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -484,10 +480,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextBytes</h4>
 <pre>public&nbsp;void&nbsp;nextBytes(byte[]&nbsp;bytes)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">BaseRandom</a></code></span></div>
-<div class="block">Generates random bytes and places them into a user-supplied byte array. The number of random
- bytes produced is equal to the length of the byte array. Reimplemented for entropy-counting
- purposes.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -503,7 +496,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextInt</h4>
 <pre>public&nbsp;int&nbsp;nextInt()</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt--" title="class or interface in java.util"><code>SplittableRandom.nextInt()</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt--" title="class or interface in java.util"><code>SplittableRandom.nextInt()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -520,7 +513,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextInt</h4>
 <pre>public&nbsp;int&nbsp;nextInt(int&nbsp;bound)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-">nextInt</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -541,7 +534,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <h4>nextInt</h4>
 <pre>public&nbsp;int&nbsp;nextInt(int&nbsp;origin,
                    int&nbsp;bound)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int, int)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int, int)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-">nextInt</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -617,7 +610,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextLong</h4>
 <pre>public&nbsp;long&nbsp;nextLong(long&nbsp;bound)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-">nextLong</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -636,7 +629,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <h4>nextLong</h4>
 <pre>public&nbsp;long&nbsp;nextLong(long&nbsp;origin,
                      long&nbsp;bound)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long, long)</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long, long)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-">nextLong</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -656,7 +649,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextDouble</h4>
 <pre>public&nbsp;double&nbsp;nextDouble()</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--">nextDouble</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -697,7 +690,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextBoolean</h4>
 <pre>public&nbsp;boolean&nbsp;nextBoolean()</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextBoolean--" title="class or interface in java.util"><code>SplittableRandom.nextBoolean()</code></a></div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextBoolean--" title="class or interface in java.util"><code>SplittableRandom.nextBoolean()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBoolean--">nextBoolean</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>

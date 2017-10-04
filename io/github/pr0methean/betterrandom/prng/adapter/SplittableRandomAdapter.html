@@ -236,7 +236,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></span>()</code>
 <div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
- current calling context.</div>
+ current thread.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -407,8 +407,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util">SplittableRandom</a>&nbsp;getSplittableRandom()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">BaseSplittableRandomAdapter</a></code></span></div>
 <div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
- current calling context. Note that <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> instances aren't thread-safe.
- Called by all the <code>next*</code> methods.</div>
+ current thread. (<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> isn't thread-safe.) Called by all the <code>next*</code>
+ methods.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></code></dd>
@@ -455,10 +455,27 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 </dl>
 </li>
 </ul>
-<a name="setSeed-byte:A-">
+<a name="setSeed-long-">
 <!--   -->
 </a>
 <ul class="blockList">
+<li class="blockList">
+<h4>setSeed</h4>
+<pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>&nbsp;SplittableRandomAdapter&nbsp;this,
+                    long&nbsp;seed)</pre>
+<div class="block">Replaces the current master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> with a new one that uses the given seed. Applies only to the calling thread.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">DirectSplittableRandomAdapter</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - the initial seed</dd>
+</dl>
+</li>
+</ul>
+<a name="setSeed-byte:A-">
+<!--   -->
+</a>
+<ul class="blockListLast">
 <li class="blockList">
 <h4>setSeed</h4>
 <pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>&nbsp;SplittableRandomAdapter&nbsp;this,
@@ -471,23 +488,6 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>seed</code> - The PRNG's new seed.</dd>
-</dl>
-</li>
-</ul>
-<a name="setSeed-long-">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>&nbsp;SplittableRandomAdapter&nbsp;this,
-                    long&nbsp;seed)</pre>
-<div class="block">Replaces the current master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> with a new one that uses the given seed. Applies only to the calling thread.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">DirectSplittableRandomAdapter</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seed</code> - the initial seed</dd>
 </dl>
 </li>
 </ul>
