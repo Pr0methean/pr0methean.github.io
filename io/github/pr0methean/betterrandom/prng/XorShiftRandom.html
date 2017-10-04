@@ -126,9 +126,10 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">XorShiftRandom</span>
 extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></pre>
 <div class="block"><p>Very fast pseudo random number generator.  See <a href="http://school.anhb.uwa.edu.au/personalpages/kwessen/shared/Marsaglia03.html">this
- page</a> for a description.  This RNG has a period of about 2<sup>160</sup>, which is not as long
- as the <a href="../../../../../io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>MersenneTwisterRandom</code></a> but it is faster.</p> <p><em>NOTE: Because instances of this
- class require 160-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-"><code>setSeed(long)</code></a>
+ page</a> (<a href="http://web.archive.org/web/20170313200403/school.anhb.uwa.edu.au/personalpages/kwessen/shared/Marsaglia03.html">archive</a>)
+ for a description.  This RNG has a period of about 2<sup>160</sup>, which is not as long as the
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>MersenneTwisterRandom</code></a> but it is faster.</p> <p><em>NOTE: Because instances of this class
+ require 160-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-"><code>setSeed(long)</code></a>
  method inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a>.  Calls to this method will have no effect. Instead the seed
  must be set by a constructor.</em></p></div>
 <dl>
@@ -173,7 +174,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#XorShiftRandom--">XorShiftRandom</a></span>()</code>
-<div class="block">Constructor for XorShiftRandom.</div>
+<div class="block">Creates a new RNG and seeds it using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -183,7 +184,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#XorShiftRandom-io.github.pr0methean.betterrandom.seed.SeedGenerator-">XorShiftRandom</a></span>(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Constructor for XorShiftRandom.</div>
+<div class="block">Seed the RNG using the provided seed generation strategy.</div>
 </td>
 </tr>
 </table>
@@ -203,7 +204,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>protected <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></span>(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubclassFields</a></span>(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</code>
 <div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
 </td>
 </tr>
@@ -228,8 +229,8 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-">setSeed</a></span>(long&nbsp;seed)</code>
-<div class="block">Sets the seed of this random number generator using a single
- <code>long</code> seed.</div>
+<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
+ supports that.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
@@ -277,7 +278,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <div class="block">Creates an RNG and seeds it with the specified seed data.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seed</code> - The seed data used to initialise the RNG.</dd>
+<dd><code>seed</code> - 20 bytes of seed data used to initialise the RNG.</dd>
 </dl>
 </li>
 </ul>
@@ -289,10 +290,10 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <h4>XorShiftRandom</h4>
 <pre>public&nbsp;XorShiftRandom()
                throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block"><p>Constructor for XorShiftRandom.</p></div>
+<div class="block">Creates a new RNG and seeds it using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if any.</dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> fails to generate a seed.</dd>
 </dl>
 </li>
 </ul>
@@ -304,12 +305,13 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <h4>XorShiftRandom</h4>
 <pre>public&nbsp;XorShiftRandom(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)
                throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block"><p>Constructor for XorShiftRandom.</p></div>
+<div class="block">Seed the RNG using the provided seed generation strategy.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seedGenerator</code> - a <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a> object.</dd>
+<dd><code>seedGenerator</code> - The seed generation strategy that will provide the seed value for this
+     RNG.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if any.</dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if there is a problem generating a seed.</dd>
 </dl>
 </li>
 </ul>
@@ -321,18 +323,18 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">
+<a name="addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addSubSubclassFields</h4>
-<pre>protected&nbsp;<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;addSubSubclassFields(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">BaseRandom</a></code></span></div>
+<h4>addSubclassFields</h4>
+<pre>protected&nbsp;<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;addSubclassFields(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">BaseRandom</a></code></span></div>
 <div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>original</code> - a <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> object.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -367,21 +369,12 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <h4>setSeed</h4>
 <pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.initialization.qual">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random.class</a>)&nbsp;XorShiftRandom&nbsp;this,
                     long&nbsp;seed)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed-long-" title="class or interface in java.util">java.util.Random</a></code></span></div>
-<div class="block">Sets the seed of this random number generator using a single
- <code>long</code> seed. The general contract of <code>setSeed</code> is
- that it alters the state of this random number generator object
- so as to be in exactly the same state as if it had just been
- created with the argument <code>seed</code> as a seed. The method
- <code>setSeed</code> is implemented by class <code>Random</code> by
- atomically updating the seed to
-  <pre><code> (seed ^ 0x5DEECE66DL) &amp; ((1L &lt;&lt; 48) - 1)</code></pre>
- and clearing the <code>haveNextNextGaussian</code> flag used by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextGaussian--" title="class or interface in java.util"><code>Random.nextGaussian()</code></a>.
-
- <p>The implementation of <code>setSeed</code> by class <code>Random</code>
- happens to use only 48 bits of the given seed. In general, however,
- an overriding method may use all 64 bits of the <code>long</code>
- argument as a seed value.</div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">BaseRandom</a></code></span></div>
+<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
+ supports that. If it is capable of using 64 bits or less of seed data (i.e. if <code>{@link
+ #getNewSeedLength()} &lt;= {@link Long#BYTES}</code>), then this method shall replace the entire seed as
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed-long-" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> does; otherwise, it shall either be a no-op, or shall combine the
+ input with the existing seed as <a href="https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html?is-external=true#setSeed-long-" title="class or interface in java.security"><code>SecureRandom.setSeed(long)</code></a> does.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -400,8 +393,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
                                byte[]&nbsp;seed)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">BaseRandom</a></code></span></div>
 <div class="block">Sets the seed, and should be overridden to set other state that derives from the seed. Called
- by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-"><code>BaseRandom.setSeed(byte[])</code></a>, whose default implementation ensures that the lock is held while
- doing so. Also called by constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject-java.io.ObjectInputStream-"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObjectNoData--"><code>BaseRandom.readObjectNoData()</code></a>.</div>
+ by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-"><code>BaseRandom.setSeed(byte[])</code></a>, constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject-java.io.ObjectInputStream-"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--"><code>BaseRandom.fallbackSetSeed()</code></a>. When called after initialization, the <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#lock"><code>BaseRandom.lock</code></a> is always held.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>

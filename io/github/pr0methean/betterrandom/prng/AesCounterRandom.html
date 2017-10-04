@@ -207,7 +207,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code><a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></span>(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubclassFields</a></span>(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</code>
 <div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
 </td>
 </tr>
@@ -329,7 +329,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <dd><code>seedSizeBytes</code> - The number of bytes to use for seed data. Valid values range from 16
      to <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes--"><code>getMaxKeyLengthBytes()</code></a> + 16.</dd>
 <dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if there is a problem generating a seed.</dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> fails to generate a seed.</dd>
 </dl>
 </li>
 </ul>
@@ -365,25 +365,25 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <pre>public static&nbsp;int&nbsp;getMaxKeyLengthBytes()</pre>
 <div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>. If the seed is longer
  than this, part of it becomes the counter's initial value. Otherwise, the full seed becomes the
- AES key and the counter is initially zero. Public for testing of its initialization.</div>
+ AES key and the counter is initially zero.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the maximum length in bytes of an AES key.</dd>
 </dl>
 </li>
 </ul>
-<a name="addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">
+<a name="addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>addSubSubclassFields</h4>
-<pre>public&nbsp;<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;addSubSubclassFields(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">BaseRandom</a></code></span></div>
+<h4>addSubclassFields</h4>
+<pre>public&nbsp;<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;addSubclassFields(<a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base">MoreObjects.ToStringHelper</a>&nbsp;original)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">BaseRandom</a></code></span></div>
 <div class="block">Adds the fields that were not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> to the given <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubclassFields-com.google.common.base.MoreObjects.ToStringHelper-">addSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>original</code> - a <a href="https://google.github.io/guava/releases/19.0/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> object.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -477,8 +477,7 @@ protected&nbsp;void&nbsp;setSeedInternal(<a href="https://checkerframework.org/a
                                                                                             byte[]&nbsp;seed)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">BaseRandom</a></code></span></div>
 <div class="block">Sets the seed, and should be overridden to set other state that derives from the seed. Called
- by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-"><code>BaseRandom.setSeed(byte[])</code></a>, whose default implementation ensures that the lock is held while
- doing so. Also called by constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject-java.io.ObjectInputStream-"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObjectNoData--"><code>BaseRandom.readObjectNoData()</code></a>.</div>
+ by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-"><code>BaseRandom.setSeed(byte[])</code></a>, constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject-java.io.ObjectInputStream-"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--"><code>BaseRandom.fallbackSetSeed()</code></a>. When called after initialization, the <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#lock"><code>BaseRandom.lock</code></a> is always held.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
