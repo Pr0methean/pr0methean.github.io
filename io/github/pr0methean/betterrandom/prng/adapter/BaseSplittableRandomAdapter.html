@@ -246,16 +246,13 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <tr id="i8" class="altColor">
 <td class="colFirst"><code>float</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextFloat--">nextFloat</a></span>()</code>
-<div class="block">Returns the next pseudorandom, uniformly distributed <code>float</code>
- value between <code>0.0</code> and <code>1.0</code> from this random
- number generator's sequence.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 </td>
 </tr>
 <tr id="i9" class="rowColor">
 <td class="colFirst"><code>double</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextGaussian--">nextGaussian</a></span>()</code>
-<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
- standard deviation 1.0 from this random number generator's sequence.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a> via <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-"><code>BaseRandom.internalNextGaussian(DoubleSupplier)</code></a>.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -293,7 +290,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a></span>()</code>
-<div class="block">Returns the next random <code>long</code>, but does not debit entropy.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong--" title="class or interface in java.util"><code>SplittableRandom.nextLong()</code></a>.</div>
 </td>
 </tr>
 <tr id="i16" class="altColor">
@@ -311,8 +308,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#withProbabilityInternal-double-">withProbabilityInternal</a></span>(double&nbsp;probability)</code>
-<div class="block">Called by <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a> to generate a boolean with a specified probability
- of returning true, after checking that <code>probability</code> is strictly between 0 and 1.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -554,8 +550,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>withProbabilityInternal</h4>
 <pre>protected&nbsp;boolean&nbsp;withProbabilityInternal(double&nbsp;probability)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal-double-">BaseRandom</a></code></span></div>
-<div class="block">Called by <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a> to generate a boolean with a specified probability
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a>. Called by <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a> to generate a boolean with a specified probability
  of returning true, after checking that <code>probability</code> is strictly between 0 and 1.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -593,8 +588,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextLongNoEntropyDebit</h4>
 <pre>protected&nbsp;long&nbsp;nextLongNoEntropyDebit()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">BaseRandom</a></code></span></div>
-<div class="block">Returns the next random <code>long</code>, but does not debit entropy.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong--" title="class or interface in java.util"><code>SplittableRandom.nextLong()</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -669,9 +663,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextGaussian</h4>
 <pre>public&nbsp;double&nbsp;nextGaussian()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">BaseRandom</a></code></span></div>
-<div class="block">Returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and
- standard deviation 1.0 from this random number generator's sequence. Unlike the one in <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a>, this implementation is lockless.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a> via <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-"><code>BaseRandom.internalNextGaussian(DoubleSupplier)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -708,38 +700,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextFloat</h4>
 <pre>public&nbsp;float&nbsp;nextFloat()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#nextFloat--" title="class or interface in java.util">java.util.Random</a></code></span></div>
-<div class="block">Returns the next pseudorandom, uniformly distributed <code>float</code>
- value between <code>0.0</code> and <code>1.0</code> from this random
- number generator's sequence.
-
- <p>The general contract of <code>nextFloat</code> is that one
- <code>float</code> value, chosen (approximately) uniformly from the
- range <code>0.0f</code> (inclusive) to <code>1.0f</code> (exclusive), is
- pseudorandomly generated and returned. All 2<sup>24</sup> possible
- <code>float</code> values of the form <i>m&nbsp;x&nbsp;</i>2<sup>-24</sup>,
- where <i>m</i> is a positive integer less than 2<sup>24</sup>, are
- produced with (approximately) equal probability.
-
- <p>The method <code>nextFloat</code> is implemented by class <code>Random</code>
- as if by:
-  <pre> <code>
- public float nextFloat() {
-   return next(24) / ((float)(1 &lt;&lt; 24));
- }</code></pre>
-
- <p>The hedge "approximately" is used in the foregoing description only
- because the next method is only approximately an unbiased source of
- independently chosen bits. If it were a perfect source of randomly
- chosen bits, then the algorithm shown would choose <code>float</code>
- values from the stated range with perfect uniformity.<p>
- [In early versions of Java, the result was incorrectly calculated as:
-  <pre> <code>
-   return next(30) / ((float)(1 &lt;&lt; 30));</code></pre>
- This might seem to be equivalent, if not better, but in fact it
- introduced a slight nonuniformity because of the bias in the rounding
- of floating-point numbers: it was slightly more likely that the
- low-order bit of the significand would be 0 than that it would be 1.]</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextFloat--">nextFloat</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
