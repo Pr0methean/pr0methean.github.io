@@ -704,7 +704,7 @@
 </dd>
 <dt><a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util"><span class="typeNameLink">LooperThread</span></a> - Class in <a href="io/github/pr0methean/betterrandom/util/package-summary.html">io.github.pr0methean.betterrandom.util</a></dt>
 <dd>
-<div class="block">Thread that loops a given task until interrupted (or until JVM shutdown, if it <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>Thread.isDaemon()</code></a>), with the iterations being transactional.</div>
+<div class="block">Thread that loops a given task until interrupted (or until JVM shutdown, if it <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>is a daemon thread</code></a>), with the iterations being transactional.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#LooperThread--">LooperThread()</a></span> - Constructor for class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
 <dd>
@@ -801,7 +801,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextBytes-byte:A-">nextBytes(byte[])</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(256)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes(byte[])</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>
@@ -811,11 +811,11 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble-double-">nextDouble(double)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble-double-double-">nextDouble(double, double)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(double, double)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(origin, bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble--">nextDouble()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
@@ -872,11 +872,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextInt-int-">nextInt(int)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextInt-int-int-">nextInt(int, int)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(int, int)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(origin, bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>&nbsp;</dd>
@@ -893,11 +893,11 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextLong-long-">nextLong(long)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextLong-long-long-">nextLong(long, long)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(long, long)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(origin, bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>
