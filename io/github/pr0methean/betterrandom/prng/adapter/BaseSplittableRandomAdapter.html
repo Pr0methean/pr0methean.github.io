@@ -407,7 +407,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
  methods.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</dd>
+<dd>the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> to use with the current thread.</dd>
 </dl>
 </li>
 </ul>
@@ -550,7 +550,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>withProbabilityInternal</h4>
 <pre>protected&nbsp;boolean&nbsp;withProbabilityInternal(double&nbsp;probability)</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a>. Called by <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a> to generate a boolean with a specified probability
+<div class="block"><p>Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble--" title="class or interface in java.util"><code>SplittableRandom.nextDouble()</code></a>.</p> Called by <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-"><code>BaseRandom.withProbability(double)</code></a> to generate a boolean with a specified probability
  of returning true, after checking that <code>probability</code> is strictly between 0 and 1.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
@@ -588,7 +588,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRa
 <li class="blockList">
 <h4>nextLongNoEntropyDebit</h4>
 <pre>protected&nbsp;long&nbsp;nextLongNoEntropyDebit()</pre>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong--" title="class or interface in java.util"><code>SplittableRandom.nextLong()</code></a>.</div>
+<div class="block"><p>Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong--" title="class or interface in java.util"><code>SplittableRandom.nextLong()</code></a>.</p> Returns the next random <code>long</code>, but does not debit entropy.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>

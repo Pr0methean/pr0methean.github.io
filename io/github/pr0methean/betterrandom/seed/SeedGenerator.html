@@ -107,9 +107,14 @@ var activeTableTab = "activeTableTab";
 <dt>All Known Implementing Classes:</dt>
 <dd><a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">DefaultSeedGenerator</a>, <a href="../../../../../io/github/pr0methean/betterrandom/seed/DevRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">DevRandomSeedGenerator</a>, <a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">RandomDotOrgSeedGenerator</a>, <a href="../../../../../io/github/pr0methean/betterrandom/seed/SecureRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">SecureRandomSeedGenerator</a></dd>
 </dl>
+<dl>
+<dt>Functional Interface:</dt>
+<dd>This is a functional interface and can therefore be used as the assignment target for a lambda expression or method reference.</dd>
+</dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">SeedGenerator</span>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html?is-external=true" title="class or interface in java.lang">@FunctionalInterface</a>
+public interface <span class="typeNameLabel">SeedGenerator</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
 <div class="block">Strategy interface for seeding random number generators. Any implementations that are not enums
  should implement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang"><code>Object.equals(Object)</code></a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang"><code>Object.hashCode()</code></a>.</div>
@@ -149,7 +154,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>default boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#isWorthTrying--">isWorthTrying</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#isWorthTrying--">isWorthTrying</a></span>()</code>
+<div class="block">Returns true if we cannot determine quickly (i.e.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -209,11 +216,12 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <li class="blockList">
 <h4>isWorthTrying</h4>
 <pre>default&nbsp;boolean&nbsp;isWorthTrying()</pre>
+<div class="block">Returns true if we cannot determine quickly (i.e. without I/O calls) that this SeedGenerator
+ would throw a <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed"><code>SeedException</code></a> if <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-int-"><code>generateSeed(int)</code></a> or <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-byte:A-"><code>generateSeed(byte[])</code></a> were being called right now.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>true if we cannot determine without I/O calls that this SeedGenerator would throw a
-     <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed"><code>SeedException</code></a> if <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-int-"><code>generateSeed(int)</code></a> or <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-byte:A-"><code>generateSeed(byte[])</code></a> were
-     being called right now.</dd>
+<dd>true if this SeedGenerator will get as far as an I/O call or other slow operation in
+     attempting to generate a seed immediately.</dd>
 </dl>
 </li>
 </ul>

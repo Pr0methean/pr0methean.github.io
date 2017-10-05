@@ -135,8 +135,8 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public class <span class="typeNameLabel">SplittableRandomAdapter</span>
 extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">DirectSplittableRandomAdapter</a></pre>
-<div class="block">Version of <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SingleThreadSplittableRandomAdapter</code></a> that wraps a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang"><code>ThreadLocal</code></a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>&gt;. Reseeding this will only affect the calling thread, so this can't be used
- with a <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a>. Instead, use a <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>ReseedingSplittableRandomAdapter</code></a>.</div>
+<div class="block">Thread-safe PRNG that wraps a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadLocal.html?is-external=true" title="class or interface in java.lang"><code>ThreadLocal</code></a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>&gt;.
+ Reseeding this will only affect the calling thread, so this can't be used with a <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a>. Instead, use a <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>ReseedingSplittableRandomAdapter</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Chris Hennick</dd>
@@ -223,7 +223,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#getEntropyBits--">getEntropyBits</a></span>()</code>
-<div class="block">Returns an estimate of the current amount of entropy.</div>
+<div class="block">Returns the entropy count for the calling thread (it is separate for each thread).</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -255,7 +255,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#setSeed-long-">setSeed</a></span>(long&nbsp;seed)</code>
-<div class="block">Replaces the current master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> with a new one that uses the given seed.</div>
+<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>DirectSplittableRandomAdapter.underlying</code></a> with a new <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that uses the given seed.</div>
 </td>
 </tr>
 </table>
@@ -364,12 +364,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>getEntropyBits</h4>
 <pre>public&nbsp;long&nbsp;getEntropyBits()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html#getEntropyBits--">EntropyCountingRandom</a></code></span></div>
-<div class="block">Returns an estimate of the current amount of entropy. Every time the PRNG is reseeded, the
- entropy count is set to the new seed's length; and every time it is used, it is decreased by
- the number of random bits in the output rounded up. The amount of entropy can go below zero,
- giving an indication of how far the entropy has been stretched. This estimate is a lower bound
- if the seed is perfectly random and is not being reused.</div>
+<div class="block">Returns the entropy count for the calling thread (it is separate for each thread).</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html#getEntropyBits--">getEntropyBits</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom">EntropyCountingRandom</a></code></dd>
@@ -413,7 +408,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom--">getSplittableRandom</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</dd>
+<dd>the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> to use with the current thread.</dd>
 </dl>
 </li>
 </ul>
@@ -463,7 +458,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <h4>setSeed</h4>
 <pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>&nbsp;SplittableRandomAdapter&nbsp;this,
                     long&nbsp;seed)</pre>
-<div class="block">Replaces the current master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> with a new one that uses the given seed. Applies only to the calling thread.</div>
+<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>DirectSplittableRandomAdapter.underlying</code></a> with a new <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a> that uses the given seed. Applies only to the calling thread.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">DirectSplittableRandomAdapter</a></code></dd>
