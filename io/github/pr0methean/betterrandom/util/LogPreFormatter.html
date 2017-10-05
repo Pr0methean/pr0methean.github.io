@@ -136,7 +136,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html#LogPreFormatter-java.lang.Class-">LogPreFormatter</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;clazz)</code>
-<div class="block">Constructor for LogPreFormatter.</div>
+<div class="block">Creates a LogPreFormatter for the given class.</div>
 </td>
 </tr>
 </table>
@@ -158,7 +158,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html#error-java.lang.String-java.lang.Object...-">error</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">error.</div>
+<div class="block">Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#SEVERE" title="class or interface in java.util.logging"><code>Level.SEVERE</code></a>.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -166,14 +166,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html#format-java.util.logging.Level-java.lang.String-java.lang.Object...-">format</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true" title="class or interface in java.util.logging">Level</a>&nbsp;level,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
       <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">format.</div>
+<div class="block">If <code>level</code> is loggable, formats <code>args</code> using <code>formatString</code> and logs
+ them at <code>level</code>.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html#info-java.lang.String-java.lang.Object...-">info</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">info.</div>
+<div class="block">Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#INFO" title="class or interface in java.util.logging"><code>Level.INFO</code></a>.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -187,7 +188,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html#warn-java.lang.String-java.lang.Object...-">warn</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
     <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</code>
-<div class="block">warn.</div>
+<div class="block">Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#WARNING" title="class or interface in java.util.logging"><code>Level.WARNING</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -219,10 +220,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>LogPreFormatter</h4>
 <pre>public&nbsp;LogPreFormatter(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;?&gt;&nbsp;clazz)</pre>
-<div class="block"><p>Constructor for LogPreFormatter.</p></div>
+<div class="block"><p>Creates a LogPreFormatter for the given class.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>clazz</code> - a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang"><code>Class</code></a> object.</dd>
+<dd><code>clazz</code> - The class that will use this LogPreFormatter.</dd>
 </dl>
 </li>
 </ul>
@@ -243,7 +244,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <pre>public&nbsp;void&nbsp;format(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true" title="class or interface in java.util.logging">Level</a>&nbsp;level,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
                    <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block"><p>format.</p></div>
+<div class="block"><p>If <code>level</code> is loggable, formats <code>args</code> using <code>formatString</code> and logs
+ them at <code>level</code>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>level</code> - a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true" title="class or interface in java.util.logging"><code>Level</code></a> object.</dd>
@@ -260,7 +262,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>error</h4>
 <pre>public&nbsp;void&nbsp;error(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
                   <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block"><p>error.</p></div>
+<div class="block"><p>Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#SEVERE" title="class or interface in java.util.logging"><code>Level.SEVERE</code></a>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>formatString</code> - a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> object.</dd>
@@ -276,7 +278,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>warn</h4>
 <pre>public&nbsp;void&nbsp;warn(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block"><p>warn.</p></div>
+<div class="block"><p>Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#WARNING" title="class or interface in java.util.logging"><code>Level.WARNING</code></a>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>formatString</code> - a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> object.</dd>
@@ -292,7 +294,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>info</h4>
 <pre>public&nbsp;void&nbsp;info(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;formatString,
                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>...&nbsp;args)</pre>
-<div class="block"><p>info.</p></div>
+<div class="block"><p>Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#INFO" title="class or interface in java.util.logging"><code>Level.INFO</code></a>.</p></div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>formatString</code> - a <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang"><code>String</code></a> object.</dd>

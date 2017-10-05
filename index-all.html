@@ -282,7 +282,7 @@
 </dd>
 <dt><a href="io/github/pr0methean/betterrandom/seed/DevRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><span class="typeNameLink">DevRandomSeedGenerator</span></a> - Enum in <a href="io/github/pr0methean/betterrandom/seed/package-summary.html">io.github.pr0methean.betterrandom.seed</a></dt>
 <dd>
-<div class="block">RNG seed strategy that gets data from /dev/random on systems that provide it (e.g.</div>
+<div class="block">RNG seed strategy that gets data from <code>/dev/random</code> on systems that provide it (e.g.</div>
 </dd>
 <dt><a href="io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><span class="typeNameLink">DirectSplittableRandomAdapter</span></a> - Class in <a href="io/github/pr0methean/betterrandom/prng/adapter/package-summary.html">io.github.pr0methean.betterrandom.prng.adapter</a></dt>
 <dd>
@@ -377,7 +377,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html#error-java.lang.String-java.lang.Object...-">error(String, Object...)</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util">LogPreFormatter</a></dt>
 <dd>
-<div class="block">error.</div>
+<div class="block">Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#SEVERE" title="class or interface in java.util.logging"><code>Level.SEVERE</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#estimateSize--">estimateSize()</a></span> - Method in class io.github.pr0methean.betterrandom.util.spliterator.<a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a></dt>
 <dd>&nbsp;</dd>
@@ -393,7 +393,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html#format-java.util.logging.Level-java.lang.String-java.lang.Object...-">format(Level, String, Object...)</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util">LogPreFormatter</a></dt>
 <dd>
-<div class="block">format.</div>
+<div class="block">If <code>level</code> is loggable, formats <code>args</code> using <code>formatString</code> and logs
+ them at <code>level</code>.</div>
 </dd>
 </dl>
 <a name="I:G">
@@ -543,7 +544,7 @@
 <dl>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html#info-java.lang.String-java.lang.Object...-">info(String, Object...)</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util">LogPreFormatter</a></dt>
 <dd>
-<div class="block">info.</div>
+<div class="block">Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#INFO" title="class or interface in java.util.logging"><code>Level.INFO</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#initTransientFields--">initTransientFields()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/AesCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">AesCounterRandom</a></dt>
 <dd>&nbsp;</dd>
@@ -670,7 +671,7 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html#LogPreFormatter-java.lang.Class-">LogPreFormatter(Class&lt;?&gt;)</a></span> - Constructor for class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util">LogPreFormatter</a></dt>
 <dd>
-<div class="block">Constructor for LogPreFormatter.</div>
+<div class="block">Creates a LogPreFormatter for the given class.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html#logStackTrace-java.util.logging.Level-java.lang.StackTraceElement:A-">logStackTrace(Level, StackTraceElement[])</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util">LogPreFormatter</a></dt>
 <dd>
@@ -815,7 +816,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble-double-double-">nextDouble(double, double)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(origin, bound)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextDouble-double-double-" title="class or interface in java.util"><code>SplittableRandom.nextDouble(origin,
+ bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextDouble--">nextDouble()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
@@ -876,7 +878,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextInt-int-int-">nextInt(int, int)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(origin, bound)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextInt-int-int-" title="class or interface in java.util"><code>SplittableRandom.nextInt(origin,
+ bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>&nbsp;</dd>
@@ -897,7 +900,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#nextLong-long-long-">nextLong(long, long)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></dt>
 <dd>
-<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(origin, bound)</code></a>.</div>
+<div class="block">Delegates to <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true#nextLong-long-long-" title="class or interface in java.util"><code>SplittableRandom.nextLong(origin,
+ bound)</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>
@@ -1303,7 +1307,7 @@ the order they are declared.</div>
 <dl>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html#warn-java.lang.String-java.lang.Object...-">warn(String, Object...)</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util">LogPreFormatter</a></dt>
 <dd>
-<div class="block">warn.</div>
+<div class="block">Log a formatted string at <a href="https://docs.oracle.com/javase/8/docs/api/java/util/logging/Level.html?is-external=true#WARNING" title="class or interface in java.util.logging"><code>Level.WARNING</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-">withProbability(double)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>
