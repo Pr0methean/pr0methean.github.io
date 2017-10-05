@@ -206,14 +206,14 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Splitera
 <td class="colFirst"><code>protected <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/LongSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">LongSupplierSpliterator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/LongSupplierSpliterator.html#internalSplit-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-">internalSplit</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;remaining,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining)</code>
-<div class="block">Should wrap a constructor that calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator.AbstractSupplierSpliterator(AtomicLong,
- AtomicLong, Object, boolean)</code></a>.</div>
+<div class="block">Splits off a new instance that uses the same Supplier, and shares its counts of remaining items
+ and remaining permitted splits with this one.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/LongSupplierSpliterator.html#internalSupplyAndAccept-java.util.function.LongConsumer-">internalSupplyAndAccept</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongConsumer.html?is-external=true" title="class or interface in java.util.function">LongConsumer</a>&nbsp;action)</code>
-<div class="block">Should be <code>action.accept(supplier.get())</code> or an equivalent.</div>
+<div class="block">Supplies the next output value to <code>action</code>.</div>
 </td>
 </tr>
 </table>
@@ -292,8 +292,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Splitera
 <pre>protected&nbsp;<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/LongSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">LongSupplierSpliterator</a>&nbsp;internalSplit(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;remaining,
                                                 <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSplit-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-">AbstractSupplierSpliterator</a></code></span></div>
-<div class="block">Should wrap a constructor that calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator.AbstractSupplierSpliterator(AtomicLong,
- AtomicLong, Object, boolean)</code></a>.</div>
+<div class="block">Splits off a new instance that uses the same Supplier, and shares its counts of remaining items
+ and remaining permitted splits with this one. Doesn't decrement the number of remaining
+ permitted splits (that's done in <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>AbstractSupplierSpliterator.trySplit()</code></a>). Should wrap a constructor that
+ ultimately calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator(remaining, splitsRemaining, supplier, false)</code></a>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSplit-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-">internalSplit</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongSupplier.html?is-external=true" title="class or interface in java.util.function">LongSupplier</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongConsumer.html?is-external=true" title="class or interface in java.util.function">LongConsumer</a>,<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/LongSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">LongSupplierSpliterator</a>&gt;</code></dd>
@@ -315,7 +317,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Splitera
 <h4>internalSupplyAndAccept</h4>
 <pre>protected&nbsp;void&nbsp;internalSupplyAndAccept(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongConsumer.html?is-external=true" title="class or interface in java.util.function">LongConsumer</a>&nbsp;action)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSupplyAndAccept-TConsumer-">AbstractSupplierSpliterator</a></code></span></div>
-<div class="block">Should be <code>action.accept(supplier.get())</code> or an equivalent.</div>
+<div class="block">Supplies the next output value to <code>action</code>. Should be equivalent to <code>action.accept(supplier.get())</code>.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSupplyAndAccept-TConsumer-">internalSupplyAndAccept</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongSupplier.html?is-external=true" title="class or interface in java.util.function">LongSupplier</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongConsumer.html?is-external=true" title="class or interface in java.util.function">LongConsumer</a>,<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/LongSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">LongSupplierSpliterator</a>&gt;</code></dd>

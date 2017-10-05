@@ -109,9 +109,11 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>TSupplier</code> - The supplier type.</dd>
-<dd><code>TConsumer</code> - The consumer type that <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#tryAdvance-TConsumer-"><code>tryAdvance(Object)</code></a> receives.</dd>
-<dd><code>TSplitInto</code> - The return type of <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>.</dd>
+<dd><code>TSupplier</code> - A specification or unboxed-primitive equivalent of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function"><code>Supplier</code></a>.</dd>
+<dd><code>TConsumer</code> - A specification or unboxed-primitive equivalent of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function"><code>Consumer</code></a> The consumer type that <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#tryAdvance-TConsumer-"><code>tryAdvance(Object)</code></a> receives.</dd>
+<dd><code>TSplitInto</code> - The return type of <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>. Should be a self-reference (i.e.
+     <code>ConcreteSupplierSpliterator extends AbstractSupplierSpliterator&lt;T, U,
+     ConcreteSupplierSpliterator&gt;</code>).</dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -147,7 +149,9 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSupplier</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#supplier">supplier</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#supplier">supplier</a></span></code>
+<div class="block">The supplier of the output values.</div>
+</td>
 </tr>
 </table>
 </li>
@@ -207,14 +211,14 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <td class="colFirst"><code>protected abstract <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSplitInto</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSplit-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-">internalSplit</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;remaining,
              <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining)</code>
-<div class="block">Should wrap a constructor that calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator(AtomicLong,
- AtomicLong, Object, boolean)</code></a>.</div>
+<div class="block">Splits off a new instance that uses the same Supplier, and shares its counts of remaining items
+ and remaining permitted splits with this one.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSupplyAndAccept-TConsumer-">internalSupplyAndAccept</a></span>(<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TConsumer</a>&nbsp;action)</code>
-<div class="block">Should be <code>action.accept(supplier.get())</code> or an equivalent.</div>
+<div class="block">Supplies the next output value to <code>action</code>.</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -254,6 +258,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>supplier</h4>
 <pre>protected final&nbsp;<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSupplier</a> supplier</pre>
+<div class="block">The supplier of the output values.</div>
 </li>
 </ul>
 </li>
@@ -338,8 +343,10 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>internalSplit</h4>
 <pre>protected abstract&nbsp;<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSplitInto</a>&nbsp;internalSplit(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;remaining,
                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining)</pre>
-<div class="block">Should wrap a constructor that calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator(AtomicLong,
- AtomicLong, Object, boolean)</code></a>.</div>
+<div class="block">Splits off a new instance that uses the same Supplier, and shares its counts of remaining items
+ and remaining permitted splits with this one. Doesn't decrement the number of remaining
+ permitted splits (that's done in <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>). Should wrap a constructor that
+ ultimately calls <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator(remaining, splitsRemaining, supplier, false)</code></a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>remaining</code> - An <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic"><code>AtomicLong</code></a> (shared between splits) that stores how many more
@@ -398,7 +405,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>true if an output was produced and consumed.</dd>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#tryAdvance-java.util.function.Consumer-" title="class or interface in java.util"><code>Spliterator.tryAdvance(Consumer)</code></a></dd>
+<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#tryAdvance-java.util.function.Consumer-" title="class or interface in java.util"><code>Spliterator.tryAdvance(java.util.function.Consumer)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -411,7 +418,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>internalSupplyAndAccept</h4>
 <pre>protected abstract&nbsp;void&nbsp;internalSupplyAndAccept(<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TConsumer</a>&nbsp;action)</pre>
-<div class="block">Should be <code>action.accept(supplier.get())</code> or an equivalent.</div>
+<div class="block">Supplies the next output value to <code>action</code>. Should be equivalent to <code>action.accept(supplier.get())</code>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>action</code> - the consumer that will receive the next output value if there is one.</dd>

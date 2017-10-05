@@ -564,8 +564,8 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSplit-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-">internalSplit(AtomicLong, AtomicLong)</a></span> - Method in class io.github.pr0methean.betterrandom.util.spliterator.<a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a></dt>
 <dd>
-<div class="block">Should wrap a constructor that calls <a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#AbstractSupplierSpliterator-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-TSupplier-boolean-"><code>AbstractSupplierSpliterator.AbstractSupplierSpliterator(AtomicLong,
- AtomicLong, Object, boolean)</code></a>.</div>
+<div class="block">Splits off a new instance that uses the same Supplier, and shares its counts of remaining items
+ and remaining permitted splits with this one.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/spliterator/DoubleSupplierSpliterator.html#internalSplit-java.util.concurrent.atomic.AtomicLong-java.util.concurrent.atomic.AtomicLong-">internalSplit(AtomicLong, AtomicLong)</a></span> - Method in class io.github.pr0methean.betterrandom.util.spliterator.<a href="io/github/pr0methean/betterrandom/util/spliterator/DoubleSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">DoubleSupplierSpliterator</a></dt>
 <dd>&nbsp;</dd>
@@ -575,7 +575,7 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#internalSupplyAndAccept-TConsumer-">internalSupplyAndAccept(TConsumer)</a></span> - Method in class io.github.pr0methean.betterrandom.util.spliterator.<a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a></dt>
 <dd>
-<div class="block">Should be <code>action.accept(supplier.get())</code> or an equivalent.</div>
+<div class="block">Supplies the next output value to <code>action</code>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/spliterator/DoubleSupplierSpliterator.html#internalSupplyAndAccept-java.util.function.DoubleConsumer-">internalSupplyAndAccept(DoubleConsumer)</a></span> - Method in class io.github.pr0methean.betterrandom.util.spliterator.<a href="io/github/pr0methean/betterrandom/util/spliterator/DoubleSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">DoubleSupplierSpliterator</a></dt>
 <dd>&nbsp;</dd>
@@ -1210,7 +1210,9 @@
  returned.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#supplier">supplier</a></span> - Variable in class io.github.pr0methean.betterrandom.util.spliterator.<a href="io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">The supplier of the output values.</div>
+</dd>
 </dl>
 <a name="I:T">
 <!--   -->
