@@ -243,8 +243,9 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThr
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#readResolve--">readResolve</a></span>()</code>
-<div class="block">Use readResolve rather than readObject, because stack size and thread group can only be
- restored in Thread constructors.</div>
+<div class="block">Deserialization uses readResolve rather than <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readObject-java.io.ObjectInputStream-"><code>LooperThread.readObject(ObjectInputStream)</code></a> alone,
+ because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread group during
+ construction and not update them afterwards.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -358,8 +359,9 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThr
 <h4>readResolve</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;readResolve()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--">LooperThread</a></code></span></div>
-<div class="block">Use readResolve rather than readObject, because stack size and thread group can only be
- restored in Thread constructors.</div>
+<div class="block">Deserialization uses readResolve rather than <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readObject-java.io.ObjectInputStream-"><code>LooperThread.readObject(ObjectInputStream)</code></a> alone,
+ because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread group during
+ construction and not update them afterwards.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--">readResolve</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></code></dd>

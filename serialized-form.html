@@ -598,8 +598,9 @@ private&nbsp;void&nbsp;readObjectNoData()
 <h4>readResolve</h4>
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;readResolve()
                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidObjectException.html?is-external=true" title="class or interface in java.io">InvalidObjectException</a></pre>
-<div class="block">Use readResolve rather than readObject, because stack size and thread group can only be
- restored in Thread constructors.</div>
+<div class="block">Deserialization uses readResolve rather than <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readObject-java.io.ObjectInputStream-"><code>LooperThread.readObject(ObjectInputStream)</code></a> alone,
+ because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread group during
+ construction and not update them afterwards.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidObjectException.html?is-external=true" title="class or interface in java.io">InvalidObjectException</a></code> - if this LooperThread's serial form is invalid.</dd>
