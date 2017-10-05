@@ -125,7 +125,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public final class <span class="typeNameLabel">RandomSeederThread</span>
 extends <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></pre>
-<div class="block">Thread that loops over <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances and reseeds them.</div>
+<div class="block">Thread that loops over <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances and reseeds them. No <a href="../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom"><code>EntropyCountingRandom</code></a> will be reseeded when it's already had more input than output.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Chris Hennick</dd>
@@ -250,7 +250,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThr
 <tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#remove-java.util.Random...-">remove</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>...&nbsp;randoms)</code>
-<div class="block">remove.</div>
+<div class="block">Remove one or more <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances.</div>
 </td>
 </tr>
 <tr id="i7" class="rowColor">
@@ -443,10 +443,11 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThr
 <li class="blockList">
 <h4>remove</h4>
 <pre>public&nbsp;void&nbsp;remove(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>...&nbsp;randoms)</pre>
-<div class="block"><p>remove.</p></div>
+<div class="block">Remove one or more <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances. If this is called while <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>LooperThread.getState()</code></a> ==
+ <code>Thread.State#RUNNABLE</code>, they may still be reseeded once more.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>randoms</code> - a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> object.</dd>
+<dd><code>randoms</code> - the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances to remove.</dd>
 </dl>
 </li>
 </ul>

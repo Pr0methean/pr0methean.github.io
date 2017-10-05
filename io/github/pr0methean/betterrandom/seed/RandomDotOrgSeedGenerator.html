@@ -76,13 +76,13 @@ var activeTableTab = "activeTableTab";
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#enum.constant.summary">Enum Constants</a>&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#enum.constant.detail">Enum Constants</a>&nbsp;|&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>
@@ -156,8 +156,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGe
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#DELAYED_RETRY">DELAYED_RETRY</a></span></code>
-<div class="block">Upon a failed request, this version of the client requires that you wait 10 seconds before
- trying again.</div>
+<div class="block">Upon a failed request, this version of the client waits 10 seconds before trying again.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -165,29 +164,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGe
 <div class="block">This version of the client may make HTTP requests as fast as your computer is capable of
  sending them.</div>
 </td>
-</tr>
-</table>
-</li>
-</ul>
-<!-- =========== FIELD SUMMARY =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.summary">
-<!--   -->
-</a>
-<h3>Field Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Field Summary table, listing fields, and an explanation">
-<caption><span>Fields</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Field and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>static <a href="https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html?is-external=true" title="class or interface in java.time">Clock</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#CLOCK">CLOCK</a></span></code>&nbsp;</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>static int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#MAX_CACHE_SIZE">MAX_CACHE_SIZE</a></span></code>&nbsp;</td>
 </tr>
 </table>
 </li>
@@ -207,7 +183,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGe
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#generateSeed-byte:A-">generateSeed</a></span>(byte[]&nbsp;seedData)</code>
-<div class="block">Generate a seed value for a random number generator.</div>
+<div class="block">Generates a seed value for a random number generator in an existing array.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -297,38 +273,8 @@ the order they are declared.</div>
 <li class="blockList">
 <h4>DELAYED_RETRY</h4>
 <pre>public static final&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">RandomDotOrgSeedGenerator</a> DELAYED_RETRY</pre>
-<div class="block">Upon a failed request, this version of the client requires that you wait 10 seconds before
- trying again. The <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> uses it and will fall back to the <a href="../../../../../io/github/pr0methean/betterrandom/seed/SecureRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>SecureRandomSeedGenerator</code></a> during this waiting period.</div>
-</li>
-</ul>
-</li>
-</ul>
-<!-- ============ FIELD DETAIL =========== -->
-<ul class="blockList">
-<li class="blockList"><a name="field.detail">
-<!--   -->
-</a>
-<h3>Field Detail</h3>
-<a name="CLOCK">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>CLOCK</h4>
-<pre>public static final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/time/Clock.html?is-external=true" title="class or interface in java.time">Clock</a> CLOCK</pre>
-</li>
-</ul>
-<a name="MAX_CACHE_SIZE">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>MAX_CACHE_SIZE</h4>
-<pre>public static final&nbsp;int MAX_CACHE_SIZE</pre>
-<dl>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../constant-values.html#io.github.pr0methean.betterrandom.seed.RandomDotOrgSeedGenerator.MAX_CACHE_SIZE">Constant Field Values</a></dd>
-</dl>
+<div class="block">Upon a failed request, this version of the client waits 10 seconds before trying again. If
+ called again during that waiting period, throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed"><code>SeedException</code></a>. The <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> uses this version.</div>
 </li>
 </ul>
 </li>
@@ -404,7 +350,7 @@ not permitted.)</div>
 <pre>public&nbsp;void&nbsp;generateSeed(byte[]&nbsp;seedData)
                   throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-byte:A-">SeedGenerator</a></code></span></div>
-<div class="block">Generate a seed value for a random number generator.</div>
+<div class="block">Generates a seed value for a random number generator in an existing array.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-byte:A-">generateSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a></code></dd>
@@ -506,13 +452,13 @@ not permitted.)</div>
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
 <li><a href="#enum.constant.summary">Enum Constants</a>&nbsp;|&nbsp;</li>
-<li><a href="#field.summary">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#method.summary">Method</a></li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li><a href="#enum.constant.detail">Enum Constants</a>&nbsp;|&nbsp;</li>
-<li><a href="#field.detail">Field</a>&nbsp;|&nbsp;</li>
+<li>Field&nbsp;|&nbsp;</li>
 <li><a href="#method.detail">Method</a></li>
 </ul>
 </div>

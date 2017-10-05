@@ -116,11 +116,12 @@ var activeTableTab = "activeTableTab";
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/FunctionalInterface.html?is-external=true" title="class or interface in java.lang">@FunctionalInterface</a>
 public interface <span class="typeNameLabel">SeedGenerator</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></pre>
-<div class="block">Strategy interface for seeding random number generators. Any implementations that are not enums
- should implement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang"><code>Object.equals(Object)</code></a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang"><code>Object.hashCode()</code></a>.</div>
+<div class="block">Strategy interface for seeding random number generators. Implementations that can have multiple
+ equivalent instances should implement <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang"><code>Object.equals(Object)</code></a> and <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang"><code>Object.hashCode()</code></a>
+ to support <a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a>.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
-<dd>Daniel Dyer</dd>
+<dd>Daniel Dyer, Chris Hennick</dd>
 </dl>
 </li>
 </ul>
@@ -143,13 +144,13 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-byte:A-">generateSeed</a></span>(byte[]&nbsp;output)</code>
-<div class="block">Generate a seed value for a random number generator.</div>
+<div class="block">Generates a seed value for a random number generator in an existing array.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>default byte[]</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-int-">generateSeed</a></span>(int&nbsp;length)</code>
-<div class="block">Generate a seed value for a random number generator.</div>
+<div class="block">Generates and returns a seed value for a random number generator as a new array.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
@@ -181,7 +182,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <h4>generateSeed</h4>
 <pre>void&nbsp;generateSeed(byte[]&nbsp;output)
            throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block">Generate a seed value for a random number generator.</div>
+<div class="block">Generates a seed value for a random number generator in an existing array.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>output</code> - The array that is to be populated with the seed.</dd>
@@ -198,7 +199,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.
 <h4>generateSeed</h4>
 <pre>default&nbsp;byte[]&nbsp;generateSeed(int&nbsp;length)
                      throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block">Generate a seed value for a random number generator.</div>
+<div class="block">Generates and returns a seed value for a random number generator as a new array.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>length</code> - The length of the seed to generate (in bytes).</dd>
