@@ -136,7 +136,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getPriority--" title="class or interface in java.lang"><code>Thread.getPriority()</code></a></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#NEW</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#TERMINATED</code></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isInterrupted--" title="class or interface in java.lang"><code>Thread.isInterrupted()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>Thread.isDaemon()</code></a></li> </ul><p> Thread state that will be restored ONLY if its values are <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io"><code>Serializable</code></a> includes that retrievable by: </p><ul> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getThreadGroup--" title="class or interface in java.lang"><code>Thread.getThreadGroup()</code></a></li>
  <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getUncaughtExceptionHandler--"><code>getUncaughtExceptionHandler()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getContextClassLoader--" title="class or interface in java.lang"><code>Thread.getContextClassLoader()</code></a></li>
  </ul><p> Thread state that will NEVER be restored includes: </p><ul> <li>Program counter, call
- stack, and local variables. The seederThread will restart.</li> <li>Suspended status (see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#suspend--" title="class or interface in java.lang"><code>Thread.suspend()</code></a></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#TIMED_WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#BLOCKED</code></li>
+ stack, and local variables. The seederThread will restart.</li> <li>Suspended status (see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#suspend--" title="class or interface in java.lang"><code>Thread.suspend()</code></a>)</li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#TIMED_WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#BLOCKED</code></li>
  <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getId--" title="class or interface in java.lang"><code>Thread.getId()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#holdsLock-java.lang.Object-" title="class or interface in java.lang"><code>Thread.holdsLock(Object)</code></a></li> </ul></div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
@@ -197,7 +197,10 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#stackSize">stackSize</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#stackSize">stackSize</a></span></code>
+<div class="block">The preferred stack size for this thread, in bytes, if it was specified during construction; 0
+ otherwise.</div>
+</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@Nullable</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></td>
@@ -395,6 +398,8 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>stackSize</h4>
 <pre>protected final&nbsp;long stackSize</pre>
+<div class="block">The preferred stack size for this thread, in bytes, if it was specified during construction; 0
+ otherwise. Held for serialization purposes.</div>
 </li>
 </ul>
 <a name="lock">
