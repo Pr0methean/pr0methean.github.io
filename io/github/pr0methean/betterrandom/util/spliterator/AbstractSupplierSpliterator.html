@@ -387,7 +387,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <h4>characteristics</h4>
 <pre>public&nbsp;int&nbsp;characteristics()</pre>
 <div class="block">Returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#IMMUTABLE" title="class or interface in java.util"><code>Spliterator.IMMUTABLE</code></a> | <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#NONNULL" title="class or interface in java.util"><code>Spliterator.NONNULL</code></a>. Also returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#SIZED" title="class or interface in java.util"><code>Spliterator.SIZED</code></a>
-     if this spliterator has never been split and doesn't result from a split.</div>
+     if this spliterator has never been split and wasn't produced by <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The characteristics as defined by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#characteristics--" title="class or interface in java.util"><code>Spliterator.characteristics()</code></a>.</dd>
