@@ -125,19 +125,19 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">LooperThread</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang">Thread</a>
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Cloneable.html?is-external=true" title="class or interface in java.lang">Cloneable</a></pre>
-<div class="block"><p>Thread that loops a given task until interrupted (or until JVM shutdown, if it <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>is a daemon thread</code></a>), with the iterations being transactional. Because of these constraints, it can be
- serialized and cloned. Subclasses must override <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate--"><code>iterate()</code></a> if instantiated without a
- target <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang"><code>Runnable</code></a>; the only reason this class is concrete is that temporary instances are
- needed during deserialization.</p> <p> Subclasses should override the <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolveConstructorWrapper--"><code>readResolveConstructorWrapper()</code></a> method to ensure they are deserialized as a subclass instance.
- </p> <p><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate--"><code>iterate()</code></a>'s body should be reasonably short, since it will block serialization
- and cloning that would otherwise catch it in mid-iteration. </p><p> Thread state that WILL be
- restored includes: </p> <ul> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getName--" title="class or interface in java.lang"><code>Thread.getName()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getPriority--" title="class or interface in java.lang"><code>Thread.getPriority()</code></a></li>
- <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#NEW</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#TERMINATED</code></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isInterrupted--" title="class or interface in java.lang"><code>Thread.isInterrupted()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>Thread.isDaemon()</code></a></li> </ul><p>
- Thread state that will be restored ONLY if its values are <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io"><code>Serializable</code></a> includes: </p><ul>
- <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getThreadGroup--" title="class or interface in java.lang"><code>Thread.getThreadGroup()</code></a></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getUncaughtExceptionHandler--"><code>getUncaughtExceptionHandler()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getContextClassLoader--" title="class or interface in java.lang"><code>Thread.getContextClassLoader()</code></a></li> </ul><p> Thread state that will NEVER be restored includes:
- </p><ul> <li>Program counter, call stack, and local variables. The seederThread will
- restart.</li> <li>Suspended status (see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#suspend--" title="class or interface in java.lang"><code>Thread.suspend()</code></a></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> ==
- <code>State#TIMED_WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#BLOCKED</code></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getId--" title="class or interface in java.lang"><code>Thread.getId()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#holdsLock-java.lang.Object-" title="class or interface in java.lang"><code>Thread.holdsLock(Object)</code></a></li> </ul></div>
+<div class="block"><p>Thread that loops a given task until interrupted (or until JVM shutdown, if it <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>is a daemon thread</code></a>), with the iterations being transactional. Because of these
+ constraints, it can be serialized and cloned. Subclasses must override <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate--"><code>iterate()</code></a> if
+ instantiated without a target <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang"><code>Runnable</code></a>; the only reason this class is concrete is that
+ temporary instances are needed during deserialization.</p> <p> Subclasses should override the
+ <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolveConstructorWrapper--"><code>readResolveConstructorWrapper()</code></a> method to ensure they are deserialized as a subclass
+ instance. </p> <p><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate--"><code>iterate()</code></a>'s body should be reasonably short, since it will block
+ serialization and cloning that would otherwise catch it in mid-iteration. </p><p> Thread state
+ that WILL be restored includes that retrievable by: </p> <ul> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getName--" title="class or interface in java.lang"><code>Thread.getName()</code></a></li>
+ <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getPriority--" title="class or interface in java.lang"><code>Thread.getPriority()</code></a></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#NEW</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#TERMINATED</code></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isInterrupted--" title="class or interface in java.lang"><code>Thread.isInterrupted()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#isDaemon--" title="class or interface in java.lang"><code>Thread.isDaemon()</code></a></li> </ul><p> Thread state that will be restored ONLY if its values are <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io"><code>Serializable</code></a> includes that retrievable by: </p><ul> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getThreadGroup--" title="class or interface in java.lang"><code>Thread.getThreadGroup()</code></a></li>
+ <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getUncaughtExceptionHandler--"><code>getUncaughtExceptionHandler()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getContextClassLoader--" title="class or interface in java.lang"><code>Thread.getContextClassLoader()</code></a></li>
+ </ul><p> Thread state that will NEVER be restored includes: </p><ul> <li>Program counter, call
+ stack, and local variables. The seederThread will restart.</li> <li>Suspended status (see <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#suspend--" title="class or interface in java.lang"><code>Thread.suspend()</code></a></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#TIMED_WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#WAITING</code></li> <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--"><code>getState()</code></a> == <code>State#BLOCKED</code></li>
+ <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#getId--" title="class or interface in java.lang"><code>Thread.getId()</code></a></li> <li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#holdsLock-java.lang.Object-" title="class or interface in java.lang"><code>Thread.holdsLock(Object)</code></a></li> </ul></div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Chris Hennick</dd>
@@ -179,7 +179,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@Nullable</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#group">group</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#group">group</a></span></code>
+<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang"><code>ThreadGroup</code></a> this thread belongs to, if any.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a></code></td>
@@ -189,7 +191,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/MonotonicNonNull.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@MonotonicNonNull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#name">name</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#name">name</a></span></code>
+<div class="block">The name of this thread, if it has a non-default name.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected long</code></td>
@@ -197,7 +201,9 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@Nullable</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#target">target</a></span></code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#target">target</a></span></code>
+<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang"><code>Runnable</code></a> that was passed into this thread's constructor, if any.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -408,6 +414,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>group</h4>
 <pre>protected&nbsp;<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@Nullable</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a> group</pre>
+<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang"><code>ThreadGroup</code></a> this thread belongs to, if any. Held for serialization purposes.</div>
 </li>
 </ul>
 <a name="target">
@@ -417,6 +424,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>target</h4>
 <pre>protected transient&nbsp;<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/Nullable.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@Nullable</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a> target</pre>
+<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang"><code>Runnable</code></a> that was passed into this thread's constructor, if any.</div>
 </li>
 </ul>
 <a name="name">
@@ -426,6 +434,7 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 <li class="blockList">
 <h4>name</h4>
 <pre>protected&nbsp;<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/MonotonicNonNull.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@MonotonicNonNull</a> <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a> name</pre>
+<div class="block">The name of this thread, if it has a non-default name. Held for serialization purposes.</div>
 </li>
 </ul>
 </li>
