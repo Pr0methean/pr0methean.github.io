@@ -201,11 +201,15 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>int</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#characteristics--">characteristics</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#characteristics--">characteristics</a></span>()</code>
+<div class="block">Returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#IMMUTABLE" title="class or interface in java.util"><code>Spliterator.IMMUTABLE</code></a> | <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#NONNULL" title="class or interface in java.util"><code>Spliterator.NONNULL</code></a>.</div>
+</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>long</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#estimateSize--">estimateSize</a></span>()</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#estimateSize--">estimateSize</a></span>()</code>
+<div class="block">Returns an upper bound on the number of remaining items.</div>
+</td>
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>protected abstract <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSplitInto</a></code></td>
@@ -365,6 +369,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>estimateSize</h4>
 <pre>public&nbsp;long&nbsp;estimateSize()</pre>
+<div class="block">Returns an upper bound on the number of remaining items.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>the total number of items remaining in the root spliterator, and thus an upper bound on
@@ -381,12 +386,11 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>characteristics</h4>
 <pre>public&nbsp;int&nbsp;characteristics()</pre>
+<div class="block">Returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#IMMUTABLE" title="class or interface in java.util"><code>Spliterator.IMMUTABLE</code></a> | <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#NONNULL" title="class or interface in java.util"><code>Spliterator.NONNULL</code></a>. Also returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#SIZED" title="class or interface in java.util"><code>Spliterator.SIZED</code></a>
+     if this spliterator has never been split and doesn't result from a split.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>IMMUTABLE | NONNULL | SIZED</code> in the root spliterator, and <code>IMMUTABLE |
-     NONNULL</code> in descendants.</dd>
-<dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#characteristics--" title="class or interface in java.util"><code>Spliterator.characteristics()</code></a></dd>
+<dd>The characteristics as defined by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#characteristics--" title="class or interface in java.util"><code>Spliterator.characteristics()</code></a>.</dd>
 </dl>
 </li>
 </ul>
