@@ -121,8 +121,9 @@ var activeTableTab = "activeTableTab";
 <pre>public class <span class="typeNameLabel">IntSupplierSpliterator</span>
 extends <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">AbstractSupplierSpliterator</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntSupplier.html?is-external=true" title="class or interface in java.util.function">IntSupplier</a>,<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntConsumer.html?is-external=true" title="class or interface in java.util.function">IntConsumer</a>,<a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/IntSupplierSpliterator.html" title="class in io.github.pr0methean.betterrandom.util.spliterator">IntSupplierSpliterator</a>&gt;
 implements <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.OfInt.html?is-external=true" title="class or interface in java.util">Spliterator.OfInt</a></pre>
-<div class="block">An unordered, concurrent <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.OfInt.html?is-external=true" title="class or interface in java.util"><code>Spliterator.OfInt</code></a> that invokes an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntSupplier.html?is-external=true" title="class or interface in java.util.function"><code>IntSupplier</code></a> to get its values and
- has a preset size.</div>
+<div class="block">An unordered, concurrent <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.OfInt.html?is-external=true" title="class or interface in java.util"><code>Spliterator.OfInt</code></a> that invokes an <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/IntSupplier.html?is-external=true" title="class or interface in java.util.function"><code>IntSupplier</code></a> to get its values. Has
+ a preset size if it isn't the result of a <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>AbstractSupplierSpliterator.trySplit()</code></a>, but shares its total size with the
+ other splits if it is.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Chris Hennick</dd>

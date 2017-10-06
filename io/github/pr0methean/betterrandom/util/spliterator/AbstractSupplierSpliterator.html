@@ -109,8 +109,10 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt><span class="paramLabel">Type Parameters:</span></dt>
-<dd><code>TSupplier</code> - A specification or unboxed-primitive equivalent of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function"><code>Supplier</code></a>.</dd>
-<dd><code>TConsumer</code> - A specification or unboxed-primitive equivalent of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function"><code>Consumer</code></a> The consumer type that <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#tryAdvance-TConsumer-"><code>tryAdvance(Object)</code></a> receives.</dd>
+<dd><code>TSupplier</code> - The type of the supplier of output values. A specification or
+     unboxed-primitive equivalent of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Supplier.html?is-external=true" title="class or interface in java.util.function"><code>Supplier</code></a>.</dd>
+<dd><code>TConsumer</code> - The consumer type that <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#tryAdvance-TConsumer-"><code>tryAdvance(Object)</code></a> receives. A
+     specification or unboxed-primitive equivalent of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html?is-external=true" title="class or interface in java.util.function"><code>Consumer</code></a></dd>
 <dd><code>TSplitInto</code> - The return type of <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>. Should be a self-reference (i.e.
      <code>ConcreteSupplierSpliterator extends AbstractSupplierSpliterator&lt;T, U,
      ConcreteSupplierSpliterator&gt;</code>).</dd>
@@ -124,7 +126,8 @@ var activeTableTab = "activeTableTab";
 <pre>public abstract class <span class="typeNameLabel">AbstractSupplierSpliterator&lt;TSupplier,TConsumer,TSplitInto&gt;</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></pre>
 <div class="block">An unordered, concurrent spliterator (possibly unboxed) that invokes a supplier (possibly
- unboxed) to get its values and has a preset size.</div>
+ unboxed) to get its values. Has a preset size if it isn't the result of a <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>,
+ but shares its total size with the other splits if it is.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Chris Hennick</dd>
@@ -174,7 +177,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                            <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining,
                            <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSupplier</a>&nbsp;supplier,
                            boolean&nbsp;sized)</code>
-<div class="block">Used to share the AtomicLongs between partitions.</div>
+<div class="block">Create an instance sharing the given <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic"><code>AtomicLong</code></a>s to track the total remaining size and
+ the remaining number of splits that are to be allowed.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -303,7 +307,8 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
                                       <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicLong</a>&nbsp;splitsRemaining,
                                       <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html" title="type parameter in AbstractSupplierSpliterator">TSupplier</a>&nbsp;supplier,
                                       boolean&nbsp;sized)</pre>
-<div class="block">Used to share the AtomicLongs between partitions.</div>
+<div class="block">Create an instance sharing the given <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic"><code>AtomicLong</code></a>s to track the total remaining size and
+ the remaining number of splits that are to be allowed. Used for splitting.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>remaining</code> - An <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html?is-external=true" title="class or interface in java.util.concurrent.atomic"><code>AtomicLong</code></a> (shared between splits) that stores how many more
@@ -386,8 +391,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html
 <li class="blockList">
 <h4>characteristics</h4>
 <pre>public&nbsp;int&nbsp;characteristics()</pre>
-<div class="block">Returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#IMMUTABLE" title="class or interface in java.util"><code>Spliterator.IMMUTABLE</code></a> | <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#NONNULL" title="class or interface in java.util"><code>Spliterator.NONNULL</code></a>. Also returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#SIZED" title="class or interface in java.util"><code>Spliterator.SIZED</code></a>
-     if this spliterator has never been split and wasn't produced by <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>.</div>
+<div class="block">Returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#IMMUTABLE" title="class or interface in java.util"><code>Spliterator.IMMUTABLE</code></a> | <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#NONNULL" title="class or interface in java.util"><code>Spliterator.NONNULL</code></a>. Also returns <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#SIZED" title="class or interface in java.util"><code>Spliterator.SIZED</code></a> if this spliterator has never been split and wasn't produced by <a href="../../../../../../io/github/pr0methean/betterrandom/util/spliterator/AbstractSupplierSpliterator.html#trySplit--"><code>trySplit()</code></a>.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The characteristics as defined by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Spliterator.html?is-external=true#characteristics--" title="class or interface in java.util"><code>Spliterator.characteristics()</code></a>.</dd>

@@ -122,9 +122,8 @@ var activeTableTab = "activeTableTab";
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?is-external=true" title="class or interface in java.lang">Enum</a>&lt;<a href="../../../../../io/github/pr0methean/betterrandom/seed/DevRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">DevRandomSeedGenerator</a>&gt;
 implements <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a></pre>
 <div class="block">RNG seed strategy that gets data from <code>/dev/random</code> on systems that provide it (e.g.
- Solaris/Linux).  If <code>/dev/random</code> does not exist or is not accessible, a <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed"><code>SeedException</code></a> is thrown. If it didn't exist during a previous call to this
- method or to <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-int-"><code>SeedGenerator.generateSeed(int)</code></a>, then for performance reasons, we assume for the rest of
- the JVM's lifespan that it still doesn't exist.</div>
+ Solaris/Linux).  If <code>/dev/random</code> does not exist or is not accessible, a <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed"><code>SeedException</code></a> is thrown. If it didn't exist during a previous call to this method or to <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html#generateSeed-int-"><code>SeedGenerator.generateSeed(int)</code></a>, then for performance reasons, we assume for the rest of the JVM's lifespan
+ that it still doesn't exist.</div>
 <dl>
 <dt><span class="simpleTagLabel">Author:</span></dt>
 <dd>Daniel Dyer</dd>
