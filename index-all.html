@@ -206,6 +206,10 @@
 <dd>
 <div class="block">Seed the RNG using the provided seed generation strategy.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html#CellularAutomatonRandom-int-">CellularAutomatonRandom(int)</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CellularAutomatonRandom</a></dt>
+<dd>
+<div class="block">Creates an RNG and seeds it with the specified seed data.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html#CellularAutomatonRandom-byte:A-">CellularAutomatonRandom(byte[])</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CellularAutomatonRandom</a></dt>
 <dd>
 <div class="block">Creates an RNG and seeds it with the specified seed data.</div>
@@ -506,8 +510,6 @@
 <dd>
 <div class="block">Returns the wrapped PRNG's seed, if we know it.</div>
 </dd>
-<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#getSeed--">getSeed()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/XorShiftRandom.html" title="class in io.github.pr0methean.betterrandom.prng">XorShiftRandom</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/RepeatableRandom.html#getSeed--">getSeed()</a></span> - Method in interface io.github.pr0methean.betterrandom.<a href="io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a></dt>
 <dd>
 <div class="block">Returns the seed.</div>
@@ -527,15 +529,9 @@
 <dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#getState--">getState()</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#getUncaughtExceptionHandler--">getUncaughtExceptionHandler()</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html#getWrapped--">getWrapped()</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></dt>
 <dd>
 <div class="block">Returns the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instance this RandomWrapper is currently wrapping.</div>
-</dd>
-<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#group">group</a></span> - Variable in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
-<dd>
-<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang"><code>ThreadGroup</code></a> this thread belongs to, if any.</div>
 </dd>
 </dl>
 <a name="I:H">
@@ -984,7 +980,11 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html#RandomWrapper-byte:A-">RandomWrapper(byte[])</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></dt>
 <dd>
-<div class="block">Wraps a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> and seeds it with the specified seed data.</div>
+<div class="block">Wraps a new <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> seeded it with the specified seed data.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html#RandomWrapper-long-">RandomWrapper(long)</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></dt>
+<dd>
+<div class="block">Wraps a new <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> seeded with the specified seed.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html#RandomWrapper-java.util.Random-">RandomWrapper(Random)</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></dt>
 <dd>
@@ -995,15 +995,13 @@
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--">readResolve()</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
 <dd>
 <div class="block">Deserialization uses readResolve rather than <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readObject-java.io.ObjectInputStream-"><code>LooperThread.readObject(ObjectInputStream)</code></a> alone,
- because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread group during
- construction and not update them afterwards.</div>
+ because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread serialGroup
+ during construction and not update them afterwards.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readResolveConstructorWrapper--">readResolveConstructorWrapper()</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
 <dd>
-<div class="block">Returns a new instance of this LooperThread's exact class, whose group is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#group"><code>LooperThread.group</code></a>, whose
- target is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#target"><code>LooperThread.target</code></a>, whose name is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#name"><code>LooperThread.name</code></a>, whose preferred stack size per <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#Thread-java.lang.ThreadGroup-java.lang.Runnable-java.lang.String-long-" title="class or interface in java.lang"><code>Thread.Thread(ThreadGroup, Runnable, String, long)</code></a> is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#stackSize"><code>LooperThread.stackSize</code></a>, and that has its
- subclass fields copied from this one if it does not have a <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--"><code>LooperThread.readResolve()</code></a> override that
- will populate them before deserialization completes.</div>
+<div class="block">Returns a new instance of this LooperThread's exact class, whose serialGroup is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#serialGroup"><code>LooperThread.serialGroup</code></a>, whose target is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#target"><code>LooperThread.target</code></a>, whose name is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#name"><code>LooperThread.name</code></a>, whose preferred
+ stack size per <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#Thread-java.lang.ThreadGroup-java.lang.Runnable-java.lang.String-long-" title="class or interface in java.lang"><code>Thread.Thread(ThreadGroup, Runnable, String, long)</code></a> is <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#stackSize"><code>LooperThread.stackSize</code></a>, and that has its subclass fields copied from this one if it does not have a <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--"><code>LooperThread.readResolve()</code></a> override that will populate them before deserialization completes.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#recordEntropySpent-long-">recordEntropySpent(long)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">SplittableRandomAdapter</a></dt>
 <dd>&nbsp;</dd>
@@ -1073,6 +1071,10 @@
 <dd>
 <div class="block">Strategy interface for seeding random number generators.</div>
 </dd>
+<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#serialGroup">serialGroup</a></span> - Variable in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
+<dd>
+<div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang"><code>ThreadGroup</code></a> this thread belongs to, if any.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html#setMaxRequestSize-int-">setMaxRequestSize(int)</a></span> - Static method in enum io.github.pr0methean.betterrandom.seed.<a href="io/github/pr0methean/betterrandom/seed/RandomDotOrgSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">RandomDotOrgSeedGenerator</a></dt>
 <dd>
 <div class="block">Sets the maximum request size that we will expect random.org to allow.</div>
@@ -1119,7 +1121,9 @@
 <div class="block">No-op.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-">setSeed(long)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/XorShiftRandom.html" title="class in io.github.pr0methean.betterrandom.prng">XorShiftRandom</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">No-op.</div>
+</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread(RandomSeederThread)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></dt>
 <dd>
 <div class="block">Registers this PRNG with the given <a href="io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> to schedule reseeding when we run
@@ -1151,8 +1155,6 @@
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeedInternal-byte:A-">setSeedInternal(byte[])</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/XorShiftRandom.html" title="class in io.github.pr0methean.betterrandom.prng">XorShiftRandom</a></dt>
 <dd>&nbsp;</dd>
-<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/util/LooperThread.html#setUncaughtExceptionHandler-java.lang.Thread.UncaughtExceptionHandler-">setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler)</a></span> - Method in class io.github.pr0methean.betterrandom.util.<a href="io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></dt>
-<dd>&nbsp;</dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html#setWrapped-java.util.Random-">setWrapped(Random)</a></span> - Method in class io.github.pr0methean.betterrandom.prng.<a href="io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></dt>
 <dd>
 <div class="block">Replaces the underlying <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instance with the given one on subsequent calls.</div>
@@ -1165,6 +1167,10 @@
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter-io.github.pr0methean.betterrandom.seed.SeedGenerator-">SingleThreadSplittableRandomAdapter(SeedGenerator)</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">SingleThreadSplittableRandomAdapter</a></dt>
 <dd>
 <div class="block">Use the provided seed generation strategy to create the seed for the underlying <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter--">SingleThreadSplittableRandomAdapter()</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">SingleThreadSplittableRandomAdapter</a></dt>
+<dd>
+<div class="block">Use the <a href="io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create the seed for the underlying <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter-byte:A-">SingleThreadSplittableRandomAdapter(byte[])</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">SingleThreadSplittableRandomAdapter</a></dt>
 <dd>
@@ -1186,6 +1192,10 @@
 <dd>
 <div class="block">Use the provided seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate
  an instance for each thread.</div>
+</dd>
+<dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter--">SplittableRandomAdapter()</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">SplittableRandomAdapter</a></dt>
+<dd>
+<div class="block">Use the <a href="io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to generate a seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate an instance for each thread.</div>
 </dd>
 <dt><span class="memberNameLink"><a href="io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter-long-">SplittableRandomAdapter(long)</a></span> - Constructor for class io.github.pr0methean.betterrandom.prng.adapter.<a href="io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">SplittableRandomAdapter</a></dt>
 <dd>

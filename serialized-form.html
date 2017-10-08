@@ -599,8 +599,8 @@ private&nbsp;void&nbsp;readObjectNoData()
 <pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>&nbsp;readResolve()
                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidObjectException.html?is-external=true" title="class or interface in java.io">InvalidObjectException</a></pre>
 <div class="block">Deserialization uses readResolve rather than <a href="io/github/pr0methean/betterrandom/util/LooperThread.html#readObject-java.io.ObjectInputStream-"><code>LooperThread.readObject(ObjectInputStream)</code></a> alone,
- because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread group during
- construction and not update them afterwards.</div>
+ because the API of <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true" title="class or interface in java.lang"><code>Thread</code></a> only lets us set preferred stack size and thread serialGroup
+ during construction and not update them afterwards.</div>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidObjectException.html?is-external=true" title="class or interface in java.io">InvalidObjectException</a></code> - if this LooperThread's serial form is invalid.</dd>
@@ -618,12 +618,8 @@ private&nbsp;void&nbsp;readObjectNoData()
  otherwise. Held for serialization purposes.</div>
 </li>
 <li class="blockList">
-<h4>uncaughtExceptionHandler</h4>
-<pre>io.github.pr0methean.betterrandom.util.LooperThread.UncaughtExceptionHandlerWrapper uncaughtExceptionHandler</pre>
-</li>
-<li class="blockList">
-<h4>group</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a> group</pre>
+<h4>serialGroup</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a> serialGroup</pre>
 <div class="block">The <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang"><code>ThreadGroup</code></a> this thread belongs to, if any. Held for serialization purposes.</div>
 </li>
 <li class="blockList">
@@ -651,9 +647,17 @@ private&nbsp;void&nbsp;readObjectNoData()
 <h4>contextClassLoader</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassLoader.html?is-external=true" title="class or interface in java.lang">ClassLoader</a> contextClassLoader</pre>
 </li>
-<li class="blockListLast">
+<li class="blockList">
 <h4>serialTarget</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a> serialTarget</pre>
+</li>
+<li class="blockList">
+<h4>serialUncaughtExceptionHandler</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.UncaughtExceptionHandler.html?is-external=true" title="class or interface in java.lang">Thread.UncaughtExceptionHandler</a> serialUncaughtExceptionHandler</pre>
+</li>
+<li class="blockListLast">
+<h4>realGroup</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a> realGroup</pre>
 </li>
 </ul>
 </li>

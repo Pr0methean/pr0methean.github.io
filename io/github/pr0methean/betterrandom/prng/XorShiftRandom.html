@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -215,25 +215,18 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code>byte[]</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#getSeed--">getSeed</a></span>()</code>
-<div class="block">Returns the seed.</div>
-</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected int</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#next-int-">next</a></span>(int&nbsp;bits)</code>
 <div class="block">Generates the next pseudorandom number.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeed-long-">setSeed</a></span>(long&nbsp;seed)</code>
-<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
- supports that.</div>
+<div class="block">No-op.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html#setSeedInternal-byte:A-">setSeedInternal</a></span>(byte[]&nbsp;seed)</code>
 <div class="block">Sets the seed, and should be overridden to set other state that derives from the seed.</div>
@@ -245,7 +238,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3>
-<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles--">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-double-double-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-double-double-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump--">dump</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt-int-int-">entropyOfInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong-long-long-">entropyOfLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--">fallbackSetSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians--">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians-long-">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits--">getEntropyBits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">initTransientFields</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-">internalNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints--">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs--">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBoolean--">nextBoolean</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-double-">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-E:A-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-java.util.List-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum-java.lang.Class-">nextEnum</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextFloat--">nextFloat</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#preferSeedWithLong--">preferSeedWithLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#recordEntropySpent-long-">recordEntropySpent</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-">setSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#useParallelStreams--">useParallelStreams</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-">withProbability</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal-double-">withProbabilityInternal</a></code></li>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles--">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-double-double-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles-long-double-double-">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump--">dump</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt-int-int-">entropyOfInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong-long-long-">entropyOfLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed--">fallbackSetSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians--">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians-long-">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits--">getEntropyBits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed--">getSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields--">initTransientFields</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian-java.util.function.DoubleSupplier-">internalNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints--">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints-long-int-int-">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs--">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs-long-long-long-">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBoolean--">nextBoolean</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextBytes-byte:A-">nextBytes</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble--">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble-double-double-">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-E:A-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement-java.util.List-">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum-java.lang.Class-">nextEnum</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextFloat--">nextFloat</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextGaussian--">nextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt--">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextInt-int-int-">nextInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong--">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLongNoEntropyDebit--">nextLongNoEntropyDebit</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#preferSeedWithLong--">preferSeedWithLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#recordEntropySpent-long-">recordEntropySpent</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-byte:A-">setSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#useParallelStreams--">useParallelStreams</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability-double-">withProbability</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal-double-">withProbabilityInternal</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -342,25 +335,6 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 </dl>
 </li>
 </ul>
-<a name="getSeed--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getSeed</h4>
-<pre>public&nbsp;byte[]&nbsp;getSeed()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html#getSeed--">RepeatableRandom</a></code></span></div>
-<div class="block">Returns the seed.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html#getSeed--">getSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a></code></dd>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed--">getSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>The seed data used to initialise this pseudo-random number generator.</dd>
-</dl>
-</li>
-</ul>
 <a name="setSeed-long-">
 <!--   -->
 </a>
@@ -369,17 +343,12 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRando
 <h4>setSeed</h4>
 <pre>public&nbsp;void&nbsp;setSeed(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnknownInitialization</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnknownInitialization.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.initialization.qual">value</a>=<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random.class</a>)&nbsp;XorShiftRandom&nbsp;this,
                     long&nbsp;seed)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">BaseRandom</a></code></span></div>
-<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
- supports that. If it is capable of using 64 bits or less of seed data (i.e. if <code>{@link
- #getNewSeedLength()} &lt;= {@link Long#BYTES}</code>), then this method shall replace the entire seed as
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed-long-" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> does; otherwise, it shall either be a no-op, or shall combine the
- input with the existing seed as <a href="https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html?is-external=true#setSeed-long-" title="class or interface in java.security"><code>SecureRandom.setSeed(long)</code></a> does.</div>
+<div class="block">No-op.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed-long-">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seed</code> - the initial seed</dd>
+<dd><code>seed</code> - ignored</dd>
 </dl>
 </li>
 </ul>

@@ -183,18 +183,23 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <th class="colOne" scope="col">Constructor and Description</th>
 </tr>
 <tr class="altColor">
+<td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter--">SplittableRandomAdapter</a></span>()</code>
+<div class="block">Use the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to generate a seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate an instance for each thread.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter-byte:A-">SplittableRandomAdapter</a></span>(byte[]&nbsp;seed)</code>
 <div class="block">Use the provided seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate
  an instance for each thread.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter-long-">SplittableRandomAdapter</a></span>(long&nbsp;seed)</code>
 <div class="block">Use the provided seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate
  an instance for each thread.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colOne"><code><span class="memberNameLink"><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html#SplittableRandomAdapter-io.github.pr0methean.betterrandom.seed.SeedGenerator-">SplittableRandomAdapter</a></span>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
 <div class="block">Use the provided seed generation strategy to create the seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate an instance for each thread.</div>
 </td>
@@ -331,6 +336,21 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>seed</code> - The seed. Must be 8 bytes.</dd>
+</dl>
+</li>
+</ul>
+<a name="SplittableRandomAdapter--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>SplittableRandomAdapter</h4>
+<pre>public&nbsp;SplittableRandomAdapter()
+                        throws <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
+<div class="block">Use the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to generate a seed for the master <a href="https://docs.oracle.com/javase/8/docs/api/java/util/SplittableRandom.html?is-external=true" title="class or interface in java.util"><code>SplittableRandom</code></a>, which will be split to generate an instance for each thread.</div>
+<dl>
+<dt><span class="throwsLabel">Throws:</span></dt>
+<dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> fails to generate a seed.</dd>
 </dl>
 </li>
 </ul>
