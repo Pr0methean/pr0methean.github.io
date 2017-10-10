@@ -243,13 +243,12 @@ public class SplittableRandomAdapterDemo {
 <p>BetterRandom requires many Java 8 features, but should work on any JVM that has them. Continuous
 integration takes place in the following environments:</p>
 <ul>
-<li>Linux (on Travis): OpenJDK 8, Oracle JDK 8</li>
+<li>Linux (on Travis): OpenJDK 8, Oracle JDK 8/9</li>
 <li>OS X (on Travis): JDK 8 (unclear whether Oracle or OpenJDK)</li>
 <li>Cygwin (on Appveyor): JDK 8 (unclear whether Oracle or OpenJDK)</li>
 <li>MinGW (on Appveyor): JDK 8 (unclear whether Oracle or OpenJDK)</li>
 </ul>
-<p>Continuous integration for Oracle JDK 9 is set up on Travis, but will be ignored until Travis knows
-how to properly set <code>$JAVA_HOME</code> for JDK 9. CI on BSD or Android isn't likely any time soon, since
+<p>CI on BSD or Android isn't likely any time soon, since
 no free providers of BSD CI seem to be integrated with GitHub, and there seems to be no
 actively-maintained Android-app wrapper for TestNG suites.</p>
 <h1>Alternative random number generators</h1>
@@ -450,10 +449,8 @@ seederThread.add(myRandom);
 <h1>Build scripts</h1>
 <ul>
 <li><code>benchmark.sh</code>: Compile and run benchmarks. Output will be in <code>benchmark/target</code>.</li>
-<li><code>coverage.sh</code>: Compile and run unit tests and generate coverage reports. Upload them to Coveralls
-if running in Travis-CI.</li>
-<li><code>test-proguard.sh</code>: Compile and run unit tests against Proguarded jar.</li>
-<li><code>unit-tests.sh</code>: Combined functions of <code>coverage.sh</code> and <code>test-proguard.sh</code>.</li>
+<li><code>unit-tests.sh</code>: Compile and run unit tests and generate coverage reports. Upload them to Coveralls
+if running in Travis-CI. If tests pass, run Proguard and then test again.</li>
 <li><code>release.sh</code>: Used to perform new releases.</li>
 <li><code>publish-javadoc.sh</code>: Used to release updated Javadocs to github.io.</li>
 <li><code>prepare-workspace.sh</code>: Install necessary packages on a fresh Ubuntu Trusty Tahr workspace, such

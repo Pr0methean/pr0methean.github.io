@@ -143,11 +143,9 @@
 <ul class="blockList">
 <li class="blockList">
 <h4>readObject</h4>
-<pre><a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@EnsuresNonNull</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.nullness.qual">value</a>={"lock","seed","entropyBits"})
-private&nbsp;void&nbsp;readObject(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnderInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnderInitialization</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnderInitialization.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.initialization.qual">value</a>=<a href="io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom.class</a>)&nbsp;BaseRandom&nbsp;this,
-                                                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)
-                                                                      throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
-                                                                             <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
+<pre>private&nbsp;void&nbsp;readObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)
+                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
 <dl>
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
@@ -156,9 +154,8 @@ private&nbsp;void&nbsp;readObject(<a href="https://checkerframework.org/api/org/
 </li>
 <li class="blockListLast">
 <h4>readObjectNoData</h4>
-<pre><a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true" title="class or interface in org.checkerframework.checker.nullness.qual">@EnsuresNonNull</a>(<a href="https://checkerframework.org/api/org/checkerframework/checker/nullness/qual/EnsuresNonNull.html?is-external=true#value--" title="class or interface in org.checkerframework.checker.nullness.qual">value</a>={"lock","seed","entropyBits"})
-private&nbsp;void&nbsp;readObjectNoData()
-                                                                            throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidObjectException.html?is-external=true" title="class or interface in java.io">InvalidObjectException</a></pre>
+<pre>private&nbsp;void&nbsp;readObjectNoData()
+                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/InvalidObjectException.html?is-external=true" title="class or interface in java.io">InvalidObjectException</a></pre>
 <div class="block">Used to deserialize a subclass instance that wasn't a subclass instance when it was serialized.
  Since that means we can't deserialize our seed, we generate a new one with the <a href="io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div>
 <dl>
@@ -503,8 +500,7 @@ private&nbsp;void&nbsp;readObjectNoData()
 <ul class="blockList">
 <li class="blockList">
 <h4>readObject</h4>
-<pre>private&nbsp;void&nbsp;readObject(<a href="https://checkerframework.org/api/org/checkerframework/checker/initialization/qual/UnderInitialization.html?is-external=true" title="class or interface in org.checkerframework.checker.initialization.qual">@UnderInitialization</a>&nbsp;RandomSeederThread&nbsp;this,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)
+<pre>private&nbsp;void&nbsp;readObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)
                  throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
 <dl>
@@ -651,13 +647,9 @@ private&nbsp;void&nbsp;readObjectNoData()
 <h4>serialTarget</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a> serialTarget</pre>
 </li>
-<li class="blockList">
+<li class="blockListLast">
 <h4>serialUncaughtExceptionHandler</h4>
 <pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.UncaughtExceptionHandler.html?is-external=true" title="class or interface in java.lang">Thread.UncaughtExceptionHandler</a> serialUncaughtExceptionHandler</pre>
-</li>
-<li class="blockListLast">
-<h4>realGroup</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a> realGroup</pre>
 </li>
 </ul>
 </li>
