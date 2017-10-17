@@ -447,18 +447,16 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <li class="blockList">
 <h4>wrapLegacy</h4>
 <pre>public static&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">ThreadLocalRandomWrapper</a>&nbsp;wrapLegacy(<a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/LongFunction.html?is-external=true" title="class or interface in java.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
-                                                  <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)
-                                           throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
+                                                  <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</pre>
 <div class="block">Uses this class and <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
  can be constructed from a <code>long</code> seed into a fully-concurrent one.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>legacyCreator</code> - a function that provides the <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that underlies the
-     returned wrapper on each thread.</dd>
+     returned wrapper on each thread, taking a seed as input.</dd>
+<dd><code>seedGenerator</code> - the seed generator whose output will be fed to <code>legacyCreator</code>.</dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>a ThreadLocalRandomWrapper decorating instances created by <code>legacyCreator</code>.</dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - should never happen.</dd>
 </dl>
 </li>
 </ul>
