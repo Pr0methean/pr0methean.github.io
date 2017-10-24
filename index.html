@@ -151,12 +151,19 @@ implemented by replacing the SplittableRandom).</li>
 <li>Get the latest version from
 <a href="%5Bhttps://search.maven.org/#search%7Cga%7C1%7Ca%3A%22BetterRandom%22%5D">Maven Central</a>.</li>
 <li>Get dependency codes for Maven, Gradle, SBT, Ivy, Grape, Leiningen and Buildr from
-<a href="https://mvnrepository.com/artifact/io.github.pr0methean.betterrandom/BetterRandom">mvnrepository.com</a>
+<a href="https://mvnrepository.com/artifact/io.github.pr0methean.betterrandom">mvnrepository.com</a>
 (more full-featured than Maven Central, but not always up-to-date).</li>
 </ul>
+<p>At both links, choose <strong>BetterRandom</strong> if using Java 8+ and Android API 24+ at both compile-time and
+runtime. Otherwise, choose <strong>BetterRandom-Java7</strong>.</p>
 <h1>Full javadocs</h1>
 <p>Javadocs for the latest snapshot, including both public and protected members (to support your
 subclassing), are at <a href="https://pr0methean.github.io/">pr0methean.github.io</a>.</p>
+<p>These Javadocs are for the Java 8+ branch; the Java 7 branch differs only in that
+<code>java.util.SplittableRandom</code>, <code>java.util.stream.*</code> and <code>java.util.function.*</code> are replaced with
+their backported counterparts (whose full names begin with <code>java8</code> instead of <code>java</code>) in
+<a href="https://sourceforge.net/projects/streamsupport/">StreamSupport</a>, which is an extra dependency for
+the Java 7 branch.</p>
 <h1>Design philosophy: don't take chances on randomness</h1>
 <p>Many standard tests of randomness amount to Monte Carlo simulations. And since widespread
 pseudorandom number generators (PRNGs) pass most but not all such tests in standard suites such as
@@ -233,8 +240,10 @@ public class SplittableRandomAdapterDemo {
 
 </code></pre>
 <h1>Supported environments</h1>
-<p>BetterRandom requires many Java 8 features, but should work on any JVM that has them. Compilation
-with Maven on a Java 9 compiler requires using <code>pom9.xml</code> because of a Proguard bug.</p>
+<p>BetterRandom has 2 versions, one for Java 7 -- including Android API levels below 24 -- and one for
+Java 8 and newer.</p>
+<h2>Java 8 (master branch)</h2>
+<p>Compilation with Maven on a Java 9 compiler requires using <code>pom9.xml</code> because of a Proguard bug.</p>
 <p>Continuous integration takes place in the following environments:</p>
 <ul>
 <li>Linux (on Travis): OpenJDK 8, Oracle JDK 8/9</li>
@@ -242,9 +251,23 @@ with Maven on a Java 9 compiler requires using <code>pom9.xml</code> because of 
 <li>Cygwin (on Appveyor): JDK 8 (unclear whether Oracle or OpenJDK)</li>
 <li>MinGW (on Appveyor): JDK 8 (unclear whether Oracle or OpenJDK)</li>
 </ul>
-<p>CI on BSD or Android isn't likely any time soon, since
-no free providers of BSD CI seem to be integrated with GitHub, and there seems to be no
-actively-maintained Android-app wrapper for TestNG suites.</p>
+<p>CI on BSD or Android isn't likely any time soon, since no free providers of BSD CI seem to be
+integrated with GitHub, and there seems to be no actively-maintained Android-app wrapper for TestNG
+suites. However, Android API levels 24 and up (required as both source and target) should work.</p>
+<h2>Java 7 (java7 branch)</h2>
+<p>This branch is mainly intended to support Android API levels 19 through 23; support for other
+environments is best-efforts. Active development on this branch is likely to end once 80% of Android
+devices have API level 24 or newer, as
+<a href="https://developer.android.com/about/dashboards/index.html#Platform">measured by Google</a>, <em>and</em> Java
+18.09 LTS has been released (which will mean Java 7 will be <em>two</em> major long-term-support versions
+out of date).</p>
+<p>Continuous integration takes place in the following environments:</p>
+<ul>
+<li>Linux (on Travis): OpenJDK 7</li>
+<li>Cygwin (on Appveyor): JDK 7 (unclear whether Oracle or OpenJDK)</li>
+<li>MinGW (on Appveyor): JDK 7 (unclear whether Oracle or OpenJDK)</li>
+</ul>
+<p>Testing on Oracle JDK 7 is a work in progress.</p>
 <h1>Alternative random number generators</h1>
 <p>BetterRandom provides several pseudorandom number generators that are intended as drop-in
 replacements for <code>java.util.Random</code>.</p>
@@ -380,7 +403,7 @@ prevented by using a hash function rather than a reversible cipher, but the hash
 standard JVMs are less cryptographically secure than AES and won't run as fast on hardware featuring
 AES-NI.</p>
 <h2>SplittableRandom adapters</h2>
-<p>These classes use <code>java.util.SplittableRandom</code> instances to implement the methods of <code>Random</code>,
+<p>These classes use <code>java8.util.SplittableRandom</code> instances to implement the methods of <code>Random</code>,
 despite that the two classes are unrelated and have slightly different method signatures. Several
 adapters are available:</p>
 <ul>
