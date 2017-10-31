@@ -18,7 +18,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -308,36 +308,30 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#awaitIteration--">awaitIteration</a></span>()</code>
-<div class="block">Wait for the next iteration to finish.</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#awaitIteration-long-java.util.concurrent.TimeUnit-">awaitIteration</a></span>(long&nbsp;time,
               <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;unit)</code>
 <div class="block">Wait for the next iteration to finish, with a timeout.</div>
 </td>
 </tr>
-<tr id="i2" class="altColor">
+<tr id="i1" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#clone--">clone</a></span>()</code>
 <div class="block">Clones this LooperThread using <a href="../../../../../io/github/pr0methean/betterrandom/util/CloneViaSerialization.html#clone-T-"><code>CloneViaSerialization.clone(Serializable)</code></a>.</div>
 </td>
 </tr>
-<tr id="i3" class="rowColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.State.html?is-external=true" title="class or interface in java.lang">Thread.State</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#getState--">getState</a></span>()</code>
 <div class="block">Returns the state of this thread.</div>
 </td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate--">iterate</a></span>()</code>
 <div class="block">The task that will be iterated until it returns false.</div>
 </td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--">readResolve</a></span>()</code>
 <div class="block">Deserialization uses readResolve rather than <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readObject-java.io.ObjectInputStream-"><code>readObject(ObjectInputStream)</code></a> alone,
@@ -345,20 +339,20 @@ implements <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializab
  during construction and not update them afterwards.</div>
 </td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i5" class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolveConstructorWrapper--">readResolveConstructorWrapper</a></span>()</code>
 <div class="block">Returns a new instance of this LooperThread's exact class, whose serialGroup is <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#serialGroup"><code>serialGroup</code></a>, whose target is <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#target"><code>target</code></a>, whose name is <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#name"><code>name</code></a>, whose preferred
  stack size per <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Thread.html?is-external=true#Thread-java.lang.ThreadGroup-java.lang.Runnable-java.lang.String-long-" title="class or interface in java.lang"><code>Thread.Thread(ThreadGroup, Runnable, String, long)</code></a> is <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#stackSize"><code>stackSize</code></a>, and that has its subclass fields copied from this one if it does not have a <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#readResolve--"><code>readResolve()</code></a> override that will populate them before deserialization completes.</div>
 </td>
 </tr>
-<tr id="i7" class="rowColor">
+<tr id="i6" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#run--">run</a></span>()</code>
 <div class="block">Runs <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate--"><code>iterate()</code></a> until either it returns false or this thread is interrupted.</div>
 </td>
 </tr>
-<tr id="i8" class="altColor">
+<tr id="i7" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#start--">start</a></span>()</code>
 <div class="block">Causes this thread to begin execution; the Java Virtual Machine
@@ -756,24 +750,6 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Stri
 </dl>
 </li>
 </ul>
-<a name="awaitIteration--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>awaitIteration</h4>
-<pre>public&nbsp;boolean&nbsp;awaitIteration()
-                       throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
-<div class="block">Wait for the next iteration to finish.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd><code>false</code> if the thread has already finished or is interrupted while we're waiting,
-     else <code>true</code></dd>
-<dt><span class="throwsLabel">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></code> - if thrown by <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Condition.html?is-external=true#await--" title="class or interface in java.util.concurrent.locks"><code>Condition.await()</code></a></dd>
-</dl>
-</li>
-</ul>
 <a name="awaitIteration-long-java.util.concurrent.TimeUnit-">
 <!--   -->
 </a>
@@ -783,7 +759,8 @@ protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Stri
 <pre>public&nbsp;boolean&nbsp;awaitIteration(long&nbsp;time,
                               <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html?is-external=true" title="class or interface in java.util.concurrent">TimeUnit</a>&nbsp;unit)
                        throws <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/InterruptedException.html?is-external=true" title="class or interface in java.lang">InterruptedException</a></pre>
-<div class="block">Wait for the next iteration to finish, with a timeout.</div>
+<div class="block">Wait for the next iteration to finish, with a timeout. May wait longer in the event of a
+ spurious wakeup.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>time</code> - the maximum time to wait</dd>
