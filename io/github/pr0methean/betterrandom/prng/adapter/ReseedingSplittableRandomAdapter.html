@@ -299,26 +299,6 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSeederThread</h4>
-<pre>public&nbsp;void&nbsp;setSeederThread(<a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
-                            <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed">RandomSeederThread</a>&nbsp;thread)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">BaseRandom</a></code></span></div>
-<div class="block">Registers this PRNG with the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> to schedule reseeding when we run
- out of entropy. Unregisters this PRNG with the previous <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> if it had a
- different one.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
-<dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>thread</code> - a <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> that will be used to reseed this PRNG.</dd>
-</dl>
-</li>
-</ul>
 <a name="getDefaultInstance--">
 <!--   -->
 </a>
@@ -354,6 +334,26 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <dt><span class="throwsLabel">Throws:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if <code>seedGenerator</code> throws one while generating the initial
      seed.</dd>
+</dl>
+</li>
+</ul>
+<a name="setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeederThread</h4>
+<pre>public&nbsp;void&nbsp;setSeederThread(<a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+                            <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed">RandomSeederThread</a>&nbsp;thread)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">BaseRandom</a></code></span></div>
+<div class="block">Registers this PRNG with the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> to schedule reseeding when we run
+ out of entropy. Unregisters this PRNG with the previous <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> if it had a
+ different one.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeederThread-io.github.pr0methean.betterrandom.seed.RandomSeederThread-">setSeederThread</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>thread</code> - a <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> that will be used to reseed this PRNG.</dd>
 </dl>
 </li>
 </ul>

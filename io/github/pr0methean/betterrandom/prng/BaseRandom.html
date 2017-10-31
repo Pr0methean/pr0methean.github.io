@@ -1619,7 +1619,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
                         long&nbsp;randomNumberOrigin,
                         long&nbsp;randomNumberBound)</pre>
 <div class="block"><p>Returns a stream producing the given number of pseudorandom longs, each conforming to the
- given origin (inclusive) and bound (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long, long)</code></a> to generate these numbers.</p></div>
+ given origin (inclusive) and bound (exclusive). This implementation uses <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong-long-long-"><code>nextLong(long, * long)</code></a> to generate these numbers.</p></div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#longs-long-long-long-" title="class or interface in java.util">longs</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
@@ -1727,6 +1727,23 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 </dl>
 </li>
 </ul>
+<a name="setSeed-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeed</h4>
+<pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre>
+<div class="block">Reseed this PRNG.<p>Most subclasses should override <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-"><code>setSeedInternal(byte[])</code></a> instead of
+ this method, so that they will deserialize properly.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - The PRNG's new seed.</dd>
+</dl>
+</li>
+</ul>
 <a name="setSeed-long-">
 <!--   -->
 </a>
@@ -1744,23 +1761,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed-long-" title="class or interface in java.util">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>seed</code> - the initial seed</dd>
-</dl>
-</li>
-</ul>
-<a name="setSeed-byte:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre>
-<div class="block">Reseed this PRNG.<p>Most subclasses should override <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-"><code>setSeedInternal(byte[])</code></a> instead of
- this method, so that they will deserialize properly.</p></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seed</code> - The PRNG's new seed.</dd>
 </dl>
 </li>
 </ul>
