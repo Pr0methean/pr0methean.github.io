@@ -675,6 +675,16 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  negative.</div>
 </li>
 </ul>
+<a name="lock">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>lock</h4>
+<pre>protected final&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a> lock</pre>
+<div class="block">Lock to prevent concurrent modification of the RNG's internal state.</div>
+</li>
+</ul>
 <a name="seed">
 <!--   -->
 </a>
@@ -685,16 +695,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <div class="block">The seed this PRNG was seeded with, as a byte array. Used by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed--"><code>getSeed()</code></a> even if the
  actual internal state of the PRNG is stored elsewhere (since otherwise getSeed() would require
  a slow type conversion).</div>
-</li>
-</ul>
-<a name="lock">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>lock</h4>
-<pre>protected transient&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a> lock</pre>
-<div class="block">Lock to prevent concurrent modification of the RNG's internal state.</div>
 </li>
 </ul>
 <a name="superConstructorFinished">
@@ -1728,23 +1728,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 </dl>
 </li>
 </ul>
-<a name="setSeed-byte:A-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre>
-<div class="block">Reseed this PRNG.<p>Most subclasses should override <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-"><code>setSeedInternal(byte[])</code></a> instead of
- this method, so that they will deserialize properly.</p></div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>seed</code> - The PRNG's new seed.</dd>
-</dl>
-</li>
-</ul>
 <a name="setSeed-long-">
 <!--   -->
 </a>
@@ -1762,6 +1745,23 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed-long-" title="class or interface in java.util">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>seed</code> - the initial seed</dd>
+</dl>
+</li>
+</ul>
+<a name="setSeed-byte:A-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeed</h4>
+<pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre>
+<div class="block">Reseed this PRNG.<p>Most subclasses should override <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal-byte:A-"><code>setSeedInternal(byte[])</code></a> instead of
+ this method, so that they will deserialize properly.</p></div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed-byte:A-">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
+<dt><span class="paramLabel">Parameters:</span></dt>
+<dd><code>seed</code> - The PRNG's new seed.</dd>
 </dl>
 </li>
 </ul>
