@@ -15,6 +15,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-tree
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/SerializableSupplier.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/SerializableFunction.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-use.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Dumpable.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/CloneViaSerialization.html
@@ -22,6 +23,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/LooperThread
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/EntryPoint.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/SerializableSupplier.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/SerializableFunction.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Dumpable.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/CloneViaSerialization.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/LooperThread.html
@@ -76,11 +78,13 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Ja
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/CellularAutomatonRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/BaseRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/AesCounterRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Cmwc4096Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/ThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/XorShiftRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg64Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/RandomWrapper.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Cmwc4096Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-summary.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html
