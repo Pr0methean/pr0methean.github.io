@@ -19,7 +19,7 @@ io.github.pr0methean
 -docencoding
 'UTF-8'
 -doctitle
-'BetterRandom 2.0.1-SNAPSHOT API'
+'BetterRandom 2.0.0-SNAPSHOT API'
 -link
 'http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1'
 -link
@@ -42,4 +42,4 @@ io.github.pr0methean
 -use
 -version
 -windowtitle
-'BetterRandom 2.0.1-SNAPSHOT API'
+'BetterRandom 2.0.0-SNAPSHOT API'
