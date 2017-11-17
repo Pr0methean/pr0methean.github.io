@@ -51,6 +51,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/class-use/Repeata
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/class-use/SeekableRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-tree.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/XorShiftRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html
@@ -72,6 +73,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/BaseRandom.h
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/XorShiftRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/ThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/BaseRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/MersenneTwisterRandom.html
