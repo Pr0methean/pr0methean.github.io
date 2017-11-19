@@ -121,7 +121,7 @@
 <pre>public class <span class="strong">ReseedingSplittableRandomAdapter</span>
 extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></pre>
 <div class="block">Like <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SplittableRandomAdapter</code></a>, but uses a <a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> to replace each
- thread's <code>SplittableRandom</code> with a reseeded one as frequently as possible, but not more
+ thread's <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> with a reseeded one as frequently as possible, but not more
  frequently than it is being used.</div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Chris Hennick</dd>
@@ -182,9 +182,9 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected java8.util.SplittableRandom</code></td>
+<td class="colFirst"><code>protected <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util">SplittableRandom</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter.html#getSplittableRandom()">getSplittableRandom</a></strong>()</code>
-<div class="block">Returns the <code>SplittableRandom</code> that is to be used to generate random numbers for the
+<div class="block">Returns the <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
  current thread.</div>
 </td>
 </tr>
@@ -331,15 +331,15 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <ul class="blockList">
 <li class="blockList">
 <h4>getSplittableRandom</h4>
-<pre>protected&nbsp;java8.util.SplittableRandom&nbsp;getSplittableRandom()</pre>
+<pre>protected&nbsp;<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util">SplittableRandom</a>&nbsp;getSplittableRandom()</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom()">BaseSplittableRandomAdapter</a></code></strong></div>
-<div class="block">Returns the <code>SplittableRandom</code> that is to be used to generate random numbers for the
- current thread. (<code>SplittableRandom</code> isn't thread-safe.) Called by all the <code>next*</code>
+<div class="block">Returns the <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that is to be used to generate random numbers for the
+ current thread. (<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> isn't thread-safe.) Called by all the <code>next*</code>
  methods.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom()">getSplittableRandom</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>the <code>SplittableRandom</code> to use with the current thread.</dd></dl>
+<dt><span class="strong">Returns:</span></dt><dd>the <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> to use with the current thread.</dd></dl>
 </li>
 </ul>
 <a name="equals(java.lang.Object)">

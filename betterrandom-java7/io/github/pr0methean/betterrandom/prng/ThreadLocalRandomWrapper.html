@@ -146,7 +146,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected java8.util.function.Supplier&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;</code></td>
+<td class="colFirst"><code>protected <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function">Supplier</a>&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#initializer">initializer</a></strong></code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
@@ -184,13 +184,13 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#ThreadLocalRandomWrapper(int,%20io.github.pr0methean.betterrandom.seed.SeedGenerator,%20java8.util.function.Function)">ThreadLocalRandomWrapper</a></strong>(int&nbsp;seedSize,
                         <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator,
-                        java8.util.function.Function&lt;byte[],? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;creator)</code>
+                        <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function">Function</a>&lt;byte[],? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;creator)</code>
 <div class="block">Wraps a seed generator and a function that takes a seed byte array as input.</div>
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colOne"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#ThreadLocalRandomWrapper(java8.util.function.Supplier)">ThreadLocalRandomWrapper</a></strong>(java8.util.function.Supplier&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;initializer)</code>
-<div class="block">Wraps the given <code>Supplier</code>.</div>
+<td class="colOne"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#ThreadLocalRandomWrapper(java8.util.function.Supplier)">ThreadLocalRandomWrapper</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function">Supplier</a>&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;initializer)</code>
+<div class="block">Wraps the given <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function"><code>Supplier</code></a>.</div>
 </td>
 </tr>
 </table>
@@ -332,15 +332,15 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">ThreadLocalRandomWrapper</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#wrapLegacy(java8.util.function.LongFunction,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">wrapLegacy</a></strong>(java8.util.function.LongFunction&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#wrapLegacy(java8.util.function.LongFunction,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">wrapLegacy</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
           <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
 <div class="block">Uses this class and <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
  can be constructed from a <code>long</code> seed into a fully-concurrent one.</div>
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected static java8.util.function.Function&lt;byte[],<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#wrapLongCreatorAsByteArrayCreator(java8.util.function.LongFunction)">wrapLongCreatorAsByteArrayCreator</a></strong>(java8.util.function.LongFunction&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator)</code>&nbsp;</td>
+<td class="colFirst"><code>protected static <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function">Function</a>&lt;byte[],<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#wrapLongCreatorAsByteArrayCreator(java8.util.function.LongFunction)">wrapLongCreatorAsByteArrayCreator</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator)</code>&nbsp;</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -384,7 +384,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <ul class="blockList">
 <li class="blockList">
 <h4>initializer</h4>
-<pre>protected final&nbsp;java8.util.function.Supplier&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt; initializer</pre>
+<pre>protected final&nbsp;<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function">Supplier</a>&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt; initializer</pre>
 </li>
 </ul>
 <a name="threadLocal">
@@ -410,10 +410,10 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <ul class="blockList">
 <li class="blockList">
 <h4>ThreadLocalRandomWrapper</h4>
-<pre>public&nbsp;ThreadLocalRandomWrapper(java8.util.function.Supplier&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;initializer)
+<pre>public&nbsp;ThreadLocalRandomWrapper(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function">Supplier</a>&lt;? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;initializer)
                          throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block">Wraps the given <code>Supplier</code>. This ThreadLocalRandomWrapper will be serializable if the
- <code>Supplier</code> is serializable.</div>
+<div class="block">Wraps the given <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function"><code>Supplier</code></a>. This ThreadLocalRandomWrapper will be serializable if the
+ <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Supplier.html?is-external=true" title="class or interface in java8.util.function"><code>Supplier</code></a> is serializable.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>initializer</code> - a supplier that will be called to provide the initial <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a>
      for each thread.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -428,12 +428,12 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <h4>ThreadLocalRandomWrapper</h4>
 <pre>public&nbsp;ThreadLocalRandomWrapper(int&nbsp;seedSize,
                         <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator,
-                        java8.util.function.Function&lt;byte[],? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;creator)
+                        <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function">Function</a>&lt;byte[],? extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;creator)
                          throws <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
 <div class="block">Wraps a seed generator and a function that takes a seed byte array as input. This
- ThreadLocalRandomWrapper will be serializable if the <code>Function</code> is serializable.</div>
+ ThreadLocalRandomWrapper will be serializable if the <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function"><code>Function</code></a> is serializable.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>seedSize</code> - the size of seed arrays to generate.</dd><dd><code>seedGenerator</code> - The seed generation strategy that will provide the seed value for each
-     thread's <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a>.</dd><dd><code>creator</code> - a <code>Function</code> that creates a <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> from each seed.
+     thread's <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a>.</dd><dd><code>creator</code> - a <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function"><code>Function</code></a> that creates a <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> from each seed.
      Probably a constructor reference.</dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code></dd></dl>
@@ -469,7 +469,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <ul class="blockList">
 <li class="blockList">
 <h4>wrapLegacy</h4>
-<pre>public static&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">ThreadLocalRandomWrapper</a>&nbsp;wrapLegacy(java8.util.function.LongFunction&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
+<pre>public static&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">ThreadLocalRandomWrapper</a>&nbsp;wrapLegacy(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
                                   <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</pre>
 <div class="block">Uses this class and <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
  can be constructed from a <code>long</code> seed into a fully-concurrent one.</div>
@@ -484,7 +484,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <ul class="blockList">
 <li class="blockList">
 <h4>wrapLongCreatorAsByteArrayCreator</h4>
-<pre>protected static&nbsp;java8.util.function.Function&lt;byte[],<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;wrapLongCreatorAsByteArrayCreator(java8.util.function.LongFunction&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator)</pre>
+<pre>protected static&nbsp;<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function">Function</a>&lt;byte[],<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;wrapLongCreatorAsByteArrayCreator(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator)</pre>
 </li>
 </ul>
 <a name="withProbabilityInternal(double)">

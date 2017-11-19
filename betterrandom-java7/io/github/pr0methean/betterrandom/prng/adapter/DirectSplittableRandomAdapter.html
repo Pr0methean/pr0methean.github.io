@@ -124,7 +124,7 @@
 <br>
 <pre>public abstract class <span class="strong">DirectSplittableRandomAdapter</span>
 extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></pre>
-<div class="block">Abstract subclass of <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>BaseSplittableRandomAdapter</code></a> where <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeed(long)"><code>setSeed(long)</code></a> and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])"><code>BaseRandom.setSeed(byte[])</code></a> replace the <code>SplittableRandom</code> that's used in the context in which they
+<div class="block">Abstract subclass of <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>BaseSplittableRandomAdapter</code></a> where <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeed(long)"><code>setSeed(long)</code></a> and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])"><code>BaseRandom.setSeed(byte[])</code></a> replace the <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that's used in the context in which they
  are called. See <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>ReseedingSplittableRandomAdapter</code></a> for an example of when it does
  <i>not</i> make sense to extend this class.</div>
 <dl><dt><span class="strong">Author:</span></dt>
@@ -149,9 +149,9 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <th class="colLast" scope="col">Field and Description</th>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected java8.util.SplittableRandom</code></td>
+<td class="colFirst"><code>protected <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util">SplittableRandom</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying">underlying</a></strong></code>
-<div class="block">The master <code>SplittableRandom</code> that will either be delegated to directly (see <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SingleThreadSplittableRandomAdapter</code></a> or be split using <code>SplittableRandom.split()</code> (see
+<div class="block">The master <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that will either be delegated to directly (see <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SingleThreadSplittableRandomAdapter</code></a> or be split using <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true#split()" title="class or interface in java8.util"><code>SplittableRandom.split()</code></a> (see
  <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SplittableRandomAdapter</code></a>) and have the splits delegated to.</div>
 </td>
 </tr>
@@ -180,13 +180,13 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <tr class="altColor">
 <td class="colFirst"><code>protected </code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#DirectSplittableRandomAdapter(byte[])">DirectSplittableRandomAdapter</a></strong>(byte[]&nbsp;seed)</code>
-<div class="block">Wraps a <code>SplittableRandom</code> with the specified seed.</div>
+<div class="block">Wraps a <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> with the specified seed.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>protected </code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#DirectSplittableRandomAdapter(long)">DirectSplittableRandomAdapter</a></strong>(long&nbsp;seed)</code>
-<div class="block">Wraps a <code>SplittableRandom</code> with the specified seed.</div>
+<div class="block">Wraps a <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> with the specified seed.</div>
 </td>
 </tr>
 </table>
@@ -213,13 +213,13 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeed(long)">setSeed</a></strong>(long&nbsp;seed)</code>
-<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <code>SplittableRandom</code> that uses the given seed.</div>
+<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that uses the given seed.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#setSeedInternal(byte[])">setSeedInternal</a></strong>(byte[]&nbsp;seed)</code>
-<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <code>SplittableRandom</code> that uses the given seed.</div>
+<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that uses the given seed.</div>
 </td>
 </tr>
 </table>
@@ -264,8 +264,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>underlying</h4>
-<pre>protected transient&nbsp;java8.util.SplittableRandom underlying</pre>
-<div class="block">The master <code>SplittableRandom</code> that will either be delegated to directly (see <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SingleThreadSplittableRandomAdapter</code></a> or be split using <code>SplittableRandom.split()</code> (see
+<pre>protected transient&nbsp;<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util">SplittableRandom</a> underlying</pre>
+<div class="block">The master <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that will either be delegated to directly (see <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SingleThreadSplittableRandomAdapter</code></a> or be split using <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true#split()" title="class or interface in java8.util"><code>SplittableRandom.split()</code></a> (see
  <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SplittableRandomAdapter</code></a>) and have the splits delegated to.</div>
 </li>
 </ul>
@@ -284,7 +284,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>DirectSplittableRandomAdapter</h4>
 <pre>protected&nbsp;DirectSplittableRandomAdapter(byte[]&nbsp;seed)</pre>
-<div class="block">Wraps a <code>SplittableRandom</code> with the specified seed.</div>
+<div class="block">Wraps a <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> with the specified seed.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - 8 bytes of seed data used to initialise the RNG.</dd></dl>
 </li>
 </ul>
@@ -295,7 +295,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>DirectSplittableRandomAdapter</h4>
 <pre>protected&nbsp;DirectSplittableRandomAdapter(long&nbsp;seed)</pre>
-<div class="block">Wraps a <code>SplittableRandom</code> with the specified seed.</div>
+<div class="block">Wraps a <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> with the specified seed.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - the seed.</dd></dl>
 </li>
 </ul>
@@ -330,7 +330,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>setSeedInternal</h4>
 <pre>protected&nbsp;void&nbsp;setSeedInternal(byte[]&nbsp;seed)</pre>
-<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <code>SplittableRandom</code> that uses the given seed.</div>
+<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that uses the given seed.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#setSeedInternal(byte[])">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></code></dd>
@@ -344,7 +344,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>setSeed</h4>
 <pre>public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
-<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <code>SplittableRandom</code> that uses the given seed.</div>
+<div class="block">Replaces <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html#underlying"><code>underlying</code></a> with a new <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a> that uses the given seed.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html#setSeed(long)">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a></code></dd>
