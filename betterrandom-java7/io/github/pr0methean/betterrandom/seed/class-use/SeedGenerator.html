@@ -81,19 +81,19 @@
 <tr class="altColor">
 <td class="colFirst"><a href="#io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng</a></td>
 <td class="colLast">
-<div class="block">Subclasses of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> using different random-number generation algorithms.</div>
+<div class="block">Subclasses of <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> using different random-number generation algorithms.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><a href="#io.github.pr0methean.betterrandom.prng.adapter">io.github.pr0methean.betterrandom.prng.adapter</a></td>
 <td class="colLast">
-<div class="block">Implementations of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> backed by instances of <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Implementations of <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> backed by instances of <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><a href="#io.github.pr0methean.betterrandom.seed">io.github.pr0methean.betterrandom.seed</a></td>
 <td class="colLast">
-<div class="block">Tools to obtain and apply truly-random seeds for <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> implementations,
+<div class="block">Tools to obtain and apply truly-random seeds for <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> implementations,
  especially those that also implement <a href="../../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom"><code>ByteArrayReseedableRandom</code></a>.</div>
 </td>
 </tr>
@@ -114,7 +114,7 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&gt;</code></td>
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&gt;</code></td>
 <td class="colLast"><span class="strong">BaseRandom.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seedGenerator">seedGenerator</a></strong></code>
 <div class="block">If the referent is non-null, it will be invoked to reseed this PRNG whenever random output is
  taken and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits()"><code>BaseRandom.getEntropyBits()</code></a> called immediately afterward would return zero or
@@ -144,17 +144,17 @@
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>static <a href="../../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">ThreadLocalRandomWrapper</a></code></td>
-<td class="colLast"><span class="strong">ThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#wrapLegacy(java8.util.function.LongFunction,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">wrapLegacy</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
+<td class="colLast"><span class="strong">ThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#wrapLegacy(java8.util.function.LongFunction,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">wrapLegacy</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
           <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Uses this class and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
+<div class="block">Uses this class and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
  can be constructed from a <code>long</code> seed into a fully-concurrent one.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../io/github/pr0methean/betterrandom/prng/ReseedingThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">ReseedingThreadLocalRandomWrapper</a></code></td>
-<td class="colLast"><span class="strong">ReseedingThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/ReseedingThreadLocalRandomWrapper.html#wrapLegacy(java8.util.function.LongFunction,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">wrapLegacy</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
+<td class="colLast"><span class="strong">ReseedingThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/ReseedingThreadLocalRandomWrapper.html#wrapLegacy(java8.util.function.LongFunction,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">wrapLegacy</a></strong>(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator,
           <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Uses this class and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
+<div class="block">Uses this class and <a href="../../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng"><code>RandomWrapper</code></a> to decorate any implementation of <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that
  can be constructed from a <code>long</code> seed into a fully-concurrent one.</div>
 </td>
 </tr>
@@ -197,7 +197,7 @@
 </tr>
 <tr class="altColor">
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#RandomWrapper(io.github.pr0methean.betterrandom.seed.SeedGenerator)">RandomWrapper</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Wraps a <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> and seeds it using the provided seedArray generation strategy.</div>
+<div class="block">Wraps a <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> and seeds it using the provided seedArray generation strategy.</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -310,7 +310,7 @@
 <tr class="rowColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SecureRandomSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed">SecureRandomSeedGenerator</a></strong></code>
-<div class="block"><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a> implementation that uses Java's bundled <a href="https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security"><code>SecureRandom</code></a> RNG to
+<div class="block"><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a> implementation that uses Java's bundled <a href="https://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html?is-external=true" title="class or interface in java.security"><code>SecureRandom</code></a> RNG to
  generate random seed data.</div>
 </td>
 </tr>
@@ -326,14 +326,14 @@
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">RandomSeederThread.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#add(io.github.pr0methean.betterrandom.seed.SeedGenerator,%20java.util.Random...)">add</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator,
-   <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>...&nbsp;randoms)</code>
-<div class="block">Add one or more <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances to the thread for the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a>.</div>
+   <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>...&nbsp;randoms)</code>
+<div class="block">Add one or more <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances to the thread for the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a>.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static boolean</code></td>
 <td class="colLast"><span class="strong">RandomSeederThread.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#asyncReseed(io.github.pr0methean.betterrandom.seed.SeedGenerator,%20java.util.Random)">asyncReseed</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator,
-           <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;random)</code>
+           <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&nbsp;random)</code>
 <div class="block">Asynchronously triggers reseeding of the given <a href="../../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom"><code>EntropyCountingRandom</code></a> if it is
  associated with a live RandomSeederThread corresponding to the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a>.</div>
 </td>
@@ -351,8 +351,8 @@
 <tr class="altColor">
 <td class="colFirst"><code>static void</code></td>
 <td class="colLast"><span class="strong">RandomSeederThread.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#remove(io.github.pr0methean.betterrandom.seed.SeedGenerator,%20java.util.Random...)">remove</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator,
-      <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>...&nbsp;randoms)</code>
-<div class="block">Remove one or more <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances from the thread for the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a>
+      <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>...&nbsp;randoms)</code>
+<div class="block">Remove one or more <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances from the thread for the given <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a>
  if such a thread exists and contains them.</div>
 </td>
 </tr>
@@ -369,9 +369,9 @@
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#RandomSeederThread(java.lang.ThreadGroup,%20java.lang.Runnable,%20java.lang.String,%20long,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">RandomSeederThread</a></strong>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a>&nbsp;group,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;target,
-                  <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
+<td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html#RandomSeederThread(java.lang.ThreadGroup,%20java.lang.Runnable,%20java.lang.String,%20long,%20io.github.pr0methean.betterrandom.seed.SeedGenerator)">RandomSeederThread</a></strong>(<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/ThreadGroup.html?is-external=true" title="class or interface in java.lang">ThreadGroup</a>&nbsp;group,
+                  <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a>&nbsp;target,
+                  <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
                   long&nbsp;stackSize,
                   <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>&nbsp;</td>
 </tr>
