@@ -135,6 +135,14 @@ extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Enum.html?i
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>static &lt;T extends <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&gt;&nbsp;<br>T</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/util/CloneViaSerialization.html#fromByteArray(byte[])">fromByteArray</a></strong>(byte[]&nbsp;serialCopy)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>static &lt;T extends <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&gt;&nbsp;<br>byte[]</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/util/CloneViaSerialization.html#toByteArray(T)">toByteArray</a></strong>(T&nbsp;object)</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../io/github/pr0methean/betterrandom/util/CloneViaSerialization.html" title="enum in io.github.pr0methean.betterrandom.util">CloneViaSerialization</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/util/CloneViaSerialization.html#valueOf(java.lang.String)">valueOf</a></strong>(<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Returns the enum constant of this type with the specified name.</div>
@@ -216,13 +224,33 @@ not permitted.)</div>
 </a><a name="clone(T)">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>clone</h4>
 <pre>public static&nbsp;&lt;T extends <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&gt;&nbsp;T&nbsp;clone(T&nbsp;object)</pre>
 <div class="block">Clones an object by serializing and deserializing it.</div>
 <dl><dt><span class="strong">Type Parameters:</span></dt><dd><code>T</code> - The type of <code>object</code>.</dd><dt><span class="strong">Parameters:</span></dt><dd><code>object</code> - The object to clone.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>A clone of <code>object</code>.</dd></dl>
+</li>
+</ul>
+<a name="fromByteArray(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>fromByteArray</h4>
+<pre>public static&nbsp;&lt;T extends <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&gt;&nbsp;T&nbsp;fromByteArray(byte[]&nbsp;serialCopy)</pre>
+</li>
+</ul>
+<a name="toByteArray(java.io.Serializable)">
+<!--   -->
+</a><a name="toByteArray(T)">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>toByteArray</h4>
+<pre>public static&nbsp;&lt;T extends <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a>&gt;&nbsp;byte[]&nbsp;toByteArray(T&nbsp;object)</pre>
 </li>
 </ul>
 </li>

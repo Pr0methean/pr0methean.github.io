@@ -257,7 +257,10 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>double</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#nextDouble()">nextDouble</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#nextDoubleNoEntropyDebit()">nextDoubleNoEntropyDebit</a></strong>()</code>
+<div class="block">Returns the next random <code>double</code> between 0.0 (inclusive) and 1.0 (exclusive), but does
+ not debit entropy.</div>
+</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>float</code></td>
@@ -308,6 +311,19 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 </td>
 </tr>
 <tr class="rowColor">
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#preferSeedWithLong()">preferSeedWithLong</a></strong>()</code>
+<div class="block">Indicates whether <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true#setSeed(long)" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> is recommended over <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed(byte[])"><code>ByteArrayReseedableRandom.setSeed(byte[])</code></a> when the seed is already in the form of a <code>long</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#setSeed(long)">setSeed</a></strong>(long&nbsp;seed)</code>
+<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
+ supports that.</div>
+</td>
+</tr>
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/ThreadLocalRandomWrapper.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></strong>(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
 <div class="block">Not supported, because this class uses a thread-local seed.</div>
@@ -348,14 +364,14 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></h3>
-<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#next(int)">next</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#preferSeedWithLong()">preferSeedWithLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#setWrapped(java.util.Random)">setWrapped</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#toString()">toString</a></code></li>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#next(int)">next</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#setWrapped(java.util.Random)">setWrapped</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#toString()">toString</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_io.github.pr0methean.betterrandom.prng.BaseRandom">
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3>
-<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#creditEntropyForNewSeed(int)">creditEntropyForNewSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles()">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(double,%20double)">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long)">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long,%20double,%20double)">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump()">dump</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt(int,%20int)">entropyOfInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong(long,%20long)">entropyOfLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed()">fallbackSetSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians()">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians(long)">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields()">initTransientFields</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian(java8.util.function.DoubleSupplier)">internalNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints()">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(int,%20int)">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long)">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long,%20int,%20int)">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs()">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long)">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long)">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long,%20long)">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble(double)">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble(double,%20double)">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(E[])">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(java.util.List)">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum(java.lang.Class)">nextEnum</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong()">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])">setSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(long)">setSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)">withProbability</a></code></li>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#creditEntropyForNewSeed(int)">creditEntropyForNewSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles()">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(double,%20double)">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long)">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long,%20double,%20double)">doubles</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump()">dump</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt(int,%20int)">entropyOfInt</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong(long,%20long)">entropyOfLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed()">fallbackSetSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeedIfInitialized()">fallbackSetSeedIfInitialized</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians()">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians(long)">gaussians</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields()">initTransientFields</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian(java8.util.function.DoubleSupplier)">internalNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints()">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(int,%20int)">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long)">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long,%20int,%20int)">ints</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#lockForNextGaussian()">lockForNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs()">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long)">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long)">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long,%20long)">longs</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble()">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble(double)">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble(double,%20double)">nextDouble</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(E[])">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(java.util.List)">nextElement</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum(java.lang.Class)">nextEnum</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong()">nextLong</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])">setSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#unlockForNextGaussian()">unlockForNextGaussian</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)">withProbability</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
@@ -447,22 +463,6 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSeedGenerator</h4>
-<pre>public&nbsp;void&nbsp;setSeedGenerator(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</pre>
-<div class="block">Not supported, because this class uses a thread-local seed.</div>
-<dl>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>seedGenerator</code> - ignored.</dd>
-<dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - always.</dd></dl>
-</li>
-</ul>
 <a name="wrapLegacy(java8.util.function.LongFunction, io.github.pr0methean.betterrandom.seed.SeedGenerator)">
 <!--   -->
 </a>
@@ -485,6 +485,22 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <li class="blockList">
 <h4>wrapLongCreatorAsByteArrayCreator</h4>
 <pre>protected static&nbsp;<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/Function.html?is-external=true" title="class or interface in java8.util.function">Function</a>&lt;byte[],<a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>&gt;&nbsp;wrapLongCreatorAsByteArrayCreator(<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/function/LongFunction.html?is-external=true" title="class or interface in java8.util.function">LongFunction</a>&lt;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">Random</a>&gt;&nbsp;legacyCreator)</pre>
+</li>
+</ul>
+<a name="setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeedGenerator</h4>
+<pre>public&nbsp;void&nbsp;setSeedGenerator(<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</pre>
+<div class="block">Not supported, because this class uses a thread-local seed.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>seedGenerator</code> - ignored.</dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang">UnsupportedOperationException</a></code> - always.</dd></dl>
 </li>
 </ul>
 <a name="withProbabilityInternal(double)">
@@ -550,7 +566,8 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
             long&nbsp;bound)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong(long,%20long)">BaseRandom</a></code></strong></div>
 <div class="block">Returns a pseudorandom <code>long</code> value between the specified origin (inclusive) and the
- specified bound (exclusive).</div>
+ specified bound (exclusive). This implementation is adapted from the reference implementation
+ of <code>Random#longs(long, long)</code> in that method's Javadoc.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong(long,%20long)">nextLong</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
@@ -668,18 +685,19 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 </dl>
 </li>
 </ul>
-<a name="nextDouble()">
+<a name="nextDoubleNoEntropyDebit()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>nextDouble</h4>
-<pre>public&nbsp;double&nbsp;nextDouble()</pre>
+<h4>nextDoubleNoEntropyDebit</h4>
+<pre>public&nbsp;double&nbsp;nextDoubleNoEntropyDebit()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDoubleNoEntropyDebit()">BaseRandom</a></code></strong></div>
+<div class="block">Returns the next random <code>double</code> between 0.0 (inclusive) and 1.0 (exclusive), but does
+ not debit entropy. @return a pseudorandom <code>double</code>.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html#nextDouble()">nextDouble</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#nextDouble()">nextDouble</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></code></dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#nextDoubleNoEntropyDebit()">nextDoubleNoEntropyDebit</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -730,6 +748,23 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <dt><span class="strong">Returns:</span></dt><dd><code>original</code> with the fields not inherited from <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a> written to it.</dd></dl>
 </li>
 </ul>
+<a name="preferSeedWithLong()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>preferSeedWithLong</h4>
+<pre>public&nbsp;boolean&nbsp;preferSeedWithLong()</pre>
+<div class="block"><strong>Description copied from interface:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#preferSeedWithLong()">ByteArrayReseedableRandom</a></code></strong></div>
+<div class="block">Indicates whether <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true#setSeed(long)" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> is recommended over <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed(byte[])"><code>ByteArrayReseedableRandom.setSeed(byte[])</code></a> when the seed is already in the form of a <code>long</code>.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#preferSeedWithLong()">preferSeedWithLong</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#preferSeedWithLong()">preferSeedWithLong</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>true if <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true#setSeed(long)" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> will tend to perform better than <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed(byte[])"><code>ByteArrayReseedableRandom.setSeed(byte[])</code></a>.</dd></dl>
+</li>
+</ul>
 <a name="getSeed()">
 <!--   -->
 </a>
@@ -740,7 +775,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#getSeed()">RandomWrapper</a></code></strong></div>
 <div class="block">Returns the wrapped PRNG's seed, if we know it. When this RandomWrapper is wrapping a passed-in
  <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> that's not a <a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom"><code>RepeatableRandom</code></a>, we won't know the seed until the next
- <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])"><code>BaseRandom.setSeed(byte[])</code></a> or <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(long)"><code>BaseRandom.setSeed(long)</code></a> call lets us set it ourselves, and so an
+ <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])"><code>BaseRandom.setSeed(byte[])</code></a> or <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#setSeed(long)"><code>RandomWrapper.setSeed(long)</code></a> call lets us set it ourselves, and so an
  <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/UnsupportedOperationException.html?is-external=true" title="class or interface in java.lang"><code>UnsupportedOperationException</code></a> will be thrown until then.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
@@ -748,6 +783,27 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWra
 <dt><strong>Overrides:</strong></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#getSeed()">getSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>The seed data used to initialise this pseudo-random number generator.</dd></dl>
+</li>
+</ul>
+<a name="setSeed(long)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setSeed</h4>
+<pre>public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(long)">BaseRandom</a></code></strong></div>
+<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
+ supports that. If it is capable of using 64 bits or less of seed data (i.e. if <code>{@link
+ #getNewSeedLength()} &lt;= {@link Long#BYTES}</code>), then this method shall replace the entire seed as
+ <a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true#setSeed(long)" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> does; otherwise, it shall either be a no-op, or shall combine the
+ input with the existing seed as <a href="https://docs.oracle.com/javase/7/docs/api/java/security/SecureRandom.html?is-external=true#setSeed(long)" title="class or interface in java.security"><code>SecureRandom.setSeed(long)</code></a> does.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html#setSeed(long)">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html#setSeed(long)">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng">RandomWrapper</a></code></dd>
+</dl>
 </li>
 </ul>
 <a name="setSeedInternal(byte[])">
