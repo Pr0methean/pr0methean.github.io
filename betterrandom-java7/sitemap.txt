@@ -58,13 +58,11 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/class-use/Repeata
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-use.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-summary.html
-https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/LooperThread.DummyTarget.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/SerializableSupplier.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Java8Constants.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Dumpable.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-tree.html
-https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/LooperThread.DummyTarget.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/SerializableSupplier.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Java8Constants.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Dumpable.html

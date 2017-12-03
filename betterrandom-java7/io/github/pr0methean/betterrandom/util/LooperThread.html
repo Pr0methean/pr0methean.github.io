@@ -40,7 +40,7 @@
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.DummyTarget.html" title="class in io.github.pr0methean.betterrandom.util"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../io/github/pr0methean/betterrandom/util/SerializableFunction.html" title="interface in io.github.pr0methean.betterrandom.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 
@@ -64,7 +64,7 @@
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.lang.Thread">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
@@ -127,17 +127,6 @@ extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html
 <!--   -->
 </a>
 <h3>Nested Class Summary</h3>
-<table class="overviewSummary" border="0" cellpadding="3" cellspacing="0" summary="Nested Class Summary table, listing nested classes, and an explanation">
-<caption><span>Nested Classes</span><span class="tabEnd">&nbsp;</span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Class and Description</th>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>protected static class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.DummyTarget.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread.DummyTarget</a></strong></code>&nbsp;</td>
-</tr>
-</table>
 <ul class="blockList">
 <li class="blockList"><a name="nested_classes_inherited_from_class_java.lang.Thread">
 <!--   -->
@@ -336,28 +325,28 @@ extends <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Thread.html
 <ul class="blockList">
 <li class="blockList">
 <h4>lock</h4>
-<pre>protected transient&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a> lock</pre>
+<pre>protected final&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a> lock</pre>
 <div class="block">The thread holds this lock whenever it is being serialized or cloned or is running <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#iterate()"><code>iterate()</code></a> called by <a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html#run()"><code>run()</code></a>.</div>
-</li>
-</ul>
-<a name="target">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>target</h4>
-<pre><a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
-protected transient&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a> target</pre>
-<div class="block">The <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang"><code>Runnable</code></a> that was passed into this thread's constructor, if any.</div>
 </li>
 </ul>
 <a name="endOfIteration">
 <!--   -->
 </a>
-<ul class="blockListLast">
+<ul class="blockList">
 <li class="blockList">
 <h4>endOfIteration</h4>
-<pre>protected transient&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a> endOfIteration</pre>
+<pre>protected final&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java/util/concurrent/locks/Condition.html?is-external=true" title="class or interface in java.util.concurrent.locks">Condition</a> endOfIteration</pre>
+</li>
+</ul>
+<a name="target">
+<!--   -->
+</a>
+<ul class="blockListLast">
+<li class="blockList">
+<h4>target</h4>
+<pre><a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+protected&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang">Runnable</a> target</pre>
+<div class="block">The <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html?is-external=true" title="class or interface in java.lang"><code>Runnable</code></a> that was passed into this thread's constructor, if any.</div>
 </li>
 </ul>
 </li>
@@ -565,7 +554,7 @@ protected transient&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java
 <div class="subNav">
 <ul class="navList">
 <li><a href="../../../../../io/github/pr0methean/betterrandom/util/LogPreFormatter.html" title="class in io.github.pr0methean.betterrandom.util"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../io/github/pr0methean/betterrandom/util/LooperThread.DummyTarget.html" title="class in io.github.pr0methean.betterrandom.util"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../io/github/pr0methean/betterrandom/util/SerializableFunction.html" title="interface in io.github.pr0methean.betterrandom.util"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 
@@ -589,7 +578,7 @@ protected transient&nbsp;<a href="https://docs.oracle.com/javase/7/docs/api/java
 <div>
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
-<li><a href="#nested_class_summary">Nested</a>&nbsp;|&nbsp;</li>
+<li><a href="#nested_classes_inherited_from_class_java.lang.Thread">Nested</a>&nbsp;|&nbsp;</li>
 <li><a href="#field_summary">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>

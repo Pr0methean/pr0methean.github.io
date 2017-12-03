@@ -335,7 +335,8 @@ not permitted.)</div>
 <pre>public static&nbsp;byte[]&nbsp;convertLongToBytes(long&nbsp;input)</pre>
 <div class="block">Converts a long to an array of bytes.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - a long.</dd>
-<dt><span class="strong">Returns:</span></dt><dd>an array of 8 bytes containing the long's value in a platform-defined endianness.</dd></dl>
+<dt><span class="strong">Returns:</span></dt><dd>a byte array of length <a href="../../../../../io/github/pr0methean/betterrandom/util/Java8Constants.html#LONG_BYTES"><code>Java8Constants.LONG_BYTES</code></a> containing the long's value in
+     <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd></dl>
 </li>
 </ul>
 <a name="convertIntToBytes(int)">
@@ -346,8 +347,9 @@ not permitted.)</div>
 <h4>convertIntToBytes</h4>
 <pre>public static&nbsp;byte[]&nbsp;convertIntToBytes(int&nbsp;input)</pre>
 <div class="block"><p>convertIntToBytes.</p></div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - a int.</dd>
-<dt><span class="strong">Returns:</span></dt><dd>an array of byte.</dd></dl>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - an int.</dd>
+<dt><span class="strong">Returns:</span></dt><dd>an array of 4 bytes containing the int's value in
+     <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd></dl>
 </li>
 </ul>
 <a name="convertBytesToLong(byte[])">
@@ -358,7 +360,8 @@ not permitted.)</div>
 <h4>convertBytesToLong</h4>
 <pre>public static&nbsp;long&nbsp;convertBytesToLong(byte[]&nbsp;bytes)</pre>
 <div class="block">Convert a byte array to a long, reversing <a href="../../../../../io/github/pr0methean/betterrandom/util/BinaryUtils.html#convertLongToBytes(long)"><code>convertLongToBytes(long)</code></a>.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - a byte array of length <a href="../../../../../io/github/pr0methean/betterrandom/util/Java8Constants.html#LONG_BYTES"><code>Java8Constants.LONG_BYTES</code></a>.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - a byte array of length <a href="../../../../../io/github/pr0methean/betterrandom/util/Java8Constants.html#LONG_BYTES"><code>Java8Constants.LONG_BYTES</code></a> in
+     <a href="https://docs.oracle.com/javase/7/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd>
 <dt><span class="strong">Returns:</span></dt><dd><code>bytes</code> as a long.</dd></dl>
 </li>
 </ul>
