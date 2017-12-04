@@ -35,12 +35,10 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/BinaryUtils.
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/CloneViaSerialization.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/LooperThread.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-frame.html
-https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/LogPreFormatter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/EntryPoint.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/CloneViaSerialization.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/LooperThread.html
-https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/LogPreFormatter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Dumpable.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-tree.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Dumpable.html
