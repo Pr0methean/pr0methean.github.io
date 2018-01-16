@@ -1,0 +1,165 @@
+<html>
+<head>
+  
+    <style type='text/css'>
+   
+   .tests {
+     width: 50%;
+     float: left;
+   }
+   
+   .mutees {
+     float: right;
+     width: 50%;
+   }
+   
+   .unit {
+     padding-top: 20px;
+     clear: both;
+   }
+   
+   .coverage_bar {
+     display: inline-block;
+     height: 1.1em;
+     width: 130px;
+     background: #FAA;
+     margin: 0 5px;
+     vertical-align: middle;
+     border: 1px solid #AAA;
+     position: relative;
+   }
+   
+   .coverage_complete {
+     display: inline-block;
+     height: 100%;
+     background: #DFD;
+     float: left;
+   }
+   
+   .coverage_legend {
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     text-align: center;
+   }
+   
+   .line, .mut {
+     vertical-align: middle;
+   }
+   
+   .coverage_percentage {
+     display: inline-block;
+     width: 3em;
+     text-align: right;
+   }
+  </style>
+  
+</head>
+<body>
+
+<h1>Pit Test Coverage Report</h1>
+<h2>Package Summary</h2>
+<h3>io.github.pr0methean.betterrandom.prng</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Number of Classes</th>
+            <th>Line Coverage</th>
+            <th>Mutation Coverage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>10</td>
+            <td>95% <div class="coverage_bar"><div class="coverage_complete" style="width:95%"></div><div class="coverage_legend">737/775</div></div></td>
+            <td>66% <div class="coverage_bar"><div class="coverage_complete" style="width:66%"></div><div class="coverage_legend">434/659</div></div></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<h3>Breakdown by Class</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Line Coverage</th>
+            <th>Mutation Coverage</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td><a href="./AesCounterRandom.java.html">AesCounterRandom.java</a></td>
+            <td><div class="coverage_percentage">88% </div><div class="coverage_bar"><div class="coverage_complete" style="width:88%"></div><div class="coverage_legend">107/121</div></div></td>
+            <td><div class="coverage_percentage">61% </div><div class="coverage_bar"><div class="coverage_complete" style="width:61%"></div><div class="coverage_legend">51/83</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./BaseRandom.java.html">BaseRandom.java</a></td>
+            <td><div class="coverage_percentage">94% </div><div class="coverage_bar"><div class="coverage_complete" style="width:94%"></div><div class="coverage_legend">210/224</div></div></td>
+            <td><div class="coverage_percentage">75% </div><div class="coverage_bar"><div class="coverage_complete" style="width:75%"></div><div class="coverage_legend">152/203</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./CellularAutomatonRandom.java.html">CellularAutomatonRandom.java</a></td>
+            <td><div class="coverage_percentage">100% </div><div class="coverage_bar"><div class="coverage_complete" style="width:100%"></div><div class="coverage_legend">53/53</div></div></td>
+            <td><div class="coverage_percentage">73% </div><div class="coverage_bar"><div class="coverage_complete" style="width:73%"></div><div class="coverage_legend">35/48</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./Cmwc4096Random.java.html">Cmwc4096Random.java</a></td>
+            <td><div class="coverage_percentage">100% </div><div class="coverage_bar"><div class="coverage_complete" style="width:100%"></div><div class="coverage_legend">29/29</div></div></td>
+            <td><div class="coverage_percentage">58% </div><div class="coverage_bar"><div class="coverage_complete" style="width:58%"></div><div class="coverage_legend">14/24</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./MersenneTwisterRandom.java.html">MersenneTwisterRandom.java</a></td>
+            <td><div class="coverage_percentage">100% </div><div class="coverage_bar"><div class="coverage_complete" style="width:100%"></div><div class="coverage_legend">62/62</div></div></td>
+            <td><div class="coverage_percentage">53% </div><div class="coverage_bar"><div class="coverage_complete" style="width:53%"></div><div class="coverage_legend">51/96</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./Pcg64Random.java.html">Pcg64Random.java</a></td>
+            <td><div class="coverage_percentage">99% </div><div class="coverage_bar"><div class="coverage_complete" style="width:99%"></div><div class="coverage_legend">69/70</div></div></td>
+            <td><div class="coverage_percentage">55% </div><div class="coverage_bar"><div class="coverage_complete" style="width:55%"></div><div class="coverage_legend">32/58</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./RandomWrapper.java.html">RandomWrapper.java</a></td>
+            <td><div class="coverage_percentage">94% </div><div class="coverage_bar"><div class="coverage_complete" style="width:94%"></div><div class="coverage_legend">109/116</div></div></td>
+            <td><div class="coverage_percentage">64% </div><div class="coverage_bar"><div class="coverage_complete" style="width:64%"></div><div class="coverage_legend">52/81</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./ReseedingThreadLocalRandomWrapper.java.html">ReseedingThreadLocalRandomWrapper.java</a></td>
+            <td><div class="coverage_percentage">100% </div><div class="coverage_bar"><div class="coverage_complete" style="width:100%"></div><div class="coverage_legend">13/13</div></div></td>
+            <td><div class="coverage_percentage">80% </div><div class="coverage_bar"><div class="coverage_complete" style="width:80%"></div><div class="coverage_legend">4/5</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./ThreadLocalRandomWrapper.java.html">ThreadLocalRandomWrapper.java</a></td>
+            <td><div class="coverage_percentage">96% </div><div class="coverage_bar"><div class="coverage_complete" style="width:96%"></div><div class="coverage_legend">55/57</div></div></td>
+            <td><div class="coverage_percentage">73% </div><div class="coverage_bar"><div class="coverage_complete" style="width:73%"></div><div class="coverage_legend">30/41</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./XorShiftRandom.java.html">XorShiftRandom.java</a></td>
+            <td><div class="coverage_percentage">100% </div><div class="coverage_bar"><div class="coverage_complete" style="width:100%"></div><div class="coverage_legend">30/30</div></div></td>
+            <td><div class="coverage_percentage">65% </div><div class="coverage_bar"><div class="coverage_complete" style="width:65%"></div><div class="coverage_legend">13/20</div></div></td>
+        </tr>
+
+     </tbody>
+</table>
+<br/>
+
+
+
+<hr/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.2.4
+
+</body>
+</html>
