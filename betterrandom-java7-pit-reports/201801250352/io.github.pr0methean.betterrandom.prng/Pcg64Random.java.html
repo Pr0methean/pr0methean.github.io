@@ -2520,16 +2520,16 @@ body{
 <a name='org.pitest.mutationtest.report.html.SourceFile@4d99acd_170'/>
 170
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4d99acd_170'>2</a>
 <span>
-1. nextGaussian : removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; SURVIVED<br/>
+1. nextGaussian : removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; TIMED_OUT<br/>
 2. nextGaussian : replaced return of double value with -(x + 1) for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextGaussian &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>      lock.unlock();</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      lock.unlock();</span></pre></td></tr>
 
 
 <tr>
@@ -3090,7 +3090,7 @@ body{
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4d99acd_170'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextGaussian<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._</span></span> replaced return of double value with -(x + 1) for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextGaussian &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextGaussian<br/><b>Killed by : </b>none</span></span> removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; SURVIVED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextGaussian<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._</span></span> replaced return of double value with -(x + 1) for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextGaussian &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextGaussian<br/><b>Killed by : </b>none</span></span> removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -3141,7 +3141,7 @@ body{
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (440 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (406 ms)</li>
 </ul>
 
 <br/>
