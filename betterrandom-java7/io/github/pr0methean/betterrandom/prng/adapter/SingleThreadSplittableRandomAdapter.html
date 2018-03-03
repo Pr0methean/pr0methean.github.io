@@ -3,14 +3,14 @@
 <html lang="en">
 <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>SingleThreadSplittableRandomAdapter (BetterRandom 2.1.1-SNAPSHOT API)</title>
+<title>SingleThreadSplittableRandomAdapter (BetterRandom 2.3.0-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="SingleThreadSplittableRandomAdapter (BetterRandom 2.1.1-SNAPSHOT API)";
+            parent.document.title="SingleThreadSplittableRandomAdapter (BetterRandom 2.3.0-SNAPSHOT API)";
         }
     }
     catch(err) {
@@ -87,10 +87,10 @@
 </div>
 <div class="contentContainer">
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="https://docs.oracle.com/javase/7/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random</a></li>
+<li><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util">java.util.Random</a></li>
 <li>
 <ul class="inheritance">
 <li><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng.BaseRandom</a></li>
@@ -119,14 +119,14 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom">EntropyCountingRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/util/Dumpable.html" title="interface in io.github.pr0methean.betterrandom.util">Dumpable</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
+<dd><a href="../../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/EntropyCountingRandom.html" title="interface in io.github.pr0methean.betterrandom">EntropyCountingRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/util/Dumpable.html" title="interface in io.github.pr0methean.betterrandom.util">Dumpable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html?is-external=true" title="class or interface in java.io">Serializable</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="strong">SingleThreadSplittableRandomAdapter</span>
 extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">DirectSplittableRandomAdapter</a></pre>
 <div class="block">Simple, non-thread-safe implementation of <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng"><code>BaseRandom</code></a>
- that wraps a <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+ that wraps a <code>SplittableRandom</code>.</div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Chris Hennick</dd>
 <dt><span class="strong">See Also:</span></dt><dd><a href="../../../../../../serialized-form.html#io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapter">Serialized Form</a></dd></dl>
@@ -171,22 +171,22 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter()">SingleThreadSplittableRandomAdapter</a></strong>()</code>
-<div class="block">Use the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create the seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create the seed for the underlying <code>SplittableRandom</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter(byte[])">SingleThreadSplittableRandomAdapter</a></strong>(byte[]&nbsp;seed)</code>
-<div class="block">Use the provided seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the provided seed for the underlying <code>SplittableRandom</code>.</div>
 </td>
 </tr>
 <tr class="altColor">
 <td class="colOne"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter(long)">SingleThreadSplittableRandomAdapter</a></strong>(long&nbsp;seed)</code>
-<div class="block">Use the provided seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the provided seed for the underlying <code>SplittableRandom</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colOne"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#SingleThreadSplittableRandomAdapter(io.github.pr0methean.betterrandom.seed.SeedGenerator)">SingleThreadSplittableRandomAdapter</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
-<div class="block">Use the provided seed generation strategy to create the seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the provided seed generation strategy to create the seed for the underlying <code>SplittableRandom</code>.</div>
 </td>
 </tr>
 </table>
@@ -218,9 +218,9 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>protected <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util">SplittableRandom</a></code></td>
+<td class="colFirst"><code>protected SplittableRandom</code></td>
 <td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html#getSplittableRandom()">getSplittableRandom</a></strong>()</code>
-<div class="block">Returns this SingleThreadSplittableRandomAdapter's only <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Returns this SingleThreadSplittableRandomAdapter's only <code>SplittableRandom</code>.</div>
 </td>
 </tr>
 </table>
@@ -243,14 +243,14 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></h3>
-<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#creditEntropyForNewSeed(int)">creditEntropyForNewSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles()">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(double,%20double)">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long)">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long,%20double,%20double)">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump()">dump</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt(int,%20int)">entropyOfInt</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong(long,%20long)">entropyOfLong</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed()">fallbackSetSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeedIfInitialized()">fallbackSetSeedIfInitialized</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians()">gaussians</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians(long)">gaussians</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits()">getEntropyBits</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed()">getSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields()">initTransientFields</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian(java8.util.function.DoubleSupplier)">internalNextGaussian</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints()">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(int,%20int)">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long)">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long,%20int,%20int)">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs()">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long)">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long)">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long,%20long)">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble()">nextDouble</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(E[])">nextElement</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(java.util.List)">nextElement</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum(java.lang.Class)">nextEnum</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong()">nextLong</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])">setSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#useParallelStreams()">useParallelStreams</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)">withProbability</a></code></li>
+<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#creditEntropyForNewSeed(int)">creditEntropyForNewSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles()">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(double,%20double)">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long)">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#doubles(long,%20double,%20double)">doubles</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#dump()">dump</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfInt(int,%20int)">entropyOfInt</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#entropyOfLong(long,%20long)">entropyOfLong</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed()">fallbackSetSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeedIfInitialized()">fallbackSetSeedIfInitialized</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians()">gaussians</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#gaussians(long)">gaussians</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getEntropyBits()">getEntropyBits</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed()">getSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields()">initTransientFields</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#internalNextGaussian(DoubleSupplier)">internalNextGaussian</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints()">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(int,%20int)">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long)">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#ints(long,%20int,%20int)">ints</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs()">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long)">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long)">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#longs(long,%20long,%20long)">longs</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextDouble()">nextDouble</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(E[])">nextElement</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextElement(java.util.List)">nextElement</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextEnum(java.lang.Class)">nextEnum</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#nextLong()">nextLong</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])">setSeed</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#useParallelStreams()">useParallelStreams</a>, <a href="../../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)">withProbability</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_java.lang.Object">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
-<code><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
+<h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
+<code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone()" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals(java.lang.Object)" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize()" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass()" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode()" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify()" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll()" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString()" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait()" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long)" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait(long,%20int)" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 </li>
 </ul>
@@ -274,7 +274,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <h4>SingleThreadSplittableRandomAdapter</h4>
 <pre>public&nbsp;SingleThreadSplittableRandomAdapter(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)
                                     throws <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block">Use the provided seed generation strategy to create the seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the provided seed generation strategy to create the seed for the underlying <code>SplittableRandom</code>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>seedGenerator</code> - The seed generation strategy that will provide the seed value for this
      RNG.</dd>
 <dt><span class="strong">Throws:</span></dt>
@@ -289,7 +289,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <h4>SingleThreadSplittableRandomAdapter</h4>
 <pre>public&nbsp;SingleThreadSplittableRandomAdapter()
                                     throws <a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></pre>
-<div class="block">Use the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create the seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> to create the seed for the underlying <code>SplittableRandom</code>.</div>
 <dl><dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedException.html" title="class in io.github.pr0methean.betterrandom.seed">SeedException</a></code> - if the <a href="../../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a> fails to generate a seed.</dd></dl>
 </li>
@@ -301,7 +301,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>SingleThreadSplittableRandomAdapter</h4>
 <pre>public&nbsp;SingleThreadSplittableRandomAdapter(byte[]&nbsp;seed)</pre>
-<div class="block">Use the provided seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the provided seed for the underlying <code>SplittableRandom</code>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - The seed. Must be 8 bytes.</dd></dl>
 </li>
 </ul>
@@ -312,7 +312,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <li class="blockList">
 <h4>SingleThreadSplittableRandomAdapter</h4>
 <pre>public&nbsp;SingleThreadSplittableRandomAdapter(long&nbsp;seed)</pre>
-<div class="block">Use the provided seed for the underlying <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<div class="block">Use the provided seed for the underlying <code>SplittableRandom</code>.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - The seed.</dd></dl>
 </li>
 </ul>
@@ -361,8 +361,8 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>getSplittableRandom</h4>
-<pre>protected&nbsp;<a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util">SplittableRandom</a>&nbsp;getSplittableRandom()</pre>
-<div class="block">Returns this SingleThreadSplittableRandomAdapter's only <a href="https://static.javadoc.io/net.sourceforge.streamsupport/streamsupport/1.5.6/java8/util/SplittableRandom.html?is-external=true" title="class or interface in java8.util"><code>SplittableRandom</code></a>.</div>
+<pre>protected&nbsp;SplittableRandom&nbsp;getSplittableRandom()</pre>
+<div class="block">Returns this SingleThreadSplittableRandomAdapter's only <code>SplittableRandom</code>.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html#getSplittableRandom()">getSplittableRandom</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a></code></dd>
@@ -436,6 +436,6 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <!--   -->
 </a></div>
 <!-- ======== END OF BOTTOM NAVBAR ======= -->
-<p class="legalCopy"><small>Copyright &#169; 2017. All rights reserved.</small></p>
+<p class="legalCopy"><small>Copyright &#169; 2018. All rights reserved.</small></p>
 </body>
 </html>
