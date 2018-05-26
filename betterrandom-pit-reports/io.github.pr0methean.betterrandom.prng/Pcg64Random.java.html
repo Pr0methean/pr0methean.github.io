@@ -908,7 +908,7 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_64'>3</a>
 <span>
 1. nextLongNoEntropyDebit : Replaced long addition with subtraction &rarr; SURVIVED<br/>
-2. nextLongNoEntropyDebit : replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextLongNoEntropyDebit &rarr; TIMED_OUT<br/>
+2. nextLongNoEntropyDebit : replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextLongNoEntropyDebit &rarr; SURVIVED<br/>
 3. nextLongNoEntropyDebit : Replaced Shift Left with Shift Right &rarr; KILLED<br/>
 
 </span>
@@ -1141,15 +1141,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@34b4c82a_80'/>
 80
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_80'>1</a>
 <span>
-1. setSeed : removed call to io/github/pr0methean/betterrandom/prng/Pcg64Random::creditEntropyForNewSeed &rarr; TIMED_OUT<br/>
+1. setSeed : removed call to io/github/pr0methean/betterrandom/prng/Pcg64Random::creditEntropyForNewSeed &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        creditEntropyForNewSeed(Long.BYTES);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        creditEntropyForNewSeed(Long.BYTES);</span></pre></td></tr>
 
 
 <tr>
@@ -1446,15 +1446,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@34b4c82a_101'/>
 101
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_101'>1</a>
 <span>
-1. advance : Replaced long multiplication with division &rarr; TIMED_OUT<br/>
+1. advance : Replaced long multiplication with division &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        accMult *= curMult;</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        accMult *= curMult;</span></pre></td></tr>
 
 
 <tr>
@@ -2420,15 +2420,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@34b4c82a_166'/>
 166
 </td>
-<td class='uncertain'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_166'>1</a>
 <span>
-1. writeObject : removed call to java/io/ObjectOutputStream::defaultWriteObject &rarr; TIMED_OUT<br/>
+1. writeObject : removed call to java/io/ObjectOutputStream::defaultWriteObject &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    out.defaultWriteObject();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>    out.defaultWriteObject();</span></pre></td></tr>
 
 
 <tr>
@@ -2489,7 +2489,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_64'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>none</span></span> Replaced long addition with subtraction &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>none</span></span> replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextLongNoEntropyDebit &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>none</span></span> Replaced long addition with subtraction &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>none</span></span> replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/Pcg64Random::nextLongNoEntropyDebit &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2549,7 +2549,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_80'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/Pcg64Random::creditEntropyForNewSeed &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/Pcg64Random::creditEntropyForNewSeed &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2599,7 +2599,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_101'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>advance<br/><b>Killed by : </b>none</span></span> Replaced long multiplication with division &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>advance<br/><b>Killed by : </b>none</span></span> Replaced long multiplication with division &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2849,7 +2849,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@34b4c82a_166'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>writeObject<br/><b>Killed by : </b>none</span></span> removed call to java/io/ObjectOutputStream::defaultWriteObject &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>writeObject<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._</span></span> removed call to java/io/ObjectOutputStream::defaultWriteObject &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -2870,7 +2870,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (404 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (440 ms)</li>
 </ul>
 
 <br/>

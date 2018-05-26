@@ -961,15 +961,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@3003d288_68'/>
 68
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3003d288_68'>1</a>
 <span>
-1. lambda$getInstance$0 : removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::setDaemon &rarr; SURVIVED<br/>
+1. lambda$getInstance$0 : removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::setDaemon &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        thread.setDaemon(true);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        thread.setDaemon(true);</span></pre></td></tr>
 
 
 <tr>
@@ -1693,15 +1693,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@3003d288_119'/>
 119
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3003d288_119'>1</a>
 <span>
-1. asyncReseed : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+1. asyncReseed : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>      return getInstance(seedGenerator).asyncReseed(random);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      return getInstance(seedGenerator).asyncReseed(random);</span></pre></td></tr>
 
 
 <tr>
@@ -3419,16 +3419,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@3003d288_239'/>
 239
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@3003d288_239'>2</a>
 <span>
-1. iterate : changed conditional boundary &rarr; SURVIVED<br/>
+1. iterate : changed conditional boundary &rarr; TIMED_OUT<br/>
 2. iterate : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>          ((EntropyCountingRandom) random).getEntropyBits() &#62; 0)) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>          ((EntropyCountingRandom) random).getEntropyBits() &#62; 0)) {</span></pre></td></tr>
 
 
 <tr>
@@ -4850,7 +4850,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@3003d288_68'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>lambda$getInstance$0<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::setDaemon &rarr; SURVIVED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>lambda$getInstance$0<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::setDaemon &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -4940,7 +4940,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@3003d288_119'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>asyncReseed<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>asyncReseed<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5160,7 +5160,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@3003d288_239'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>iterate<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>iterate<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>iterate<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>iterate<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5421,7 +5421,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (361 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1155 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (953 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (754 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (979 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1213 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1128 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (599 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1423 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1863 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (341 ms)</li><li>io.github.pr0methean.betterrandom.seed.RandomSeederThreadTest._ (2871 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (24710 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._ (16 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (404 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1498 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (212 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (2186 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (168 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1993 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (2101 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (3011 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (267 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1085 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (913 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (712 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (959 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1290 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1168 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (781 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1335 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1851 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (369 ms)</li><li>io.github.pr0methean.betterrandom.seed.RandomSeederThreadTest._ (2854 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (22856 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._ (21 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (440 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1549 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (221 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (1667 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (178 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1982 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (2233 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (3090 ms)</li>
 </ul>
 
 <br/>
