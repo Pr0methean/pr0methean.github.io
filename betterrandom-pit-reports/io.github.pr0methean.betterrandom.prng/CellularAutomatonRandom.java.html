@@ -1520,10 +1520,10 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_108'>10</a>
 <span>
 1. convertCellsToInt : Replaced Shift Left with Shift Right &rarr; SURVIVED<br/>
-2. convertCellsToInt : Replaced integer addition with subtraction &rarr; TIMED_OUT<br/>
-3. convertCellsToInt : Replaced Shift Left with Shift Right &rarr; TIMED_OUT<br/>
-4. convertCellsToInt : Replaced integer addition with subtraction &rarr; TIMED_OUT<br/>
-5. convertCellsToInt : Replaced integer addition with subtraction &rarr; TIMED_OUT<br/>
+2. convertCellsToInt : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+3. convertCellsToInt : Replaced Shift Left with Shift Right &rarr; SURVIVED<br/>
+4. convertCellsToInt : Replaced integer addition with subtraction &rarr; SURVIVED<br/>
+5. convertCellsToInt : Replaced integer addition with subtraction &rarr; KILLED<br/>
 6. convertCellsToInt : Replaced integer addition with subtraction &rarr; KILLED<br/>
 7. convertCellsToInt : Replaced integer addition with subtraction &rarr; KILLED<br/>
 8. convertCellsToInt : Replaced integer addition with subtraction &rarr; KILLED<br/>
@@ -2189,15 +2189,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@39352f6b_153'/>
 153
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_153'>1</a>
 <span>
-1. setSeed : removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED<br/>
+1. setSeed : removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>      lock.lock();</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      lock.lock();</span></pre></td></tr>
 
 
 <tr>
@@ -2249,15 +2249,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@39352f6b_157'/>
 157
 </td>
-<td class='uncertain'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_157'>1</a>
 <span>
-1. setSeed : removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; TIMED_OUT<br/>
+1. setSeed : removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        lock.unlock();</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>        lock.unlock();</span></pre></td></tr>
 
 
 <tr>
@@ -2617,15 +2617,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@39352f6b_182'/>
 182
 </td>
-<td class='uncertain'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_182'>1</a>
 <span>
-1. setSeedInternal : Changed increment from 1 to -1 &rarr; TIMED_OUT<br/>
+1. setSeedInternal : Changed increment from 1 to -1 &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>      seedAsInt++;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>      seedAsInt++;</span></pre></td></tr>
 
 
 <tr>
@@ -2647,17 +2647,17 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@39352f6b_184'/>
 184
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_184'>3</a>
 <span>
-1. setSeedInternal : changed conditional boundary &rarr; TIMED_OUT<br/>
-2. setSeedInternal : negated conditional &rarr; TIMED_OUT<br/>
+1. setSeedInternal : changed conditional boundary &rarr; SURVIVED<br/>
+2. setSeedInternal : negated conditional &rarr; SURVIVED<br/>
 3. setSeedInternal : Changed increment from 1 to -1 &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    for (int i = 0; i &#60; (AUTOMATON_LENGTH - 4); i++) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    for (int i = 0; i &#60; (AUTOMATON_LENGTH - 4); i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -2670,7 +2670,7 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_185'>3</a>
 <span>
 1. setSeedInternal : Replaced integer modulus with multiplication &rarr; SURVIVED<br/>
-2. setSeedInternal : Replaced Shift Right with Shift Left &rarr; TIMED_OUT<br/>
+2. setSeedInternal : Replaced Shift Right with Shift Left &rarr; SURVIVED<br/>
 3. setSeedInternal : Replaced bitwise AND with OR &rarr; KILLED<br/>
 
 </span>
@@ -2725,17 +2725,17 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@39352f6b_189'/>
 189
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_189'>3</a>
 <span>
-1. setSeedInternal : changed conditional boundary &rarr; TIMED_OUT<br/>
+1. setSeedInternal : changed conditional boundary &rarr; SURVIVED<br/>
 2. setSeedInternal : Changed increment from 1 to -1 &rarr; TIMED_OUT<br/>
 3. setSeedInternal : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    for (int i = 0; i &#60; EVOLVE_ITERATIONS_AFTER_SEEDING; i++) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    for (int i = 0; i &#60; EVOLVE_ITERATIONS_AFTER_SEEDING; i++) {</span></pre></td></tr>
 
 
 <tr>
@@ -2876,7 +2876,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_108'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>convertCellsToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -3036,7 +3036,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_153'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -3056,7 +3056,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_157'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::unlock &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -3146,7 +3146,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_182'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -3156,7 +3156,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_184'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Changed increment from 1 to -1 &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -3166,7 +3166,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_185'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Replaced integer modulus with multiplication &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Replaced Shift Right with Shift Left &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Replaced integer modulus with multiplication &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Replaced Shift Right with Shift Left &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -3176,7 +3176,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@39352f6b_189'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> Changed increment from 1 to -1 &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -3207,7 +3207,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (23513 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (29886 ms)</li>
 </ul>
 
 <br/>

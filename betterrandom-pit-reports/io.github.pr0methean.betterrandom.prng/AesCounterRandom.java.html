@@ -2091,17 +2091,17 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_149'/>
 149
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_149'>3</a>
 <span>
-1. getKeyLength : changed conditional boundary &rarr; TIMED_OUT<br/>
+1. getKeyLength : changed conditional boundary &rarr; SURVIVED<br/>
 2. getKeyLength : negated conditional &rarr; KILLED<br/>
 3. getKeyLength : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    return (input.length &#62; MAX_KEY_LENGTH_BYTES) ? MAX_KEY_LENGTH_BYTES</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    return (input.length &#62; MAX_KEY_LENGTH_BYTES) ? MAX_KEY_LENGTH_BYTES</span></pre></td></tr>
 
 
 <tr>
@@ -2109,16 +2109,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_150'/>
 150
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_150'>2</a>
 <span>
-1. getKeyLength : changed conditional boundary &rarr; TIMED_OUT<br/>
+1. getKeyLength : changed conditional boundary &rarr; SURVIVED<br/>
 2. getKeyLength : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        : ((input.length &#62;= 24) ? 24 : 16);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        : ((input.length &#62;= 24) ? 24 : 16);</span></pre></td></tr>
 
 
 <tr>
@@ -3452,15 +3452,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_242'/>
 242
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_242'>1</a>
 <span>
-1. setSeed : removed call to java/lang/System::arraycopy &rarr; TIMED_OUT<br/>
+1. setSeed : removed call to java/lang/System::arraycopy &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>          System.arraycopy(this.seed, 0, newSeed, 0, this.seed.length);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>          System.arraycopy(this.seed, 0, newSeed, 0, this.seed.length);</span></pre></td></tr>
 
 
 <tr>
@@ -3468,15 +3468,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_243'/>
 243
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_243'>1</a>
 <span>
-1. setSeed : removed call to java/lang/System::arraycopy &rarr; TIMED_OUT<br/>
+1. setSeed : removed call to java/lang/System::arraycopy &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>          System.arraycopy(seed, 0, newSeed, this.seed.length, seed.length);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>          System.arraycopy(seed, 0, newSeed, this.seed.length, seed.length);</span></pre></td></tr>
 
 
 <tr>
@@ -3498,16 +3498,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_245'/>
 245
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_245'>2</a>
 <span>
-1. setSeed : changed conditional boundary &rarr; TIMED_OUT<br/>
+1. setSeed : changed conditional boundary &rarr; SURVIVED<br/>
 2. setSeed : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>          if (newSeed.length &#62; keyLength) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>          if (newSeed.length &#62; keyLength) {</span></pre></td></tr>
 
 
 <tr>
@@ -3529,15 +3529,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_247'/>
 247
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_247'>1</a>
 <span>
-1. setSeed : removed call to java/security/MessageDigest::update &rarr; TIMED_OUT<br/>
+1. setSeed : removed call to java/security/MessageDigest::update &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>            md.update(newSeed);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>            md.update(newSeed);</span></pre></td></tr>
 
 
 <tr>
@@ -3703,16 +3703,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_259'/>
 259
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_259'>2</a>
 <span>
-1. setSeed : Replaced integer subtraction with addition &rarr; TIMED_OUT<br/>
+1. setSeed : Replaced integer subtraction with addition &rarr; SURVIVED<br/>
 2. setSeed : Replaced long multiplication with division &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>        entropyBits.addAndGet(8L * (seed.length - key.length));</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>        entropyBits.addAndGet(8L * (seed.length - key.length));</span></pre></td></tr>
 
 
 <tr>
@@ -4181,16 +4181,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@77e2a5d3_292'/>
 292
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_292'>2</a>
 <span>
-1. setSeedInternal : removed call to java/lang/System::arraycopy &rarr; TIMED_OUT<br/>
+1. setSeedInternal : removed call to java/lang/System::arraycopy &rarr; SURVIVED<br/>
 2. setSeedInternal : Replaced integer subtraction with addition &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    System.arraycopy(seed, keyLength, counter, 0, seedLength - keyLength);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    System.arraycopy(seed, keyLength, counter, 0, seedLength - keyLength);</span></pre></td></tr>
 
 
 <tr>
@@ -4811,7 +4811,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_149'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -4821,7 +4821,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_150'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getKeyLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5051,7 +5051,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_242'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/lang/System::arraycopy &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/lang/System::arraycopy &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -5061,7 +5061,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_243'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/lang/System::arraycopy &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/lang/System::arraycopy &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -5071,7 +5071,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_245'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5081,7 +5081,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_247'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/security/MessageDigest::update &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> removed call to java/security/MessageDigest::update &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -5111,7 +5111,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_259'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced long multiplication with division &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced long multiplication with division &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5171,7 +5171,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@77e2a5d3_292'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> removed call to java/lang/System::arraycopy &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> removed call to java/lang/System::arraycopy &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -5312,7 +5312,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (23513 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._ (15 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (877 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1209 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1132 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (2597 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1876 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._ (15 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (835 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1217 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1171 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (2664 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1768 ms)</li>
 </ul>
 
 <br/>

@@ -785,15 +785,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@7c48ea9e_55'/>
 55
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7c48ea9e_55'>1</a>
 <span>
-1. convertBytesToHexString : Replaced integer multiplication with division &rarr; TIMED_OUT<br/>
+1. convertBytesToHexString : Replaced integer multiplication with division &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    final StringBuilder buffer = new StringBuilder(data.length * 2);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    final StringBuilder buffer = new StringBuilder(data.length * 2);</span></pre></td></tr>
 
 
 <tr>
@@ -815,16 +815,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@7c48ea9e_57'/>
 57
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7c48ea9e_57'>2</a>
 <span>
-1. convertBytesToHexString : Replaced Unsigned Shift Right with Shift Left &rarr; SURVIVED<br/>
+1. convertBytesToHexString : Replaced Unsigned Shift Right with Shift Left &rarr; TIMED_OUT<br/>
 2. convertBytesToHexString : Replaced bitwise AND with OR &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>      buffer.append(HEX_CHARS[(b &#62;&#62;&#62; 4) &#38; 0x0F]);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      buffer.append(HEX_CHARS[(b &#62;&#62;&#62; 4) &#38; 0x0F]);</span></pre></td></tr>
 
 
 <tr>
@@ -1318,9 +1318,9 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@7c48ea9e_91'>14</a>
 <span>
 1. convertBytesToInt : Replaced Shift Left with Shift Right &rarr; SURVIVED<br/>
-2. convertBytesToInt : Replaced Shift Left with Shift Right &rarr; TIMED_OUT<br/>
-3. convertBytesToInt : Replaced bitwise OR with AND &rarr; TIMED_OUT<br/>
-4. convertBytesToInt : Replaced bitwise OR with AND &rarr; TIMED_OUT<br/>
+2. convertBytesToInt : Replaced bitwise OR with AND &rarr; SURVIVED<br/>
+3. convertBytesToInt : Replaced Shift Left with Shift Right &rarr; SURVIVED<br/>
+4. convertBytesToInt : Replaced bitwise OR with AND &rarr; SURVIVED<br/>
 5. convertBytesToInt : Replaced integer addition with subtraction &rarr; KILLED<br/>
 6. convertBytesToInt : Replaced bitwise AND with OR &rarr; KILLED<br/>
 7. convertBytesToInt : Replaced integer addition with subtraction &rarr; KILLED<br/>
@@ -2430,7 +2430,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@7c48ea9e_55'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertBytesToHexString<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertBytesToHexString<br/><b>Killed by : </b>none</span></span> Replaced integer multiplication with division &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2440,7 +2440,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@7c48ea9e_57'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertBytesToHexString<br/><b>Killed by : </b>none</span></span> Replaced Unsigned Shift Right with Shift Left &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>convertBytesToHexString<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertBytesToHexString<br/><b>Killed by : </b>none</span></span> Replaced Unsigned Shift Right with Shift Left &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>convertBytesToHexString<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2530,7 +2530,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@7c48ea9e_91'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced bitwise OR with AND &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced bitwise OR with AND &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='KILLED'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='KILLED'><span class='pop'>13.<span><b>13</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._</span></span> Replaced bitwise OR with AND &rarr; KILLED</p> <p class='KILLED'><span class='pop'>14.<span><b>14</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>6.<span><b>6</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced bitwise OR with AND &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>7.<span><b>7</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> <p class='KILLED'><span class='pop'>8.<span><b>8</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>9.<span><b>9</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; SURVIVED</p> <p class='SURVIVED'><span class='pop'>10.<span><b>10</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>none</span></span> Replaced bitwise OR with AND &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>11.<span><b>11</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced bitwise AND with OR &rarr; KILLED</p> <p class='KILLED'><span class='pop'>12.<span><b>12</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> <p class='KILLED'><span class='pop'>13.<span><b>13</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._</span></span> Replaced bitwise OR with AND &rarr; KILLED</p> <p class='KILLED'><span class='pop'>14.<span><b>14</b><br/><b>Location : </b>convertBytesToInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -2671,7 +2671,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (215 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1054 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (921 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (693 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (877 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1209 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1132 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (636 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1472 ms)</li><li>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._ (6 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1876 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (336 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (23513 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._ (15 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (358 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1457 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (200 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (1835 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (2019 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (226 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (2157 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (2597 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (267 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1091 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (898 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (674 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (835 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1217 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1171 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (599 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1503 ms)</li><li>io.github.pr0methean.betterrandom.util.BinaryUtilsTest._ (15 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1768 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (332 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (29886 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomDemoTest._ (15 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (393 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1521 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (227 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (2058 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1911 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (122 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (2156 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (2664 ms)</li>
 </ul>
 
 <br/>
