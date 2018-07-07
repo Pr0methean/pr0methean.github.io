@@ -264,7 +264,7 @@ extends <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapte
 <ul class="blockListLast">
 <li class="blockList">
 <h4>underlying</h4>
-<pre>protected transient&nbsp;java8.util.SplittableRandom underlying</pre>
+<pre>protected transient volatile&nbsp;java8.util.SplittableRandom underlying</pre>
 <div class="block">The master <code>SplittableRandom</code> that will either be delegated to directly (see <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SingleThreadSplittableRandomAdapter</code></a> or be split using <code>SplittableRandom.split()</code> (see
  <a href="../../../../../../io/github/pr0methean/betterrandom/prng/adapter/SplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter"><code>SplittableRandomAdapter</code></a>) and have the splits delegated to.</div>
 </li>
