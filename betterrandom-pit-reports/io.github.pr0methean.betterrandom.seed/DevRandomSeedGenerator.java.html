@@ -922,15 +922,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@15ae711a_65'/>
 65
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@15ae711a_65'>1</a>
 <span>
-1. generateSeed : Replaced integer subtraction with addition &rarr; KILLED<br/>
+1. generateSeed : Replaced integer subtraction with addition &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>        final int bytesRead = inputStream.read(randomSeed, count, length - count);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        final int bytesRead = inputStream.read(randomSeed, count, length - count);</span></pre></td></tr>
 
 
 <tr>
@@ -1374,7 +1374,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@15ae711a_65'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateSeed<br/><b>Killed by : </b>none</span></span> Replaced integer subtraction with addition &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -1455,7 +1455,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (142 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1171 ms)</li><li>io.github.pr0methean.betterrandom.seed.DefaultSeedGeneratorTest._ (465 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (893 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (593 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (993 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1196 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1064 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (682 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1449 ms)</li><li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._ (264 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (2143 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (342 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (28516 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (371 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1479 ms)</li><li>io.github.pr0methean.betterrandom.seed.DevRandomSeedGeneratorTest._ (12 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (1837 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (120 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (2447 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (69 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1715 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (2924 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (2974 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (133 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1098 ms)</li><li>io.github.pr0methean.betterrandom.seed.DefaultSeedGeneratorTest._ (414 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (879 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (595 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom160Test._ (871 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom256Test._ (1115 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom384Test._ (1098 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (587 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1289 ms)</li><li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._ (229 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (1852 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (321 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (26014 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (324 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1511 ms)</li><li>io.github.pr0methean.betterrandom.seed.DevRandomSeedGeneratorTest._ (15 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (2068 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (145 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (2339 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (62 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1772 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (2515 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandom128Test._ (2736 ms)</li>
 </ul>
 
 <br/>
