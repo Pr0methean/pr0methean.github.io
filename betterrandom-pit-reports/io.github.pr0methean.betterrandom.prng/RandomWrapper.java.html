@@ -1463,15 +1463,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_104'/>
 104
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_104'>1</a>
 <span>
-1. <init> : removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; TIMED_OUT<br/>
+1. <init> : removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    readEntropyOfWrapped(wrapped);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    readEntropyOfWrapped(wrapped);</span></pre></td></tr>
 
 
 <tr>
@@ -1680,15 +1680,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_119'/>
 119
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_119'>1</a>
 <span>
-1. useParallelStreams : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT<br/>
+1. useParallelStreams : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    return haveParallelStreams;</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    return haveParallelStreams;</span></pre></td></tr>
 
 
 <tr>
@@ -1743,7 +1743,7 @@
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_123'>3</a>
 <span>
 1. next : changed conditional boundary &rarr; SURVIVED<br/>
-2. next : negated conditional &rarr; KILLED<br/>
+2. next : negated conditional &rarr; TIMED_OUT<br/>
 3. next : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
@@ -1756,16 +1756,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_124'/>
 124
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_124'>2</a>
 <span>
-1. next : Replaced Unsigned Shift Right with Shift Left &rarr; SURVIVED<br/>
+1. next : Replaced Unsigned Shift Right with Shift Left &rarr; TIMED_OUT<br/>
 2. next : negated conditional &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        : (bits == 31) ? getWrapped().nextInt() &#62;&#62;&#62; 1</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        : (bits == 31) ? getWrapped().nextInt() &#62;&#62;&#62; 1</span></pre></td></tr>
 
 
 <tr>
@@ -1773,15 +1773,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_125'/>
 125
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_125'>1</a>
 <span>
-1. next : Replaced Shift Left with Shift Right &rarr; KILLED<br/>
+1. next : Replaced Shift Left with Shift Right &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>            : getWrapped().nextInt(1 &#60;&#60; bits);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>            : getWrapped().nextInt(1 &#60;&#60; bits);</span></pre></td></tr>
 
 
 <tr>
@@ -2119,15 +2119,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_149'/>
 149
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_149'>1</a>
 <span>
-1. setWrapped : removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; SURVIVED<br/>
+1. setWrapped : removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>      readEntropyOfWrapped(wrapped);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      readEntropyOfWrapped(wrapped);</span></pre></td></tr>
 
 
 <tr>
@@ -2296,16 +2296,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_161'/>
 161
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_161'>2</a>
 <span>
-1. readEntropyOfWrapped : Replaced long multiplication with division &rarr; SURVIVED<br/>
-2. readEntropyOfWrapped : negated conditional &rarr; KILLED<br/>
+1. readEntropyOfWrapped : Replaced long multiplication with division &rarr; TIMED_OUT<br/>
+2. readEntropyOfWrapped : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        : ((wrapped instanceof RepeatableRandom) ? (((RepeatableRandom) wrapped).getSeed().length</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        : ((wrapped instanceof RepeatableRandom) ? (((RepeatableRandom) wrapped).getSeed().length</span></pre></td></tr>
 
 
 <tr>
@@ -3035,15 +3035,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_212'/>
 212
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_212'>1</a>
 <span>
-1. setSeedInternal : negated conditional &rarr; KILLED<br/>
+1. setSeedInternal : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    if (seed == null) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>    if (seed == null) {</span></pre></td></tr>
 
 
 <tr>
@@ -3817,16 +3817,16 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_265'/>
 265
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_265'>2</a>
 <span>
-1. preferSeedWithLong : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
-2. preferSeedWithLong : negated conditional &rarr; TIMED_OUT<br/>
+1. preferSeedWithLong : negated conditional &rarr; TIMED_OUT<br/>
+2. preferSeedWithLong : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>      return !(currentWrapped instanceof ByteArrayReseedableRandom)</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      return !(currentWrapped instanceof ByteArrayReseedableRandom)</span></pre></td></tr>
 
 
 <tr>
@@ -4012,15 +4012,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_278'/>
 278
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_278'>1</a>
 <span>
-1. getNewSeedLength : negated conditional &rarr; KILLED<br/>
+1. getNewSeedLength : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>      if (wrapped == null) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>      if (wrapped == null) {</span></pre></td></tr>
 
 
 <tr>
@@ -4028,15 +4028,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_279'/>
 279
 </td>
-<td class='survived'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_279'>1</a>
 <span>
-1. getNewSeedLength : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED<br/>
+1. getNewSeedLength : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='survived'>        return 0;</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>        return 0;</span></pre></td></tr>
 
 
 <tr>
@@ -4368,15 +4368,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_302'/>
 302
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_302'>1</a>
 <span>
-1. nextInt : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+1. nextInt : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    return result;</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>    return result;</span></pre></td></tr>
 
 
 <tr>
@@ -4426,15 +4426,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@6f52612e_306'/>
 306
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_306'>1</a>
 <span>
-1. nextLongNoEntropyDebit : replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/RandomWrapper::nextLongNoEntropyDebit &rarr; TIMED_OUT<br/>
+1. nextLongNoEntropyDebit : replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/RandomWrapper::nextLongNoEntropyDebit &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    return getWrapped().nextLong();</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    return getWrapped().nextLong();</span></pre></td></tr>
 
 
 <tr>
@@ -4873,7 +4873,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_104'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -4883,7 +4883,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_110'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSeedOrDummy<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getSeedOrDummy<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/prng/RandomWrapper::getSeedOrDummy to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSeedOrDummy<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>getSeedOrDummy<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/prng/RandomWrapper::getSeedOrDummy to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -4903,7 +4903,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_119'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>useParallelStreams<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>useParallelStreams<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -4913,7 +4913,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_123'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>next<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>next<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>next<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>next<br/><b>Killed by : </b>none</span></span> changed conditional boundary &rarr; SURVIVED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>next<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>next<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -4923,7 +4923,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_124'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>next<br/><b>Killed by : </b>none</span></span> Replaced Unsigned Shift Right with Shift Left &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>next<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>next<br/><b>Killed by : </b>none</span></span> Replaced Unsigned Shift Right with Shift Left &rarr; TIMED_OUT</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>next<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -4933,7 +4933,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_125'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>next<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> Replaced Shift Left with Shift Right &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>next<br/><b>Killed by : </b>none</span></span> Replaced Shift Left with Shift Right &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -4943,7 +4943,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_133'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getWrapped<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getWrapped<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -4953,7 +4953,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_135'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getWrapped<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/prng/RandomWrapper::getWrapped to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getWrapped<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/prng/RandomWrapper::getWrapped to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -4983,7 +4983,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_149'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setWrapped<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; SURVIVED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setWrapped<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/RandomWrapper::readEntropyOfWrapped &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5023,7 +5023,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_161'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readEntropyOfWrapped<br/><b>Killed by : </b>none</span></span> Replaced long multiplication with division &rarr; SURVIVED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>readEntropyOfWrapped<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readEntropyOfWrapped<br/><b>Killed by : </b>none</span></span> Replaced long multiplication with division &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>readEntropyOfWrapped<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5073,7 +5073,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_188'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5093,7 +5093,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_193'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5143,7 +5143,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_212'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5163,7 +5163,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_217'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5173,7 +5173,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_221'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -5193,7 +5193,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_225'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> negated conditional &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5333,7 +5333,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_265'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preferSeedWithLong<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>preferSeedWithLong<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>preferSeedWithLong<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>preferSeedWithLong<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5383,7 +5383,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_276'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewSeedLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewSeedLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> removed call to java/util/concurrent/locks/ReentrantLock::lock &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -5393,7 +5393,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_278'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewSeedLength<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewSeedLength<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5403,7 +5403,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_279'/> 
 
-<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewSeedLength<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; SURVIVED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getNewSeedLength<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5483,7 +5483,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_302'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextInt<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextInt<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -5493,7 +5493,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@6f52612e_306'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>none</span></span> replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/RandomWrapper::nextLongNoEntropyDebit &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nextLongNoEntropyDebit<br/><b>Killed by : </b>none</span></span> replaced return of long value with value + 1 for io/github/pr0methean/betterrandom/prng/RandomWrapper::nextLongNoEntropyDebit &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -5584,7 +5584,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (295 ms)</li><li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (141 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1483 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (1723 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (558 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1351 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1568 ms)</li><li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._ (173 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (9296 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.RandomWrapperRandomTest._ (357 ms)</li><li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperTest._ (279 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperMersenneTwisterRandomTest._ (1548 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (1903 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (479 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperSecureRandomTest._ (1495 ms)</li><li>io.github.pr0methean.betterrandom.prng.ReseedingThreadLocalRandomWrapperTest._ (1749 ms)</li><li>io.github.pr0methean.betterrandom.prng.ThreadLocalRandomWrapperMersenneTwisterTest._ (205 ms)</li><li>io.github.pr0methean.betterrandom.prng.RandomWrapperAesCounterRandomTest._ (9850 ms)</li>
 </ul>
 
 <br/>
