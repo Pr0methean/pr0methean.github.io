@@ -3,14 +3,14 @@
 <html lang="en">
 <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>BaseRandom (BetterRandom 2.4.1-SNAPSHOT API)</title>
+<title>BaseRandom (BetterRandom 2.4.2-SNAPSHOT API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="BaseRandom (BetterRandom 2.4.1-SNAPSHOT API)";
+            parent.document.title="BaseRandom (BetterRandom 2.4.2-SNAPSHOT API)";
         }
     }
     catch(err) {
@@ -554,8 +554,9 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(long)">setSeed</a></strong>(long&nbsp;seed)</code>
-<div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
- supports that.</div>
+<div class="block"><strong>Deprecated.</strong>&nbsp;
+<div class="block"><i>Some implementations are very slow.</i></div>
+</div>
 </td>
 </tr>
 <tr class="rowColor">
@@ -1404,12 +1405,15 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <ul class="blockList">
 <li class="blockList">
 <h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Deprecated.html?is-external=true" title="class or interface in java.lang">@Deprecated</a>
+public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
+<div class="block"><span class="strong">Deprecated.</span>&nbsp;<i>Some implementations are very slow.</i></div>
 <div class="block">Sets the seed of this random number generator using a single long seed, if this implementation
  supports that. If it is capable of using 64 bits or less of seed data (i.e. if <code>{@link
  #getNewSeedLength()} &lt;= {@link Long#BYTES}</code>), then this method shall replace the entire seed as
- <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed(long)" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> does; otherwise, it shall either be a no-op, or shall combine the
- input with the existing seed as <a href="https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html?is-external=true#setSeed(long)" title="class or interface in java.security"><code>SecureRandom.setSeed(long)</code></a> does.</div>
+ <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#setSeed(long)" title="class or interface in java.util"><code>Random.setSeed(long)</code></a> does; otherwise, it shall either combine the input with the
+ existing seed as <a href="https://docs.oracle.com/javase/8/docs/api/java/security/SecureRandom.html?is-external=true#setSeed(long)" title="class or interface in java.security"><code>SecureRandom.setSeed(long)</code></a> does, or it shall generate a
+ new seed using the <a href="../../../../../io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html" title="enum in io.github.pr0methean.betterrandom.seed"><code>DefaultSeedGenerator</code></a>.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html#setSeed(long)">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a></code></dd>
