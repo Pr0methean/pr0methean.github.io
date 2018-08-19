@@ -279,7 +279,7 @@ not permitted.)</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>convertBytesToHexString</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;convertBytesToHexString(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;convertBytesToHexString(<a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                              byte[]&nbsp;data)</pre>
 <div class="block">Converts an array of bytes into a String of hexadecimal characters (0 - F).</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>data</code> - An array of bytes to convert to a String.</dd>
@@ -292,7 +292,7 @@ not permitted.)</div>
 <ul class="blockList">
 <li class="blockList">
 <h4>convertIntLeastBytesToHexString</h4>
-<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;convertIntLeastBytesToHexString(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+<pre>public static&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;convertIntLeastBytesToHexString(<a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                                      int[]&nbsp;data)</pre>
 <div class="block">Converts an array of ints into a String of hexadecimal characters (0 - F), taking only the
  least significant byte of each int. Prepends a newline, unless returning "null".</div>
@@ -363,8 +363,8 @@ not permitted.)</div>
 <pre>public static&nbsp;byte[]&nbsp;convertLongToBytes(long&nbsp;input)</pre>
 <div class="block">Converts a long to an array of bytes.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - a long.</dd>
-<dt><span class="strong">Returns:</span></dt><dd>a byte array of length <a href="../../../../../io/github/pr0methean/betterrandom/util/Java8Constants.html#LONG_BYTES"><code>Java8Constants.LONG_BYTES</code></a> containing the long's value in
-     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd></dl>
+<dt><span class="strong">Returns:</span></dt><dd>an array of 8 bytes containing the long's value in
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#nativeOrder()" title="class or interface in java.nio"><code>ByteOrder.nativeOrder()</code></a>.</dd></dl>
 </li>
 </ul>
 <a name="convertLongToBytes(long, java.nio.ByteOrder)">
@@ -376,9 +376,9 @@ not permitted.)</div>
 <pre>public static&nbsp;byte[]&nbsp;convertLongToBytes(long&nbsp;input,
                         <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true" title="class or interface in java.nio">ByteOrder</a>&nbsp;byteOrder)</pre>
 <div class="block">Converts a long to an array of bytes.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - a long.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - a long.</dd><dd><code>byteOrder</code> - the byte order to use</dd>
 <dt><span class="strong">Returns:</span></dt><dd>an array of 8 bytes containing the long's value in
-     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd></dl>
+     the specified order.</dd></dl>
 </li>
 </ul>
 <a name="convertIntToBytes(int)">
@@ -391,7 +391,7 @@ not permitted.)</div>
 <div class="block"><p>convertIntToBytes.</p></div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - an int.</dd>
 <dt><span class="strong">Returns:</span></dt><dd>an array of 4 bytes containing the int's value in
-     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd></dl>
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#nativeOrder()" title="class or interface in java.nio"><code>ByteOrder.nativeOrder()</code></a> order.</dd></dl>
 </li>
 </ul>
 <a name="convertBytesToLong(byte[])">
@@ -402,8 +402,8 @@ not permitted.)</div>
 <h4>convertBytesToLong</h4>
 <pre>public static&nbsp;long&nbsp;convertBytesToLong(byte[]&nbsp;bytes)</pre>
 <div class="block">Convert a byte array to a long, reversing <a href="../../../../../io/github/pr0methean/betterrandom/util/BinaryUtils.html#convertLongToBytes(long)"><code>convertLongToBytes(long)</code></a>.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - a byte array of length <a href="../../../../../io/github/pr0methean/betterrandom/util/Java8Constants.html#LONG_BYTES"><code>Java8Constants.LONG_BYTES</code></a> in
-     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#BIG_ENDIAN" title="class or interface in java.nio"><code>ByteOrder.BIG_ENDIAN</code></a> order.</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>bytes</code> - a byte array of length <code>Long#BYTES</code> in
+     <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteOrder.html?is-external=true#nativeOrder()" title="class or interface in java.nio"><code>ByteOrder.nativeOrder()</code></a> order.</dd>
 <dt><span class="strong">Returns:</span></dt><dd><code>bytes</code> as a long.</dd></dl>
 </li>
 </ul>

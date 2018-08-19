@@ -717,7 +717,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <ul class="blockList">
 <li class="blockList">
 <h4>seedBuffer</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+<pre><a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
 protected transient volatile&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a> seedBuffer</pre>
 <div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio"><code>ByteBuffer</code></a> that wraps <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed"><code>seed</code></a> if requested; null otherwise.</div>
 </li>
@@ -1494,7 +1494,7 @@ public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>setSeedGenerator</h4>
-<pre>public&nbsp;void&nbsp;setSeedGenerator(<a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+<pre>public&nbsp;void&nbsp;setSeedGenerator(<a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
                     <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</pre>
 <div class="block">Registers this PRNG with the <a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> for the corresponding <a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed"><code>SeedGenerator</code></a>, to schedule reseeding when we run out of entropy. Unregisters this PRNG with
  the previous <a href="../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed"><code>RandomSeederThread</code></a> if it had a different one.</div>
@@ -1508,7 +1508,7 @@ public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
 <ul class="blockList">
 <li class="blockList">
 <h4>getSeedGenerator</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
+<pre><a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
 public&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;getSeedGenerator()</pre>
 <div class="block">Returns the current seed generator for this PRNG.</div>
 <dl><dt><span class="strong">Returns:</span></dt><dd>the current seed generator, or null if there is none</dd></dl>
@@ -1572,10 +1572,10 @@ public&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedG
 <pre>protected static&nbsp;byte[]&nbsp;checkLength(byte[]&nbsp;seed,
                  int&nbsp;requiredLength)</pre>
 <div class="block">Checks that the given seed is the expected length, then returns it.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - the seed to check</dd><dd><code>expectedLength</code> - the expected length</dd>
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - the seed to check</dd><dd><code>requiredLength</code> - the expected length</dd>
 <dt><span class="strong">Returns:</span></dt><dd><code>seed</code></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>seed == null || seed.length != expectedLength</code></dd></dl>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>seed == null || seed.length != requiredLength</code></dd></dl>
 </li>
 </ul>
 <a name="usesByteBuffer()">
