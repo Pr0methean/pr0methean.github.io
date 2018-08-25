@@ -3,14 +3,14 @@
 <html lang="en">
 <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>BaseRandom (BetterRandom 2.4.6 API)</title>
+<title>BaseRandom (BetterRandom 2.4.7 API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="BaseRandom (BetterRandom 2.4.6 API)";
+            parent.document.title="BaseRandom (BetterRandom 2.4.7 API)";
         }
     }
     catch(err) {
@@ -168,12 +168,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 </td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a></code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seedBuffer">seedBuffer</a></strong></code>
-<div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio"><code>ByteBuffer</code></a> that wraps <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed"><code>seed</code></a> if requested; null otherwise.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicReference.html?is-external=true" title="class or interface in java.util.concurrent.atomic">AtomicReference</a>&lt;<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&gt;</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seedGenerator">seedGenerator</a></strong></code>
 <div class="block">If the referent is non-null, it will be invoked to reseed this PRNG whenever random output is
@@ -181,7 +175,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
  negative.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#superConstructorFinished">superConstructorFinished</a></strong></code>
 <div class="block">Set by the constructor once either <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#Random()" title="class or interface in java.util"><code>Random.Random()</code></a> or <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true#Random(long)" title="class or interface in java.util"><code>Random.Random(long)</code></a> has
@@ -603,20 +597,13 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#useParallelStreams()">useParallelStreams</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#usesByteBuffer()">usesByteBuffer</a></strong>()</code>
-<div class="block">If overridden to return true, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seedBuffer"><code>seedBuffer</code></a> is initialized with a buffer that wraps
- <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed"><code>seed</code></a>; otherwise, that field remains null.</div>
-</td>
-</tr>
-<tr class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)">withProbability</a></strong>(double&nbsp;probability)</code>
 <div class="block">Returns true with the given probability, and records that only 1 bit of entropy is being
  spent.</div>
 </td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbabilityInternal(double)">withProbabilityInternal</a></strong>(double&nbsp;probability)</code>
 <div class="block">Called by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)"><code>withProbability(double)</code></a> to generate a boolean with a specified probability
@@ -709,17 +696,6 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <div class="block">The seed this PRNG was seeded with, as a byte array. Used by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#getSeed()"><code>getSeed()</code></a> even if the
  actual internal state of the PRNG is stored elsewhere (since otherwise getSeed() would require
  a slow type conversion).</div>
-</li>
-</ul>
-<a name="seedBuffer">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>seedBuffer</h4>
-<pre><a href="http://checkstyle-addons.github.io/jsr305-javadoc/3.0.1/javax/annotation/Nullable.html?is-external=true" title="class or interface in javax.annotation">@Nullable</a>
-protected transient volatile&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio">ByteBuffer</a> seedBuffer</pre>
-<div class="block">A <a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html?is-external=true" title="class or interface in java.nio"><code>ByteBuffer</code></a> that wraps <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed"><code>seed</code></a> if requested; null otherwise.</div>
 </li>
 </ul>
 <a name="superConstructorFinished">
@@ -1576,18 +1552,6 @@ public&nbsp;<a href="../../../../../io/github/pr0methean/betterrandom/seed/SeedG
 <dt><span class="strong">Returns:</span></dt><dd><code>seed</code></dd>
 <dt><span class="strong">Throws:</span></dt>
 <dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html?is-external=true" title="class or interface in java.lang">IllegalArgumentException</a></code> - if <code>seed == null || seed.length != requiredLength</code></dd></dl>
-</li>
-</ul>
-<a name="usesByteBuffer()">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>usesByteBuffer</h4>
-<pre>protected&nbsp;boolean&nbsp;usesByteBuffer()</pre>
-<div class="block">If overridden to return true, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seedBuffer"><code>seedBuffer</code></a> is initialized with a buffer that wraps
- <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#seed"><code>seed</code></a>; otherwise, that field remains null.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>true to wrap seed in a ByteBuffer; false otherwise</dd></dl>
 </li>
 </ul>
 <a name="getEntropyBits()">
