@@ -719,15 +719,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@60046091_51'/>
 51
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@60046091_51'>1</a>
 <span>
-1. getDefaultInstance : mutated return of Object value for io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::getDefaultInstance to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+1. getDefaultInstance : mutated return of Object value for io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::getDefaultInstance to ( if (x != null) null else throw new RuntimeException ) &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    return getInstance(DefaultSeedGenerator.DEFAULT_SEED_GENERATOR);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>    return getInstance(DefaultSeedGenerator.DEFAULT_SEED_GENERATOR);</span></pre></td></tr>
 
 
 <tr>
@@ -1163,15 +1163,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@60046091_82'/>
 82
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@60046091_82'>1</a>
 <span>
-1. setSeedGenerator : negated conditional &rarr; KILLED<br/>
+1. setSeedGenerator : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    if (seedGenerator != this.seedGenerator) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>    if (seedGenerator != this.seedGenerator) {</span></pre></td></tr>
 
 
 <tr>
@@ -1395,15 +1395,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@60046091_98'/>
 98
 </td>
-<td class='killed'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@60046091_98'>1</a>
 <span>
-1. readObject : removed call to io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::initSubclassTransientFields &rarr; KILLED<br/>
+1. readObject : removed call to io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::initSubclassTransientFields &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    initSubclassTransientFields();</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    initSubclassTransientFields();</span></pre></td></tr>
 
 
 <tr>
@@ -1627,15 +1627,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@60046091_114'/>
 114
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@60046091_114'>1</a>
 <span>
-1. getSplittableRandom : removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::add &rarr; KILLED<br/>
+1. getSplittableRandom : removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::add &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    RandomSeederThread.add(seedGenerator, adapterForThread);</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>    RandomSeederThread.add(seedGenerator, adapterForThread);</span></pre></td></tr>
 
 
 <tr>
@@ -2023,7 +2023,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@60046091_51'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getDefaultInstance<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::getDefaultInstance to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getDefaultInstance<br/><b>Killed by : </b>none</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::getDefaultInstance to ( if (x != null) null else throw new RuntimeException ) &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -2073,7 +2073,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@60046091_82'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedGenerator<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedGenerator<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -2113,7 +2113,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@60046091_98'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readObject<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::initSubclassTransientFields &rarr; KILLED</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readObject<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/ReseedingSplittableRandomAdapter::initSubclassTransientFields &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -2153,7 +2153,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@60046091_114'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSplittableRandom<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._</span></span> removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::add &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>getSplittableRandom<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/seed/RandomSeederThread::add &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -2234,12 +2234,12 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (2775 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (22 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (1790 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (3173 ms)</li>
 </ul>
 
 <br/>
 
-Report generated by <a href='http://pitest.org'>PIT</a> 1.4.0
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.2
 
 </body>
 </html>
