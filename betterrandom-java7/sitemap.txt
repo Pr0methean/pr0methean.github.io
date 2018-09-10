@@ -30,6 +30,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Re
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/XorShiftRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg64Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Java8CompatRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg128Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/CellularAutomatonRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/BaseRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/AesCounterRandom.html
@@ -52,6 +53,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/pack
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/XorShiftRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Pcg64Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Pcg128Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-tree.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/BaseRandom.html
@@ -70,10 +72,12 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-tree.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/EntryPoint.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Java8Constants.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-summary.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Byte16ArrayArithmetic.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/SerializableSupplier.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/EntryPoint.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Java8Constants.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Byte16ArrayArithmetic.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/SerializableSupplier.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/LooperThread.html
