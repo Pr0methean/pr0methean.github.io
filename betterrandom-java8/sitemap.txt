@@ -2,8 +2,10 @@ https://pr0methean.github.io/privacy policy.html
 https://pr0methean.github.io/index.html
 https://pr0methean.github.io/allclasses-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/RepeatableRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Byte16ArrayArithmetic.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-summary.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/EntryPoint.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Byte16ArrayArithmetic.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/EntryPoint.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/LooperThread.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Dumpable.html
@@ -36,6 +38,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-summary.h
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/RandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/XorShiftRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-summary.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Pcg128Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/package-summary.html
@@ -57,6 +60,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/AesCounterRa
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/RandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/XorShiftRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg128Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/BaseRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg64Random.html
