@@ -605,15 +605,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@4c3ad8a_43'/>
 43
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_43'>1</a>
 <span>
-1. <init> : removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeed &rarr; TIMED_OUT<br/>
+1. <init> : removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeed &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    setSeed(seed);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    setSeed(seed);</span></pre></td></tr>
 
 
 <tr>
@@ -721,15 +721,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@4c3ad8a_51'/>
 51
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_51'>1</a>
 <span>
-1. readObject : removed call to java/io/ObjectInputStream::defaultReadObject &rarr; TIMED_OUT<br/>
+1. readObject : removed call to java/io/ObjectInputStream::defaultReadObject &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    in.defaultReadObject();</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    in.defaultReadObject();</span></pre></td></tr>
 
 
 <tr>
@@ -737,15 +737,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@4c3ad8a_52'/>
 52
 </td>
-<td class='uncertain'>
+<td class='survived'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_52'>1</a>
 <span>
-1. readObject : removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeedInternal &rarr; TIMED_OUT<br/>
+1. readObject : removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeedInternal &rarr; SURVIVED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    setSeedInternal(seed);</span></pre></td></tr>
+<td class='covered'><pre><span  class='survived'>    setSeedInternal(seed);</span></pre></td></tr>
 
 
 <tr>
@@ -951,15 +951,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@4c3ad8a_67'/>
 67
 </td>
-<td class='killed'>
+<td class='uncertain'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_67'>1</a>
 <span>
-1. setSeed : negated conditional &rarr; KILLED<br/>
+1. setSeed : negated conditional &rarr; TIMED_OUT<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='killed'>    if (superConstructorFinished) {</span></pre></td></tr>
+<td class='covered'><pre><span  class='uncertain'>    if (superConstructorFinished) {</span></pre></td></tr>
 
 
 <tr>
@@ -1044,7 +1044,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_43'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeed &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeed &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -1064,7 +1064,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_51'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readObject<br/><b>Killed by : </b>none</span></span> removed call to java/io/ObjectInputStream::defaultReadObject &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readObject<br/><b>Killed by : </b>none</span></span> removed call to java/io/ObjectInputStream::defaultReadObject &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -1074,7 +1074,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_52'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readObject<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeedInternal &rarr; TIMED_OUT</p> 
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>readObject<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter::setSeedInternal &rarr; SURVIVED</p> 
 </td>
 </tr>
 <tr>
@@ -1084,7 +1084,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_59'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.ThreadLocalRandomWrapperMersenneTwisterTest._</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter::setSeedInternal &rarr; KILLED</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeedInternal<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._</span></span> removed call to io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter::setSeedInternal &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -1094,7 +1094,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@4c3ad8a_67'/> 
 
-<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperAesCounterRandomTest._</span></span> negated conditional &rarr; KILLED</p> 
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>setSeed<br/><b>Killed by : </b>none</span></span> negated conditional &rarr; TIMED_OUT</p> 
 </td>
 </tr>
 <tr>
@@ -1125,7 +1125,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (1298 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (533 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingThreadLocalRandomWrapperTest._ (717 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomTest._ (299 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ThreadLocalRandomWrapperMersenneTwisterTest._ (404 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (629 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperRandomTest._ (751 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (42961 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (852 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (345 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperMersenneTwisterRandomTest._ (1662 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperSecureRandomTest._ (1241 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (434 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (874 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ThreadLocalRandomWrapperTest._ (525 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (1072 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (83 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg128RandomTest._ (960 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (31762 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperAesCounterRandomTest._ (73 ms)</li>
+<li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (936 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SingleThreadSplittableRandomAdapterTest._ (443 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingThreadLocalRandomWrapperTest._ (663 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomTest._ (110 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ThreadLocalRandomWrapperMersenneTwisterTest._ (295 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (559 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperRandomTest._ (626 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (17168 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (626 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingThreadLocalRandomWrapperFailingSeedGeneratorTest._ (321 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperMersenneTwisterRandomTest._ (766 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperSecureRandomTest._ (863 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.SplittableRandomAdapterTest._ (278 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (706 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ThreadLocalRandomWrapperTest._ (350 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterTest._ (894 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.ReseedingSplittableRandomAdapterDemoTest._ (34 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg128RandomTest._ (724 ms)</li><li>io.github.pr0methean.betterrandom.prng.Cmwc4096RandomTest._ (16402 ms)</li><li>io.github.pr0methean.betterrandom.prng.adapter.RandomWrapperAesCounterRandomTest._ (117 ms)</li>
 </ul>
 
 <br/>
