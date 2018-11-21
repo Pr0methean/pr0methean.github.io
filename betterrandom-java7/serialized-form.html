@@ -3,14 +3,14 @@
 <html lang="en">
 <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Serialized Form (BetterRandom 2.7.1 API)</title>
+<title>Serialized Form (BetterRandom 2.8.0 API)</title>
 <link rel="stylesheet" type="text/css" href="stylesheet.css" title="Style">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="Serialized Form (BetterRandom 2.7.1 API)";
+            parent.document.title="Serialized Form (BetterRandom 2.8.0 API)";
         }
     }
     catch(err) {
@@ -610,6 +610,54 @@
 <li class="blockList">
 <h2 title="Package">Package&nbsp;io.github.pr0methean.betterrandom.seed</h2>
 <ul class="blockList">
+<li class="blockList"><a name="io.github.pr0methean.betterrandom.seed.BufferedSeedGenerator">
+<!--   -->
+</a>
+<h3>Class <a href="io/github/pr0methean/betterrandom/seed/BufferedSeedGenerator.html" title="class in io.github.pr0methean.betterrandom.seed">io.github.pr0methean.betterrandom.seed.BufferedSeedGenerator</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a> implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-2100305696539110970L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serialized_methods">
+<!--   -->
+</a>
+<h3>Serialization Methods</h3>
+<ul class="blockList">
+<li class="blockListLast"><a name="readObject(java.io.ObjectInputStream)">
+<!--   -->
+</a>
+<h4>readObject</h4>
+<pre>private&nbsp;void&nbsp;readObject(<a href="https://docs.oracle.com/javase/8/docs/api/java/io/ObjectInputStream.html?is-external=true" title="class or interface in java.io">ObjectInputStream</a>&nbsp;in)
+                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a>,
+                        <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></pre>
+<dl><dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/io/IOException.html?is-external=true" title="class or interface in java.io">IOException</a></code></dd>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/ClassNotFoundException.html?is-external=true" title="class or interface in java.lang">ClassNotFoundException</a></code></dd></dl>
+</li>
+</ul>
+</li>
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockList">
+<h4>delegate</h4>
+<pre><a href="io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a> delegate</pre>
+</li>
+<li class="blockList">
+<h4>lock</h4>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/locks/Lock.html?is-external=true" title="class or interface in java.util.concurrent.locks">Lock</a> lock</pre>
+</li>
+<li class="blockListLast">
+<h4>size</h4>
+<pre>int size</pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="blockList"><a name="io.github.pr0methean.betterrandom.seed.SeedException">
 <!--   -->
 </a>
@@ -618,6 +666,28 @@
 <dt>serialVersionUID:</dt>
 <dd>-6151013676983010168L</dd>
 </dl>
+</li>
+<li class="blockList"><a name="io.github.pr0methean.betterrandom.seed.SeedGeneratorPreferenceList">
+<!--   -->
+</a>
+<h3>Class <a href="io/github/pr0methean/betterrandom/seed/SeedGeneratorPreferenceList.html" title="class in io.github.pr0methean.betterrandom.seed">io.github.pr0methean.betterrandom.seed.SeedGeneratorPreferenceList</a> extends <a href="https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/CopyOnWriteArrayList.html?is-external=true" title="class or interface in java.util.concurrent">CopyOnWriteArrayList</a>&lt;<a href="io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&gt; implements Serializable</h3>
+<dl class="nameValue">
+<dt>serialVersionUID:</dt>
+<dd>-4429919137592899776L</dd>
+</dl>
+<ul class="blockList">
+<li class="blockList"><a name="serializedForm">
+<!--   -->
+</a>
+<h3>Serialized Fields</h3>
+<ul class="blockList">
+<li class="blockListLast">
+<h4>isAlwaysWorthTrying</h4>
+<pre>boolean isAlwaysWorthTrying</pre>
+</li>
+</ul>
+</li>
+</ul>
 </li>
 </ul>
 </li>
