@@ -207,7 +207,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/Byte16ArrayArithmetic.html#rotateRightLeast64-byte:A-int-">rotateRightLeast64</a></span>(byte[]&nbsp;shifted,
                   int&nbsp;bits)</code>
-<div class="block"><code>return (long) ((shifted &gt;&gt;&gt; bits) | shifted &lt;&lt; (128 - bits))</code></div>
+<div class="block">Returns the lower 64 bits of the result when the input is rotated.</div>
 </td>
 </tr>
 <tr id="i6" class="altColor">
@@ -238,8 +238,7 @@ extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Enum.html?i
 <td class="colFirst"><code>static long</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../io/github/pr0methean/betterrandom/util/Byte16ArrayArithmetic.html#unsignedShiftRightLeast64-byte:A-int-">unsignedShiftRightLeast64</a></span>(byte[]&nbsp;shifted,
                          int&nbsp;bits)</code>
-<div class="block"><code>return (long)(shifted &gt;&gt;&gt; bits)</code>
- From <a href="https://github.com/patrickfav/bytes-java/blob/743a6ab60649e6ce7ec972412bdcb42010a46077/src/main/java/at/favre/lib/bytes/Util.java#L395">this source</a>.</div>
+<div class="block">Returns the lower 64 bits of the shifted input.</div>
 </td>
 </tr>
 <tr id="i10" class="altColor">
@@ -458,12 +457,14 @@ not permitted.)</div>
 <h4>unsignedShiftRightLeast64</h4>
 <pre>public static&nbsp;long&nbsp;unsignedShiftRightLeast64(byte[]&nbsp;shifted,
                                              int&nbsp;bits)</pre>
-<div class="block"><code>return (long)(shifted &gt;&gt;&gt; bits)</code>
+<div class="block">Returns the lower 64 bits of the shifted input.
  From <a href="https://github.com/patrickfav/bytes-java/blob/743a6ab60649e6ce7ec972412bdcb42010a46077/src/main/java/at/favre/lib/bytes/Util.java#L395">this source</a>.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>shifted</code> - the array input and the result</dd>
 <dd><code>bits</code> - how many bits to shift by</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>(long)(shifted &gt;&gt;&gt; bits)</code></dd>
 </dl>
 </li>
 </ul>
@@ -531,11 +532,13 @@ not permitted.)</div>
 <h4>rotateRightLeast64</h4>
 <pre>public static&nbsp;long&nbsp;rotateRightLeast64(byte[]&nbsp;shifted,
                                       int&nbsp;bits)</pre>
-<div class="block"><code>return (long) ((shifted &gt;&gt;&gt; bits) | shifted &lt;&lt; (128 - bits))</code></div>
+<div class="block">Returns the lower 64 bits of the result when the input is rotated.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>shifted</code> - the array input and the result</dd>
 <dd><code>bits</code> - how many bits to shift by</dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd><code>(long) ((shifted &gt;&gt;&gt; bits) | shifted &lt;&lt; (128 - bits))</code></dd>
 </dl>
 </li>
 </ul>
