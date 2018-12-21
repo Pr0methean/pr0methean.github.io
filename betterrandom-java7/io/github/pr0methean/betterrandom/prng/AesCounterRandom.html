@@ -3,14 +3,14 @@
 <html lang="en">
 <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AesCounterRandom (BetterRandom 2.8.1 API)</title>
+<title>AesCounterRandom (BetterRandom 2.9.0 API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="AesCounterRandom (BetterRandom 2.8.1 API)";
+            parent.document.title="AesCounterRandom (BetterRandom 2.9.0 API)";
         }
     }
     catch(err) {
@@ -65,7 +65,7 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_io.github.pr0methean.betterrandom.prng.CipherCounterRandom">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
@@ -96,7 +96,12 @@
 <li><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng.BaseRandom</a></li>
 <li>
 <ul class="inheritance">
+<li><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng.CipherCounterRandom</a></li>
+<li>
+<ul class="inheritance">
 <li>io.github.pr0methean.betterrandom.prng.AesCounterRandom</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -114,14 +119,11 @@
 <hr>
 <br>
 <pre>public class <span class="strong">AesCounterRandom</span>
-extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a>
-implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRandom.html" title="interface in io.github.pr0methean.betterrandom">SeekableRandom</a></pre>
-<div class="block"><p>Non-linear random number generator based on the AES block cipher in counter mode. Uses the
- seed as a key to encrypt a 128-bit counter using AES(Rijndael).</p> <p>By default, we only use a
- 128-bit key for the cipher because any larger key requires the inconvenience of installing the
- unlimited strength cryptography policy files for the Java platform.  Larger keys may be used (192
- or 256 bits) but if the cryptography policy files are not installed, a <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security"><code>GeneralSecurityException</code></a> will be thrown.</p> <p><em>NOTE: Because instances of this class
- require 128-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed(long)"><code>setSeed(long)</code></a>
+extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></pre>
+<div class="block"><p>CipherCounterRandom using AES (Rijndael).</p> <p>Keys larger than 128 bits, and thus seeds
+ larger than 256 bits, require unlimited strength cryptography policy files on closed-source
+ JDKs.</p> <p><em>NOTE: Because instances of this class
+ require 128-bit seeds, it is not possible to seed this RNG using the <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#setSeed(long)"><code>CipherCounterRandom.setSeed(long)</code></a>
  method inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> until the seed array has been set.</em></p></div>
 <dl><dt><span class="strong">Author:</span></dt>
   <dd>Daniel Dyer, Chris Hennick</dd>
@@ -138,6 +140,13 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 <!--   -->
 </a>
 <h3>Field Summary</h3>
+<ul class="blockList">
+<li class="blockList"><a name="fields_inherited_from_class_io.github.pr0methean.betterrandom.prng.CipherCounterRandom">
+<!--   -->
+</a>
+<h3>Fields inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></h3>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#addendDigits">addendDigits</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#cipher">cipher</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#counter">counter</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#counterInput">counterInput</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#currentBlock">currentBlock</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#index">index</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="fields_inherited_from_class_io.github.pr0methean.betterrandom.prng.BaseRandom">
 <!--   -->
@@ -206,40 +215,58 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 </td>
 </tr>
 <tr class="altColor">
-<td class="colFirst"><code>static int</code></td>
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/Cipher.html?is-external=true" title="class or interface in javax.crypto">Cipher</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#createCipher()">createCipher</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/security/MessageDigest.html?is-external=true" title="class or interface in java.security">MessageDigest</a></code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#createHash()">createHash</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getBlocksAtOnce()">getBlocksAtOnce</a></strong>()</code>
+<div class="block">Returns how many consecutive values of the counter are encrypted at once, in order to reduce
+ the number of calls to Cipher methods.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getBytesAtOnce()">getBytesAtOnce</a></strong>()</code>
+<div class="block">Returns the number of random bytes that can be precalculated at once, which is normally
+ <code>getCounterSizeBytes() * getBlocksAtOnce()</code>.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getCounterSizeBytes()">getCounterSizeBytes</a></strong>()</code>
+<div class="block">Returns the length of the counter.</div>
+</td>
+</tr>
+<tr class="rowColor">
+<td class="colFirst"><code>protected int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getKeyLength(int)">getKeyLength</a></strong>(int&nbsp;inputLength)</code>
+<div class="block">Returns the length of the key that should be extracted from a seed of a given length.</div>
+</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes()">getMaxKeyLengthBytes</a></strong>()</code>
 <div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>.</div>
 </td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>int</code></td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxTotalSeedLengthBytes()">getMaxTotalSeedLengthBytes</a></strong>()</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>int</code></td>
 <td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getNewSeedLength()">getNewSeedLength</a></strong>()</code>
 <div class="block">Returns the longest supported seed length.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#initTransientFields()">initTransientFields</a></strong>()</code>
-<div class="block">Called in constructor and readObject to initialize transient fields.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>protected int</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#next(int)">next</a></strong>(int&nbsp;bits)</code>
-<div class="block">Generates the next pseudorandom number.</div>
-</td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed(byte[])">setSeed</a></strong>(byte[]&nbsp;seed)</code>
-<div class="block">Reseed this PRNG.</div>
-</td>
-</tr>
-<tr class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setSeed(long)">setSeed</a></strong>(long&nbsp;seed)</code>
-<div class="block">Combines the given seed with the existing seed using SHA-256.</div>
-</td>
+<td class="colLast"><code><strong><a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#setKey(byte[])">setKey</a></strong>(byte[]&nbsp;key)</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>protected void</code></td>
@@ -256,6 +283,13 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 </td>
 </tr>
 </table>
+<ul class="blockList">
+<li class="blockList"><a name="methods_inherited_from_class_io.github.pr0methean.betterrandom.prng.CipherCounterRandom">
+<!--   -->
+</a>
+<h3>Methods inherited from class&nbsp;io.github.pr0methean.betterrandom.prng.<a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></h3>
+<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#initTransientFields()">initTransientFields</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#next(int)">next</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#nextBlock()">nextBlock</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#setSeed(byte[])">setSeed</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#setSeed(long)">setSeed</a></code></li>
+</ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods_inherited_from_class_io.github.pr0methean.betterrandom.prng.BaseRandom">
 <!--   -->
@@ -354,17 +388,100 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 <!--   -->
 </a>
 <h3>Method Detail</h3>
+<a name="getCounterSizeBytes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getCounterSizeBytes</h4>
+<pre>public&nbsp;int&nbsp;getCounterSizeBytes()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getCounterSizeBytes()">CipherCounterRandom</a></code></strong></div>
+<div class="block">Returns the length of the counter.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getCounterSizeBytes()">getCounterSizeBytes</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the length of the counter</dd></dl>
+</li>
+</ul>
+<a name="getBlocksAtOnce()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBlocksAtOnce</h4>
+<pre>public&nbsp;int&nbsp;getBlocksAtOnce()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getBlocksAtOnce()">CipherCounterRandom</a></code></strong></div>
+<div class="block">Returns how many consecutive values of the counter are encrypted at once, in order to reduce
+ the number of calls to Cipher methods. Each counter value encrypts to yield a "block" of
+ pseudorandom data. Changing this value won't change the output if the cipher is running in
+ block mode, but it may impact performance.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getBlocksAtOnce()">getBlocksAtOnce</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the number of blocks (counter values) to encrypt at once</dd></dl>
+</li>
+</ul>
+<a name="getBytesAtOnce()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getBytesAtOnce</h4>
+<pre>public&nbsp;int&nbsp;getBytesAtOnce()</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getBytesAtOnce()">CipherCounterRandom</a></code></strong></div>
+<div class="block">Returns the number of random bytes that can be precalculated at once, which is normally
+ <code>getCounterSizeBytes() * getBlocksAtOnce()</code>.</div>
+<dl>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getBytesAtOnce()">getBytesAtOnce</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the number of random bytes that can be precalculated at once</dd></dl>
+</li>
+</ul>
+<a name="getMaxTotalSeedLengthBytes()">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getMaxTotalSeedLengthBytes</h4>
+<pre>public&nbsp;int&nbsp;getMaxTotalSeedLengthBytes()</pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getMaxTotalSeedLengthBytes()">getMaxTotalSeedLengthBytes</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+</dl>
+</li>
+</ul>
 <a name="getMaxKeyLengthBytes()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>getMaxKeyLengthBytes</h4>
-<pre>public static&nbsp;int&nbsp;getMaxKeyLengthBytes()</pre>
+<pre>public&nbsp;int&nbsp;getMaxKeyLengthBytes()</pre>
 <div class="block">Returns the maximum length in bytes of an AES key, which is <code>Math.min(Cipher.getMaxAllowedKeyLength("AES/ECB/NoPadding") / 8, 32)</code>. If the seed is longer
  than this, part of it becomes the counter's initial value. Otherwise, the full seed becomes the
  AES key and the counter is initially zero.</div>
-<dl><dt><span class="strong">Returns:</span></dt><dd>the maximum length in bytes of an AES key.</dd></dl>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getMaxKeyLengthBytes()">getMaxKeyLengthBytes</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+<dt><span class="strong">Returns:</span></dt><dd>the maximum length in bytes of an AES key.</dd></dl>
+</li>
+</ul>
+<a name="getKeyLength(int)">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getKeyLength</h4>
+<pre>protected&nbsp;int&nbsp;getKeyLength(int&nbsp;inputLength)</pre>
+<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getKeyLength(int)">CipherCounterRandom</a></code></strong></div>
+<div class="block">Returns the length of the key that should be extracted from a seed of a given length. During
+ the initial seeding, whatever part of the seed does not become the key, becomes the counter's
+ initial value.</div>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getKeyLength(int)">getKeyLength</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+<dt><span class="strong">Parameters:</span></dt><dd><code>inputLength</code> - the length of the whole seed</dd>
+<dt><span class="strong">Returns:</span></dt><dd>the length of the key</dd></dl>
 </li>
 </ul>
 <a name="addSubclassFields(com.google.common.base.MoreObjects.ToStringHelper)">
@@ -377,76 +494,35 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubclassFields(com.google.common.base.MoreObjects.ToStringHelper)">BaseRandom</a></code></strong></div>
 <div class="block">Adds the fields that were not inherited from BaseRandom to the given <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> for dumping.</div>
 <dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#addSubclassFields(com.google.common.base.MoreObjects.ToStringHelper)">addSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#addSubclassFields(com.google.common.base.MoreObjects.ToStringHelper)">addSubclassFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>original</code> - a <a href="https://google.github.io/guava/releases/snapshot-jre/api/docs/com/google/common/base/MoreObjects.ToStringHelper.html?is-external=true" title="class or interface in com.google.common.base"><code>MoreObjects.ToStringHelper</code></a> object.</dd>
 <dt><span class="strong">Returns:</span></dt><dd><code>original</code> with the fields not inherited from BaseRandom written to it.</dd></dl>
 </li>
 </ul>
-<a name="initTransientFields()">
+<a name="createHash()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>initTransientFields</h4>
-<pre>protected&nbsp;void&nbsp;initTransientFields()</pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields()">BaseRandom</a></code></strong></div>
-<div class="block">Called in constructor and readObject to initialize transient fields.</div>
+<h4>createHash</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/security/MessageDigest.html?is-external=true" title="class or interface in java.security">MessageDigest</a>&nbsp;createHash()</pre>
 <dl>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#initTransientFields()">initTransientFields</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#createHash()">createHash</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="next(int)">
+<a name="createCipher()">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>next</h4>
-<pre>protected final&nbsp;int&nbsp;next(int&nbsp;bits)</pre>
-<div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next(int)">BaseRandom</a></code></strong></div>
-<div class="block">Generates the next pseudorandom number. Called by all other random-number-generating methods.
- Should not debit the entropy count, since that's done by the calling methods according to the
- amount they actually output (see for example <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#withProbability(double)"><code>BaseRandom.withProbability(double)</code></a>, which uses 53
- random bits but outputs only one, and thus debits only 1 bit of entropy).</div>
+<h4>createCipher</h4>
+<pre>protected&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/Cipher.html?is-external=true" title="class or interface in javax.crypto">Cipher</a>&nbsp;createCipher()</pre>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#next(int)">next</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="setSeed(byte[])">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(byte[]&nbsp;seed)</pre>
-<div class="block">Reseed this PRNG.<p>Most subclasses should override <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal(byte[])"><code>BaseRandom.setSeedInternal(byte[])</code></a> instead of
- this method, so that they will deserialize properly.</p> If the seed is not of the maximum length, it is combined with the existing seed
- using SHA-256.</div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html#setSeed(byte[])">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom">ByteArrayReseedableRandom</a></code></dd>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
-<dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - The PRNG's new seed.</dd></dl>
-</li>
-</ul>
-<a name="setSeed(long)">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>setSeed</h4>
-<pre>public&nbsp;void&nbsp;setSeed(long&nbsp;seed)</pre>
-<div class="block">Combines the given seed with the existing seed using SHA-256.</div>
-<dl>
-<dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html#setSeed(long)">setSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html" title="interface in io.github.pr0methean.betterrandom.prng">Java8CompatRandom</a></code></dd>
-<dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(long)">setSeed</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#createCipher()">createCipher</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -462,8 +538,23 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
  by <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeed(byte[])"><code>BaseRandom.setSeed(byte[])</code></a>, constructors, <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#readObject(java.io.ObjectInputStream)"><code>BaseRandom.readObject(ObjectInputStream)</code></a> and <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#fallbackSetSeed()"><code>BaseRandom.fallbackSetSeed()</code></a>. When called after initialization, the <a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#lock"><code>BaseRandom.lock</code></a> is always held.</div>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html#setSeedInternal(byte[])">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/BaseRandom.html" title="class in io.github.pr0methean.betterrandom.prng">BaseRandom</a></code></dd>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#setSeedInternal(byte[])">setSeedInternal</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - The new seed.</dd></dl>
+</li>
+</ul>
+<a name="setKey(byte[])">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>setKey</h4>
+<pre>protected&nbsp;void&nbsp;setKey(byte[]&nbsp;key)
+               throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/InvalidKeyException.html?is-external=true" title="class or interface in java.security">InvalidKeyException</a></pre>
+<dl>
+<dt><strong>Specified by:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#setKey(byte[])">setKey</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
+<dt><span class="strong">Throws:</span></dt>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/InvalidKeyException.html?is-external=true" title="class or interface in java.security">InvalidKeyException</a></code></dd></dl>
 </li>
 </ul>
 <a name="getNewSeedLength()">
@@ -494,6 +585,8 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/SeekableRandom.html#advance(long)">advance</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/SeekableRandom.html" title="interface in io.github.pr0methean.betterrandom">SeekableRandom</a></code></dd>
+<dt><strong>Overrides:</strong></dt>
+<dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#advance(long)">advance</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>delta</code> - the number of steps to advance; can be negative</dd></dl>
 </li>
 </ul>
@@ -567,7 +660,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/SeekableRan
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_io.github.pr0methean.betterrandom.prng.BaseRandom">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_io.github.pr0methean.betterrandom.prng.CipherCounterRandom">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>

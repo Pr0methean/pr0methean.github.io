@@ -3,14 +3,14 @@
 <html lang="en">
 <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Uses of Class io.github.pr0methean.betterrandom.util.LooperThread (BetterRandom 2.9.0 API)</title>
+<title>Uses of Class io.github.pr0methean.betterrandom.prng.CipherCounterRandom (BetterRandom 2.9.0 API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
 <body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="Uses of Class io.github.pr0methean.betterrandom.util.LooperThread (BetterRandom 2.9.0 API)";
+            parent.document.title="Uses of Class io.github.pr0methean.betterrandom.prng.CipherCounterRandom (BetterRandom 2.9.0 API)";
         }
     }
     catch(err) {
@@ -29,7 +29,7 @@
 <ul class="navList" title="Navigation">
 <li><a href="../../../../../../index.html">Overview</a></li>
 <li><a href="../package-summary.html">Package</a></li>
-<li><a href="../../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">Class</a></li>
+<li><a href="../../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">Class</a></li>
 <li class="navBarCell1Rev">Use</li>
 <li><a href="../package-tree.html">Tree</a></li>
 <li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
@@ -44,7 +44,7 @@
 </ul>
 <ul class="navList">
 
-<li><a href="LooperThread.html" target="_top">No Frames</a></li>
+<li><a href="CipherCounterRandom.html" target="_top">No Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_top">
 <li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
@@ -66,23 +66,22 @@
 </a></div>
 <!-- ========= END OF TOP NAVBAR ========= -->
 <div class="header">
-<h2 title="Uses of Class io.github.pr0methean.betterrandom.util.LooperThread" class="title">Uses of Class<br>io.github.pr0methean.betterrandom.util.LooperThread</h2>
+<h2 title="Uses of Class io.github.pr0methean.betterrandom.prng.CipherCounterRandom" class="title">Uses of Class<br>io.github.pr0methean.betterrandom.prng.CipherCounterRandom</h2>
 </div>
 <div class="classUseContainer">
 <ul class="blockList">
 <li class="blockList">
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing packages, and an explanation">
-<caption><span>Packages that use <a href="../../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a></span><span class="tabEnd">&nbsp;</span></caption>
+<caption><span>Packages that use <a href="../../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Package</th>
 <th class="colLast" scope="col">Description</th>
 </tr>
 <tbody>
 <tr class="altColor">
-<td class="colFirst"><a href="#io.github.pr0methean.betterrandom.seed">io.github.pr0methean.betterrandom.seed</a></td>
+<td class="colFirst"><a href="#io.github.pr0methean.betterrandom.prng">io.github.pr0methean.betterrandom.prng</a></td>
 <td class="colLast">
-<div class="block">Tools to obtain and apply truly-random seeds for <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> implementations,
- especially those that also implement <a href="../../../../../../io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html" title="interface in io.github.pr0methean.betterrandom"><code>ByteArrayReseedableRandom</code></a>.</div>
+<div class="block">Subclasses of <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> using different random-number generation algorithms.</div>
 </td>
 </tr>
 </tbody>
@@ -90,12 +89,12 @@
 </li>
 <li class="blockList">
 <ul class="blockList">
-<li class="blockList"><a name="io.github.pr0methean.betterrandom.seed">
+<li class="blockList"><a name="io.github.pr0methean.betterrandom.prng">
 <!--   -->
 </a>
-<h3>Uses of <a href="../../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a> in <a href="../../../../../../io/github/pr0methean/betterrandom/seed/package-summary.html">io.github.pr0methean.betterrandom.seed</a></h3>
+<h3>Uses of <a href="../../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a> in <a href="../../../../../../io/github/pr0methean/betterrandom/prng/package-summary.html">io.github.pr0methean.betterrandom.prng</a></h3>
 <table border="0" cellpadding="3" cellspacing="0" summary="Use table, listing subclasses, and an explanation">
-<caption><span>Subclasses of <a href="../../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">LooperThread</a> in <a href="../../../../../../io/github/pr0methean/betterrandom/seed/package-summary.html">io.github.pr0methean.betterrandom.seed</a></span><span class="tabEnd">&nbsp;</span></caption>
+<caption><span>Subclasses of <a href="../../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a> in <a href="../../../../../../io/github/pr0methean/betterrandom/prng/package-summary.html">io.github.pr0methean.betterrandom.prng</a></span><span class="tabEnd">&nbsp;</span></caption>
 <tr>
 <th class="colFirst" scope="col">Modifier and Type</th>
 <th class="colLast" scope="col">Class and Description</th>
@@ -103,8 +102,8 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code>class&nbsp;</code></td>
-<td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/seed/RandomSeederThread.html" title="class in io.github.pr0methean.betterrandom.seed">RandomSeederThread</a></strong></code>
-<div class="block">Thread that loops over <a href="https://docs.oracle.com/javase/8/docs/api/java/util/Random.html?is-external=true" title="class or interface in java.util"><code>Random</code></a> instances and reseeds them.</div>
+<td class="colLast"><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">AesCounterRandom</a></strong></code>
+<div class="block">CipherCounterRandom using AES (Rijndael).</div>
 </td>
 </tr>
 </tbody>
@@ -123,7 +122,7 @@
 <ul class="navList" title="Navigation">
 <li><a href="../../../../../../index.html">Overview</a></li>
 <li><a href="../package-summary.html">Package</a></li>
-<li><a href="../../../../../../io/github/pr0methean/betterrandom/util/LooperThread.html" title="class in io.github.pr0methean.betterrandom.util">Class</a></li>
+<li><a href="../../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">Class</a></li>
 <li class="navBarCell1Rev">Use</li>
 <li><a href="../package-tree.html">Tree</a></li>
 <li><a href="../../../../../../deprecated-list.html">Deprecated</a></li>
@@ -138,7 +137,7 @@
 </ul>
 <ul class="navList">
 
-<li><a href="LooperThread.html" target="_top">No Frames</a></li>
+<li><a href="CipherCounterRandom.html" target="_top">No Frames</a></li>
 </ul>
 <ul class="navList" id="allclasses_navbar_bottom">
 <li><a href="../../../../../../allclasses-noframe.html">All Classes</a></li>
