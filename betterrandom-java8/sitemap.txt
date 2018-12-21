@@ -28,6 +28,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/pack
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/RandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/BaseRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Pcg64Random.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/AesCounterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Cmwc4096Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-summary.html
@@ -35,6 +36,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-tree
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg128Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/BaseRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Pcg64Random.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/CipherCounterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/AesCounterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Cmwc4096Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/CellularAutomatonRandom.html
