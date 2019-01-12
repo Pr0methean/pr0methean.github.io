@@ -1,61 +1,7 @@
+<!DOCTYPE html>
 <html>
 <head>
-  
-    <style type='text/css'>
-   
-   .tests {
-     width: 50%;
-     float: left;
-   }
-   
-   .mutees {
-     float: right;
-     width: 50%;
-   }
-   
-   .unit {
-     padding-top: 20px;
-     clear: both;
-   }
-   
-   .coverage_bar {
-     display: inline-block;
-     height: 1.1em;
-     width: 130px;
-     background: #FAA;
-     margin: 0 5px;
-     vertical-align: middle;
-     border: 1px solid #AAA;
-     position: relative;
-   }
-   
-   .coverage_complete {
-     display: inline-block;
-     height: 100%;
-     background: #DFD;
-     float: left;
-   }
-   
-   .coverage_legend {
-     position: absolute;
-     height: 100%;
-     width: 100%;
-     left: 0;
-     top: 0;
-     text-align: center;
-   }
-   
-   .line, .mut {
-     vertical-align: middle;
-   }
-   
-   .coverage_percentage {
-     display: inline-block;
-     width: 3em;
-     text-align: right;
-   }
-  </style>
-  
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
 
@@ -72,9 +18,9 @@
     </thead>
     <tbody>
         <tr>
-            <td>5</td>
-            <td>92% <div class="coverage_bar"><div class="coverage_complete" style="width:92%"></div><div class="coverage_legend">320/347</div></div></td>
-            <td>85% <div class="coverage_bar"><div class="coverage_complete" style="width:85%"></div><div class="coverage_legend">162/191</div></div></td>
+            <td>7</td>
+            <td>90% <div class="coverage_bar"><div class="coverage_complete width-90"></div><div class="coverage_legend">330/368</div></div></td>
+            <td>91% <div class="coverage_bar"><div class="coverage_complete width-91"></div><div class="coverage_legend">186/205</div></div></td>
         </tr>
     </tbody>
 </table>
@@ -92,33 +38,45 @@
     <tbody>
 
         <tr>
+            <td><a href="./BufferedSeedGenerator.java.html">BufferedSeedGenerator.java</a></td>
+            <td><div class="coverage_percentage">88% </div><div class="coverage_bar"><div class="coverage_complete width-88"></div><div class="coverage_legend">29/33</div></div></td>
+            <td><div class="coverage_percentage">85% </div><div class="coverage_bar"><div class="coverage_complete width-85"></div><div class="coverage_legend">23/27</div></div></td>
+        </tr>
+
+        <tr>
             <td><a href="./DefaultSeedGenerator.java.html">DefaultSeedGenerator.java</a></td>
-            <td><div class="coverage_percentage">80% </div><div class="coverage_bar"><div class="coverage_complete" style="width:80%"></div><div class="coverage_legend">12/15</div></div></td>
-            <td><div class="coverage_percentage">64% </div><div class="coverage_bar"><div class="coverage_complete" style="width:64%"></div><div class="coverage_legend">7/11</div></div></td>
+            <td><div class="coverage_percentage">58% </div><div class="coverage_bar"><div class="coverage_complete width-58"></div><div class="coverage_legend">7/12</div></div></td>
+            <td><div class="coverage_percentage">60% </div><div class="coverage_bar"><div class="coverage_complete width-60"></div><div class="coverage_legend">3/5</div></div></td>
         </tr>
 
         <tr>
             <td><a href="./DevRandomSeedGenerator.java.html">DevRandomSeedGenerator.java</a></td>
-            <td><div class="coverage_percentage">72% </div><div class="coverage_bar"><div class="coverage_complete" style="width:72%"></div><div class="coverage_legend">26/36</div></div></td>
-            <td><div class="coverage_percentage">56% </div><div class="coverage_bar"><div class="coverage_complete" style="width:56%"></div><div class="coverage_legend">10/18</div></div></td>
+            <td><div class="coverage_percentage">72% </div><div class="coverage_bar"><div class="coverage_complete width-72"></div><div class="coverage_legend">26/36</div></div></td>
+            <td><div class="coverage_percentage">72% </div><div class="coverage_bar"><div class="coverage_complete width-72"></div><div class="coverage_legend">13/18</div></div></td>
         </tr>
 
         <tr>
             <td><a href="./RandomDotOrgSeedGenerator.java.html">RandomDotOrgSeedGenerator.java</a></td>
-            <td><div class="coverage_percentage">93% </div><div class="coverage_bar"><div class="coverage_complete" style="width:93%"></div><div class="coverage_legend">124/134</div></div></td>
-            <td><div class="coverage_percentage">94% </div><div class="coverage_bar"><div class="coverage_complete" style="width:94%"></div><div class="coverage_legend">61/65</div></div></td>
+            <td><div class="coverage_percentage">91% </div><div class="coverage_bar"><div class="coverage_complete width-91"></div><div class="coverage_legend">98/108</div></div></td>
+            <td><div class="coverage_percentage">92% </div><div class="coverage_bar"><div class="coverage_complete width-92"></div><div class="coverage_legend">47/51</div></div></td>
         </tr>
 
         <tr>
             <td><a href="./RandomSeederThread.java.html">RandomSeederThread.java</a></td>
-            <td><div class="coverage_percentage">98% </div><div class="coverage_bar"><div class="coverage_complete" style="width:98%"></div><div class="coverage_legend">149/152</div></div></td>
-            <td><div class="coverage_percentage">88% </div><div class="coverage_bar"><div class="coverage_complete" style="width:88%"></div><div class="coverage_legend">79/90</div></div></td>
+            <td><div class="coverage_percentage">97% </div><div class="coverage_bar"><div class="coverage_complete width-97"></div><div class="coverage_legend">142/146</div></div></td>
+            <td><div class="coverage_percentage">100% </div><div class="coverage_bar"><div class="coverage_complete width-100"></div><div class="coverage_legend">85/85</div></div></td>
         </tr>
 
         <tr>
             <td><a href="./SecureRandomSeedGenerator.java.html">SecureRandomSeedGenerator.java</a></td>
-            <td><div class="coverage_percentage">90% </div><div class="coverage_bar"><div class="coverage_complete" style="width:90%"></div><div class="coverage_legend">9/10</div></div></td>
-            <td><div class="coverage_percentage">71% </div><div class="coverage_bar"><div class="coverage_complete" style="width:71%"></div><div class="coverage_legend">5/7</div></div></td>
+            <td><div class="coverage_percentage">90% </div><div class="coverage_bar"><div class="coverage_complete width-90"></div><div class="coverage_legend">9/10</div></div></td>
+            <td><div class="coverage_percentage">71% </div><div class="coverage_bar"><div class="coverage_complete width-71"></div><div class="coverage_legend">5/7</div></div></td>
+        </tr>
+
+        <tr>
+            <td><a href="./SeedGeneratorPreferenceList.java.html">SeedGeneratorPreferenceList.java</a></td>
+            <td><div class="coverage_percentage">83% </div><div class="coverage_bar"><div class="coverage_complete width-83"></div><div class="coverage_legend">19/23</div></div></td>
+            <td><div class="coverage_percentage">83% </div><div class="coverage_bar"><div class="coverage_complete width-83"></div><div class="coverage_legend">10/12</div></div></td>
         </tr>
 
      </tbody>
@@ -129,7 +87,7 @@
 
 <hr/>
 
-Report generated by <a href='http://pitest.org'>PIT</a> 1.2.4
+Report generated by <a href='http://pitest.org'>PIT</a> 1.3.2
 
 </body>
 </html>
