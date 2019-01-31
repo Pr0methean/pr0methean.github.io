@@ -945,15 +945,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@e995e42_67'/>
 67
 </td>
-<td class='uncertain'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e995e42_67'>1</a>
 <span>
-1. generateSeed : removed call to io/github/pr0methean/betterrandom/seed/SeedGenerator::generateSeed &rarr; TIMED_OUT<br/>
+1. generateSeed : removed call to io/github/pr0methean/betterrandom/seed/SeedGenerator::generateSeed &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    delegate.generateSeed(output);</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>    delegate.generateSeed(output);</span></pre></td></tr>
 
 
 <tr>
@@ -1017,15 +1017,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@e995e42_72'/>
 72
 </td>
-<td class='uncertain'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e995e42_72'>1</a>
 <span>
-1. generateSeed : mutated return of Object value for io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator::generateSeed to ( if (x != null) null else throw new RuntimeException ) &rarr; TIMED_OUT<br/>
+1. generateSeed : mutated return of Object value for io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator::generateSeed to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    return delegate.generateSeed(length);</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>    return delegate.generateSeed(length);</span></pre></td></tr>
 
 
 <tr>
@@ -1173,15 +1173,15 @@
 <a name='org.pitest.mutationtest.report.html.SourceFile@e995e42_83'/>
 83
 </td>
-<td class='uncertain'>
+<td class='killed'>
 <span class='pop'>
 <a href='#grouporg.pitest.mutationtest.report.html.SourceFile@e995e42_83'>1</a>
 <span>
-1. isWorthTrying : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT<br/>
+1. isWorthTrying : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
 
 </span>
 </td>
-<td class='covered'><pre><span  class='uncertain'>    return true;</span></pre></td></tr>
+<td class='covered'><pre><span  class='killed'>    return true;</span></pre></td></tr>
 
 
 <tr>
@@ -1242,7 +1242,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e995e42_67'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateSeed<br/><b>Killed by : </b>none</span></span> removed call to io/github/pr0methean/betterrandom/seed/SeedGenerator::generateSeed &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.seed.DefaultSeedGeneratorTest._</span></span> removed call to io/github/pr0methean/betterrandom/seed/SeedGenerator::generateSeed &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -1252,7 +1252,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e995e42_72'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateSeed<br/><b>Killed by : </b>none</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator::generateSeed to ( if (x != null) null else throw new RuntimeException ) &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>generateSeed<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingSplittableRandomAdapterDemoTest._</span></span> mutated return of Object value for io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator::generateSeed to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
 </td>
 </tr>
 <tr>
@@ -1262,7 +1262,7 @@
 
 <a name='grouporg.pitest.mutationtest.report.html.SourceFile@e995e42_83'/> 
 
-<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isWorthTrying<br/><b>Killed by : </b>none</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; TIMED_OUT</p> 
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isWorthTrying<br/><b>Killed by : </b>io.github.pr0methean.betterrandom.seed.DefaultSeedGeneratorTest._</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
 </td>
 </tr>
 
@@ -1283,7 +1283,7 @@
 
 <h2>Tests examined</h2>
 <ul>
-<li>io.github.pr0methean.betterrandom.seed.RandomDotOrgSeedGeneratorHermeticTest._ (3573 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.SplittableRandomAdapterTest._ (278 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (710 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (520 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (20471 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg128RandomTest._ (928 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingSplittableRandomAdapterTest._ (952 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.SingleThreadSplittableRandomAdapterTest._ (514 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.RandomWrapperSecureRandomTest._ (677 ms)</li><li>io.github.pr0methean.betterrandom.seed.DefaultSeedGeneratorTest._ (39 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (721 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingSplittableRandomAdapterDemoTest._ (26 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.RandomWrapperRandomTest._ (545 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (784 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.RandomWrapperMersenneTwisterRandomTest._ (1033 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomTest._ (2307 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ThreadLocalRandomWrapperMersenneTwisterTest._ (289 ms)</li>
+<li>io.github.pr0methean.betterrandom.seed.RandomDotOrgSeedGeneratorHermeticTest._ (3652 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.SplittableRandomAdapterTest._ (283 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg64RandomTest._ (644 ms)</li><li>io.github.pr0methean.betterrandom.prng.XorShiftRandomTest._ (472 ms)</li><li>io.github.pr0methean.betterrandom.prng.CellularAutomatonRandomTest._ (18645 ms)</li><li>io.github.pr0methean.betterrandom.prng.Pcg128RandomTest._ (931 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingSplittableRandomAdapterTest._ (864 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.SingleThreadSplittableRandomAdapterTest._ (415 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.RandomWrapperSecureRandomTest._ (817 ms)</li><li>io.github.pr0methean.betterrandom.seed.DefaultSeedGeneratorTest._ (34 ms)</li><li>io.github.pr0methean.betterrandom.prng.MersenneTwisterRandomTest._ (747 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingSplittableRandomAdapterDemoTest._ (32 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.RandomWrapperRandomTest._ (484 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ReseedingThreadLocalRandomWrapperMersenneTwisterTest._ (703 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.RandomWrapperMersenneTwisterRandomTest._ (873 ms)</li><li>io.github.pr0methean.betterrandom.prng.AesCounterRandomTest._ (2552 ms)</li><li>io.github.pr0methean.betterrandom.prng.concurrent.ThreadLocalRandomWrapperMersenneTwisterTest._ (382 ms)</li>
 </ul>
 
 <br/>
