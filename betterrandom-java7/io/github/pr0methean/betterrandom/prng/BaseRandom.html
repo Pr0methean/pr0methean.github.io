@@ -1,16 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
 <html lang="en">
-<head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>BaseRandom (BetterRandom 3.0.1 API)</title>
+<title>BaseRandom (BetterRandom 3.0.3 API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
-<body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="BaseRandom (BetterRandom 3.0.1 API)";
+            parent.document.title="BaseRandom (BetterRandom 3.0.3 API)";
         }
     }
     catch(err) {
@@ -108,7 +108,7 @@
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
-<dd><a href="../../../../../io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">BaseSplittableRandomAdapter</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CellularAutomatonRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/Cmwc4096Random.html" title="class in io.github.pr0methean.betterrandom.prng">Cmwc4096Random</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">MersenneTwisterRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/Pcg128Random.html" title="class in io.github.pr0methean.betterrandom.prng">Pcg128Random</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/Pcg64Random.html" title="class in io.github.pr0methean.betterrandom.prng">Pcg64Random</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/adapter/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng.adapter">RandomWrapper</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html" title="class in io.github.pr0methean.betterrandom.prng">XorShiftRandom</a></dd>
+<dd><a href="../../../../../io/github/pr0methean/betterrandom/prng/concurrent/BaseSplittableRandomAdapter.html" title="class in io.github.pr0methean.betterrandom.prng.concurrent">BaseSplittableRandomAdapter</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CellularAutomatonRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/Cmwc4096Random.html" title="class in io.github.pr0methean.betterrandom.prng">Cmwc4096Random</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/MersenneTwisterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">MersenneTwisterRandom</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/Pcg128Random.html" title="class in io.github.pr0methean.betterrandom.prng">Pcg128Random</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/Pcg64Random.html" title="class in io.github.pr0methean.betterrandom.prng">Pcg64Random</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/concurrent/RandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng.concurrent">RandomWrapper</a>, <a href="../../../../../io/github/pr0methean/betterrandom/prng/XorShiftRandom.html" title="class in io.github.pr0methean.betterrandom.prng">XorShiftRandom</a></dd>
 </dl>
 <hr>
 <br>
@@ -1347,7 +1347,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
             long&nbsp;bound)</pre>
 <div class="block">Returns a pseudorandom <code>long</code> value between the specified origin (inclusive) and the
  specified bound (exclusive). This implementation is adapted from the reference implementation
- of <code>Random#longs(long, long)</code> in that method's Javadoc.</div>
+ of Random.longs(long, long) from JDK 8.</div>
 <dl><dt><span class="strong">Parameters:</span></dt><dd><code>origin</code> - the least value returned</dd><dd><code>bound</code> - the upper bound (exclusive)</dd>
 <dt><span class="strong">Returns:</span></dt><dd>a pseudorandom <code>long</code> value between the origin (inclusive) and the bound
      (exclusive)</dd>
@@ -1411,7 +1411,7 @@ implements <a href="../../../../../io/github/pr0methean/betterrandom/ByteArrayRe
 <dl>
 <dt><strong>Specified by:</strong></dt>
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html#getSeed()">getSeed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/RepeatableRandom.html" title="interface in io.github.pr0methean.betterrandom">RepeatableRandom</a></code></dd>
-<dt><span class="strong">Returns:</span></dt><dd>The seed data used to initialise this pseudo-random number generator.</dd></dl>
+<dt><span class="strong">Returns:</span></dt><dd>The seed data used to initialize this pseudo-random number generator.</dd></dl>
 </li>
 </ul>
 <a name="setSeed(long)">

@@ -1,16 +1,16 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <!-- NewPage -->
 <html lang="en">
-<head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start": new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!="dataLayer"?"<head>l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-K9NNCTT");</script><!-- End Google Tag Manager -->
+<head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>AesCounterRandom (BetterRandom 3.0.1 API)</title>
+<title>AesCounterRandom (BetterRandom 3.0.3 API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../stylesheet.css" title="Style">
 </head>
-<body><noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9NNCTT" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<body>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="AesCounterRandom (BetterRandom 3.0.1 API)";
+            parent.document.title="AesCounterRandom (BetterRandom 3.0.3 API)";
         }
     }
     catch(err) {
@@ -419,7 +419,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCou
 <h4>AesCounterRandom</h4>
 <pre>public&nbsp;AesCounterRandom(byte[]&nbsp;seed)</pre>
 <div class="block">Creates an RNG and seeds it with the specified seed data.</div>
-<dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - The seed data used to initialise the RNG. Length must be at least 16 and no
+<dl><dt><span class="strong">Parameters:</span></dt><dd><code>seed</code> - The seed data used to initialize the RNG. Length must be at least 16 and no
      more than <a href="../../../../../io/github/pr0methean/betterrandom/prng/AesCounterRandom.html#getMaxKeyLengthBytes()"><code>getMaxKeyLengthBytes()</code></a> + 16.</dd></dl>
 </li>
 </ul>
@@ -677,9 +677,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCou
 <h4>doCipher</h4>
 <pre>protected&nbsp;void&nbsp;doCipher(byte[]&nbsp;input,
             byte[]&nbsp;output)
-                 throws <a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/ShortBufferException.html?is-external=true" title="class or interface in javax.crypto">ShortBufferException</a>,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/IllegalBlockSizeException.html?is-external=true" title="class or interface in javax.crypto">IllegalBlockSizeException</a>,
-                        <a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/BadPaddingException.html?is-external=true" title="class or interface in javax.crypto">BadPaddingException</a></pre>
+                 throws <a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#doCipher(byte[],%20byte[])">CipherCounterRandom</a></code></strong></div>
 <div class="block">Executes the cipher.</div>
 <dl>
@@ -687,9 +685,7 @@ extends <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCou
 <dd><code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#doCipher(byte[],%20byte[])">doCipher</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html" title="class in io.github.pr0methean.betterrandom.prng">CipherCounterRandom</a></code></dd>
 <dt><span class="strong">Parameters:</span></dt><dd><code>input</code> - an array of input whose length is equal to <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getBytesAtOnce()"><code>CipherCounterRandom.getBytesAtOnce()</code></a></dd><dd><code>output</code> - an array of output whose length is equal to <a href="../../../../../io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html#getBytesAtOnce()"><code>CipherCounterRandom.getBytesAtOnce()</code></a></dd>
 <dt><span class="strong">Throws:</span></dt>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/ShortBufferException.html?is-external=true" title="class or interface in javax.crypto">ShortBufferException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/IllegalBlockSizeException.html?is-external=true" title="class or interface in javax.crypto">IllegalBlockSizeException</a></code></dd>
-<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/javax/crypto/BadPaddingException.html?is-external=true" title="class or interface in javax.crypto">BadPaddingException</a></code></dd></dl>
+<dd><code><a href="https://docs.oracle.com/javase/8/docs/api/java/security/GeneralSecurityException.html?is-external=true" title="class or interface in java.security">GeneralSecurityException</a></code> - if an internal error occurs in the cipher</dd></dl>
 </li>
 </ul>
 </li>
