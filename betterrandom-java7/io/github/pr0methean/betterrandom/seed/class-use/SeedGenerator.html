@@ -3,14 +3,14 @@
 <html lang="en">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Uses of Interface io.github.pr0methean.betterrandom.seed.SeedGenerator (BetterRandom 3.0.3 API)</title>
+<title>Uses of Interface io.github.pr0methean.betterrandom.seed.SeedGenerator (BetterRandom 3.1.1 API)</title>
 <link rel="stylesheet" type="text/css" href="../../../../../../stylesheet.css" title="Style">
 </head>
 <body>
 <script type="text/javascript"><!--
     try {
         if (location.href.indexOf('is-external=true') == -1) {
-            parent.document.title="Uses of Interface io.github.pr0methean.betterrandom.seed.SeedGenerator (BetterRandom 3.0.3 API)";
+            parent.document.title="Uses of Interface io.github.pr0methean.betterrandom.seed.SeedGenerator (BetterRandom 3.1.1 API)";
         }
     }
     catch(err) {
@@ -214,15 +214,15 @@
 <tbody>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a></code></td>
-<td class="colLast"><span class="strong">ReseedingThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingThreadLocalRandomWrapper.html#getSeedGenerator()">getSeedGenerator</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">ReseedingSplittableRandomAdapter.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingSplittableRandomAdapter.html#getSeedGenerator()">getSeedGenerator</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a></code></td>
-<td class="colLast"><span class="strong">ThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ThreadLocalRandomWrapper.html#getSeedGenerator()">getSeedGenerator</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">ReseedingThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingThreadLocalRandomWrapper.html#getSeedGenerator()">getSeedGenerator</a></strong>()</code>&nbsp;</td>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code><a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a></code></td>
-<td class="colLast"><span class="strong">ReseedingSplittableRandomAdapter.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingSplittableRandomAdapter.html#getSeedGenerator()">getSeedGenerator</a></strong>()</code>&nbsp;</td>
+<td class="colLast"><span class="strong">ThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ThreadLocalRandomWrapper.html#getSeedGenerator()">getSeedGenerator</a></strong>()</code>&nbsp;</td>
 </tr>
 </tbody>
 </table>
@@ -241,23 +241,23 @@
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
+<td class="colLast"><span class="strong">ReseedingSplittableRandomAdapter.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingSplittableRandomAdapter.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>&nbsp;</td>
+</tr>
+<tr class="altColor">
+<td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">SplittableRandomAdapter.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/SplittableRandomAdapter.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
 <div class="block">Not supported, because this class uses a thread-local seed.</div>
 </td>
 </tr>
-<tr class="altColor">
+<tr class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ReseedingThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingThreadLocalRandomWrapper.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>&nbsp;</td>
 </tr>
-<tr class="rowColor">
+<tr class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><span class="strong">ThreadLocalRandomWrapper.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ThreadLocalRandomWrapper.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>
 <div class="block">Not supported, because this class uses a thread-local seed.</div>
 </td>
-</tr>
-<tr class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><span class="strong">ReseedingSplittableRandomAdapter.</span><code><strong><a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingSplittableRandomAdapter.html#setSeedGenerator(io.github.pr0methean.betterrandom.seed.SeedGenerator)">setSeedGenerator</a></strong>(<a href="../../../../../../io/github/pr0methean/betterrandom/seed/SeedGenerator.html" title="interface in io.github.pr0methean.betterrandom.seed">SeedGenerator</a>&nbsp;seedGenerator)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
 <td class="colFirst"><code>static <a href="../../../../../../io/github/pr0methean/betterrandom/prng/concurrent/ReseedingThreadLocalRandomWrapper.html" title="class in io.github.pr0methean.betterrandom.prng.concurrent">ReseedingThreadLocalRandomWrapper</a></code></td>
