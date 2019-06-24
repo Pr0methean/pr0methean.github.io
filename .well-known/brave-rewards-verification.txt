@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: pr0methean.github.io
+Token: d2893561775f1ea43737fd507975f067a07cdc06e6480759bdf7cd9dc06c52a7
