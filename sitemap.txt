@@ -45,9 +45,11 @@ https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/DevRandomSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/package-frame.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/RandomSeederThread.DefaultThreadFactory.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/RandomDotOrgSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/DevRandomSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/DefaultSeedGenerator.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/RandomSeederThread.DefaultThreadFactory.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/SecureRandomSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/SeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/class-use/SeedGeneratorPreferenceList.html
