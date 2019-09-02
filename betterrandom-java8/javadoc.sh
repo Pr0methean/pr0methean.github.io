@@ -1,1 +1,1 @@
-/usr/lib/jvm/adoptopenjdk-11-hotspot-amd64/bin/javadoc @options
+/usr/lib/jvm/zulu-7-amd64/jre/../bin/javadoc @options
