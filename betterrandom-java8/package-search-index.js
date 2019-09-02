@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"io.github.pr0methean.betterrandom"},{"l":"io.github.pr0methean.betterrandom.prng"},{"l":"io.github.pr0methean.betterrandom.prng.concurrent"},{"l":"io.github.pr0methean.betterrandom.seed"},{"l":"io.github.pr0methean.betterrandom.util"}]

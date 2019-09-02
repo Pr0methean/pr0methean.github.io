@@ -1,1 +1,1 @@
-/usr/lib/jvm/java-8-oracle/jre/../bin/javadoc @options
+/usr/lib/jvm/adoptopenjdk-11-hotspot-amd64/bin/javadoc @options
