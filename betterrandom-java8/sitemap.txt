@@ -5,6 +5,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/class-use/Entropy
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/class-use/ByteArrayReseedableRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-summary.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/RepeatableRandom.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/SeekableRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/package-use.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/class-use/SeedGenerator.html
@@ -19,6 +20,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/class-use/Ra
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/class-use/BufferedSeedGenerator.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/package-summary.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/SeedGenerator.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/SecureRandomSeedGenerator.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/SeedException.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html
@@ -42,6 +44,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/Me
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/class-use/CipherCounterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/CellularAutomatonRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-summary.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/AesCounterRandom.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Cmwc4096Random.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/Pcg128Random.html
@@ -63,6 +66,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/c
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/class-use/SplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/package-summary.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/BaseSplittableRandomAdapter.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/SingleThreadSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/package-tree.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/concurrent/RandomWrapper.html
@@ -80,6 +84,7 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Lo
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/class-use/Byte16ArrayArithmetic.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-summary.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/EntryPoint.html
+https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/package-frame.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/BinaryUtils.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/Dumpable.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/util/LooperThread.html
