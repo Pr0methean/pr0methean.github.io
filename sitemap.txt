@@ -1,4 +1,3 @@
-https://pr0methean.github.io/enterprise.html
 https://pr0methean.github.io/googlead1687c49bff66ea.html
 https://pr0methean.github.io/betterrandom-pit-reports/io.github.pr0methean.betterrandom.util/BinaryUtils.java.html
 https://pr0methean.github.io/betterrandom-pit-reports/io.github.pr0methean.betterrandom.util/Byte16ArrayArithmetic.java.html
@@ -34,6 +33,7 @@ https://pr0methean.github.io/betterrandom-pit-reports/io.github.pr0methean.bette
 https://pr0methean.github.io/betterrandom-pit-reports/io.github.pr0methean.betterrandom.seed/BufferedSeedGenerator.java.html
 https://pr0methean.github.io/betterrandom-pit-reports/io.github.pr0methean.betterrandom.seed/index.html
 https://pr0methean.github.io/betterrandom-pit-reports/io.github.pr0methean.betterrandom.seed/DevRandomSeedGenerator.java.html
+https://pr0methean.github.io/betterrandom-enterprise.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/package-use.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/class-use/RepeatableRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/class-use/SeekableRandom.html
