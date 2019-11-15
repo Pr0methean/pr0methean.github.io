@@ -28,6 +28,8 @@ io.github.pr0methean
 -link
 'https://javadoc.io/doc/javax.xml.bind/jaxb-api/2.2.11'
 -link
+'https://docs.oracle.com'
+-link
 'https://guava.dev/releases/snapshot-jre/api/docs'
 -linkoffline
 'https://docs.oracle.com/javase/7/docs/api' '/home/chris/git/BetterRandom/betterrandom/target/javadoc-bundle-options'
