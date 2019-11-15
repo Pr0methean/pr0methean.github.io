@@ -9,8 +9,6 @@
 '/home/chris/git/BetterRandom/betterrandom/src/main/java:/home/chris/git/BetterRandom/betterrandom/src/main/javadoc'
 -subpackages
 io.github.pr0methean
---add-modules
-java.xml.bind
 -author
 -bottom
 '© 2019 Chris Hennick. Free to use under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. <a href="/privacy policy.html">Privacy Policy</a>'
@@ -29,8 +27,6 @@ java.xml.bind
 'https://checkerframework.org/api'
 -link
 'https://javadoc.io/doc/javax.xml.bind/jaxb-api/2.2.11'
--link
-'https://docs.oracle.com'
 -link
 'https://guava.dev/releases/snapshot-jre/api/docs'
 -linkoffline
