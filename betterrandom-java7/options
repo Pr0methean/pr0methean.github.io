@@ -9,6 +9,8 @@
 '/home/chris/git/BetterRandom/betterrandom/src/main/java:/home/chris/git/BetterRandom/betterrandom/src/main/javadoc'
 -subpackages
 io.github.pr0methean
+--add-modules
+java.xml.bind
 -author
 -bottom
 '© 2019 Chris Hennick. Free to use under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a>. <a href="/privacy policy.html">Privacy Policy</a>'
