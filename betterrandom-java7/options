@@ -26,9 +26,9 @@ io.github.pr0methean
 -link
 'https://checkerframework.org/api'
 -link
-'https://docs.oracle.com'
+'https://javadoc.io/doc/javax.xml.bind/jaxb-api/2.2.11'
 -link
-'https://docs.oracle.com/javase/7/docs/api'
+'https://docs.oracle.com'
 -link
 'https://guava.dev/releases/snapshot-jre/api/docs'
 -linkoffline
