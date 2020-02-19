@@ -183,6 +183,7 @@ https://pr0methean.github.io/betterrandom-java7/index.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/SeekableRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/EntropyCountingRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/package-tree.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/package-frame.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/ByteArrayReseedableRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/class-use/SeekableRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/class-use/EntropyCountingRandom.html
@@ -192,6 +193,7 @@ https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/Looper.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/package-tree.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/Java8Constants.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/package-frame.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/class-use/Looper.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/class-use/Java8Constants.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/util/class-use/EntryPoint.html
@@ -214,6 +216,7 @@ https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/SeedGeneratorPreferenceList.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/package-tree.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/SeedGenerator.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/package-frame.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/DefaultSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/DevRandomSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/seed/SimpleRandomSeeder.DefaultThreadFactory.html
@@ -241,6 +244,7 @@ https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/package-tree.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/ThreadLocalRandomWrapper.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/SingleThreadSplittableRandomAdapter.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/package-frame.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/class-use/EntropyBlockingReseedingSplittableRandomAdapter.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/class-use/DirectSplittableRandomAdapter.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/adapter/class-use/BaseSplittableRandomAdapter.html
@@ -265,6 +269,7 @@ https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/package-tree.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/Java8CompatRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/Cmwc4096Random.html
+https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/package-frame.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/AesCounterRandom.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/EntropyBlockingHelper.html
 https://pr0methean.github.io/betterrandom-java7/io/github/pr0methean/betterrandom/prng/CipherCounterRandom.html
