@@ -37,7 +37,6 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/XorShiftRand
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/BaseSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/EntropyBlockingSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/EntropyBlockingRandomWrapper.html
-https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/DirectSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/package-use.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/package-tree.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/RandomWrapper.html
@@ -46,7 +45,6 @@ https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/Thre
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/BaseSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/EntropyBlockingSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/EntropyBlockingRandomWrapper.html
-https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/DirectSplittableRandomAdapter.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/RandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/ReseedingThreadLocalRandomWrapper.html
 https://pr0methean.github.io/io/github/pr0methean/betterrandom/prng/adapter/class-use/ThreadLocalRandomWrapper.html
