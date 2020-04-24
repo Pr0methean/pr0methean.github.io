@@ -42,6 +42,7 @@ https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/RandomSeeder.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/LegacyRandomSeeder.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/SeedGeneratorPreferenceList.html
+https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/WebSeedClientConfiguration.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/RandomSeeder.DefaultThreadFactory.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/AnuQuantumSeedClient.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/RandomDotOrgAnonymousClient.html
@@ -57,11 +58,14 @@ https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrando
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/RandomSeeder.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/LegacyRandomSeeder.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/SeedGeneratorPreferenceList.html
+https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/WebSeedClientConfiguration.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/RandomSeeder.DefaultThreadFactory.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/AnuQuantumSeedClient.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/RandomDotOrgAnonymousClient.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/BufferedSeedGenerator.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/DevRandomSeedGenerator.html
+https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/class-use/WebSeedClientConfiguration.Builder.html
+https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/seed/WebSeedClientConfiguration.Builder.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/package-use.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/EntropyCountingRandom.html
 https://pr0methean.github.io/betterrandom-java8/io/github/pr0methean/betterrandom/RepeatableRandom.html
